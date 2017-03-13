@@ -1,8 +1,8 @@
-## Delectables
+# Delectables
 
-#Features
-#Project Design
-#Technology
+##Features
+##Project Design
+##Technology
   * Ruby version
 
   * System dependencies
@@ -18,4 +18,4 @@
   * Services (job queues, cache servers, search engines, etc.)
 
   * Deployment instructions
-#Future Implementations
+##Future Implementations
