@@ -4,7 +4,7 @@
 - Hosting on Heroku
 - Recipes
 - Commenting on Recipes
-- Adding photos and videos to Recipes
+- Adding photos to Recipes
 - Searching recipes by keyword
 
 ##Design Docs
@@ -22,7 +22,7 @@ Objective: Functioning rails Recipe with frontend Authentication
 Phase 2: Recipes Model, API, and components (2 days)
 Objective: Recipes can be created, read, edited, and destroyed through the API
 
-Phase 3: Comments, adding photo/video(3 days)
+Phase 3: Comments, adding photo(3 days)
 Objective: users can comment on a Recipe, add photo/video/.
 
 Phase 4: Complex Styling, and search (3 days)
