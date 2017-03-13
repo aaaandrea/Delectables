@@ -5,7 +5,6 @@
   * SessionContainer
   * Search
  - SearchContainer
- - SplashContainer
  - CategoryContainer
 
 ### SearchContainer

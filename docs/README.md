@@ -9,10 +9,10 @@ MVPs
 
 Design Docs
 - View Wireframes
-- React Components
+- [React Components](https://github.com/adelrio1/Delectables/blob/master/docs/component_hierarchy.md)
 - [API endpoints](https://github.com/adelrio1/Delectables/blob/master/docs/api_endpoints.md)
-- DB Schema
-- Sample State
+- [DB Schema](https://github.com/adelrio1/Delectables/blob/master/docs/schema.md)
+- [Sample State](https://github.com/adelrio1/Delectables/blob/master/docs/sample_state.md)
 
 Implementation Timeline
 Phase 1: Backend setup and Frontend User Authentication (2 days)
