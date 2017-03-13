@@ -27,3 +27,7 @@ Objective: users can comment on a Recipe, add photo/video/.
 
 Phase 4: Complex Styling, and search (3 days)
 Objective: Finish CSS work, including images, as well as seeding database, and tags such that recipes are searchable.
+
+#Bonus Features:
+- User Likes
+- User Image Icon
