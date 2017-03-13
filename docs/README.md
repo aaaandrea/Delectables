@@ -1,5 +1,5 @@
 ##MVPs
-- New Account creation, login, and guest/demo login
+- New Account creation, login
 - A production README, replacing this README
 - Hosting on Heroku
 - Recipes
