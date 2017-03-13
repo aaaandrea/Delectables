@@ -17,12 +17,12 @@
 ##Implementation Timeline
 
 Phase 1: Backend setup and Frontend User Authentication (2 days)
-Objective: Functioning rails Recipe with frontend Authentication
+Objective: Functioning rails with frontend Authentication; users can sign up and sign in.
 
 Phase 2: Recipes Model, API, and components (2 days)
 Objective: Recipes can be created, read, edited, and destroyed through the API
 
-Phase 3: Comments, adding photo(3 days)
+Phase 3: Comments, adding photo(2 days)
 Objective: users can comment on a Recipe, add photo/video/.
 
 Phase 4: Complex Styling, and search (3 days)
