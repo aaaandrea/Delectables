@@ -2,10 +2,10 @@ MVPs
 - New Account creation, login, and guest/demo login
 - A production README, replacing this README
 - Hosting on Heroku
-- Projects
-- Commenting on Projects
-- Adding photos and videos to Projects
-- Searching projects by keyword
+- Recipes
+- Commenting on Recipes
+- Adding photos and videos to Recipes
+- Searching recipes by keyword
 
 Design Docs
 - View Wireframes
