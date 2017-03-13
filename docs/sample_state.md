@@ -20,5 +20,4 @@
       img: "coconut_lime.jpg",
     }
   },
-  images: ['image1.url', 'image2.url']
 }

@@ -10,7 +10,7 @@ MVPs
 Design Docs
 - View Wireframes
 - React Components
-- API endpoints
+- [API endpoints](https://github.com/adelrio1/Delectables/blob/master/docs/api_endpoints.md)
 - DB Schema
 - Sample State
 
