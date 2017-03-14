@@ -1,0 +1,10 @@
+import {  Router, Route, IndexRoute, hashHistory } from 'react-redux';
+import App from './app';
+
+const Root = ({ store }) => (
+  <Provider store={ store }>
+    <Router history={ hashHistory }>
+      <Route path="/" component={ App } />
+    </Router>
+  </Provider>
+);
