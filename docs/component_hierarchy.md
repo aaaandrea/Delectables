@@ -1,43 +1,20 @@
 # Component Hierarchy
 
-### HomeContainer
- - NavContainer
-  * SessionContainer
-  * Search
- - SearchContainer
- - CategoryContainer
+#index-delectables
+- search
+- display_index
 
-### SearchContainer
- - Search
- - Recipes
- - IndexContainer
+#auth
+- auth_form_container
+  - auth_form
+    - error_list
 
-### CategoryContainer
- - CategoryImages
- - CategoryIndexes
-
-### AuthFormContainer
- - AuthForm
- - NavContainer
-
-### IndexContainer
- - NavContainer
- - ShowContainer
- - CategoryContainer
-
-### ShowContainer
- - Category
- - RecipeImages
-
-### CreateContainer
- - CreateForm
- - CreateInstructions
-
-### RecipeContainer
- - NavContainer
- - RecipeData
- - CommentsContainer
-
-### CommentsContainer
- - CommentForm
- - Comments
+#recipes
+- recipe_create_form_container
+  - recipe_create_form
+    - error_list
+- recipe_index_container
+  - recipe_index
+- recipe_show_container
+  - recipe_show
+    - comments_form

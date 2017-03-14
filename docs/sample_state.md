@@ -9,7 +9,7 @@
     logIn: {errors: []}
   },
 
-  recipes: {
+  recipe: {
     1: {
       name: 'coconut-lime drink',
       author: 'guest',
@@ -18,6 +18,19 @@
       comments: ["It's pretty good"]
       directions: 'Put the lime in the coconut and mix them both together',
       img: "coconut_lime.jpg",
+    }
+  },
+
+  recipes: {
+    1: {
+      name: 'coconut-lime drink',
+      author: 'guest',
+      img: "coconut_lime.jpg",
+    }
+    2: {
+      name: 'key-lime pie',
+      author: 'quinn',
+      img: 'key-lime.jpg'
     }
   },
 }

@@ -19,7 +19,4 @@ Recipes
 - POST /api/recipes
 - PATCH /api/recipes/:id
 - DESTROY /api/recipes/:id
-
-Comments
-- GET /api/comments/:recipesId
-- POST /api/comments
+- POST /api/recipes/comments
