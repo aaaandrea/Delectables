@@ -19,19 +19,6 @@ image_url        | string    | not null
 user_id          | integer   | not null, indexed
 ingredients       |text       | not null
 
-## ingredients
-column name      | data type | details
------------------|-----------|--------
-id               | integer   | not null, primary key
-name             | string    | not null, indexed
-
-## recipe_ingredients
-column name      | data type | details
------------------|-----------|--------
-id               | integer   | not null, primary key
-recipe_id        | integer   | not null, indexed
-ingredient_id    | integer   | not null, indexed
-
 ## comments
 column name      | data type | details
 -----------------|-----------|--------

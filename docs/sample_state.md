@@ -26,7 +26,7 @@
       name: 'coconut-lime drink',
       author: 'guest',
       img: "coconut_lime.jpg",
-    }
+    },
     2: {
       name: 'key-lime pie',
       author: 'quinn',
