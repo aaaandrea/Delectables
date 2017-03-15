@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
-const sessionLinks = () => (
-  <nav className="login-signup">
-    <Link to="/login" activeClassName="current">Login</Link>
-    <br></br>
-    <br></br>
-    <Link to="/signup" activeClassName="current">Sign up</Link>
-  </nav>
+const sessionLinks = () => {
+  const login = () => {
+    hashHistory.push('/login');
+  };
+
+  const signup = () => {
+    hashHistory.push('signup');
+  };
+
+  return(
+    <nav className="login-signup">
+      <button className="header-button" onClick={login}>Log In</button>
+      <button className="header-button" onClick={signup}>Sign Up</button>
+    </nav>
 );
+};
 
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
