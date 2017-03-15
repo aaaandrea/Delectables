@@ -7,7 +7,7 @@ const sessionLinks = () => {
   };
 
   const signup = () => {
-    hashHistory.push('signup');
+    hashHistory.push('/signup');
   };
 
   return(

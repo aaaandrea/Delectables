@@ -1,0 +1,30 @@
+
+nav {
+  width: 100%;
+  background-color: #C0768C;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+
+.header-nav {
+  background: pink;
+}
+
+.header-button {
+  background-color: #E1C6B8;
+  justify-content: right;
+  font-family: sans-serif;
+  color: #654F60;
+}
+
+.header-button:hover {
+  background-color: #DFA36A;
+}
