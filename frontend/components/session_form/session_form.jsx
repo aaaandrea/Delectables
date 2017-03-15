@@ -33,40 +33,35 @@ class SessionForm extends React.Component {
   }
 
   render(){
-    // let username;
-    // if (this.props.formType === 'login') {
-    //   username = "";
-    // } else {
-    //   username = <input placeholder="username" onChange={ this.updateAttributes('username') }/>;
-    // }
-
     return(
-      <section className="section-setup">
-        <h2>{ this.props.formType }</h2>
-        <Link to={ this.props.formType === 'login' ? '/signup' : '/login' } />
-          <br></br>
-          <br></br>
-        <p>{ this.props.errors }</p>
-        <form onSubmit={ this.handleSubmit.bind(this) }>
+      <div className="form-container">
+        <section className="form-setup">
+          <h2 className="form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
+          <Link to={ this.props.formType === 'login' ? '/signup' : '/login' } />
+            <br></br>
+            <br></br>
+          <p>{ this.props.errors }</p>
+          <form onSubmit={ this.handleSubmit.bind(this) }>
 
-					<label>Username</label>
-					<br></br>
-					<input type="text" value={this.state.username} onChange={this.updateAttributes('username')}/>
+  					<label className="form-label">Username</label>
+  					<br></br>
+  					<input className="form-attributes" type="text" value={this.state.username} onChange={this.updateAttributes('username')}/>
 
-					<br></br>
-					<br></br>
+  					<br></br>
+  					<br></br>
 
-					<label>Password</label>
-					<br></br>
-          <input type='password' placeholder="Password" onChange={ this.updateAttributes('password') }/>
+  					<label className="form-label">Password</label>
+  					<br></br>
+            <input className="form-attributes" type='password' placeholder="Password" onChange={ this.updateAttributes('password') }/>
 
-					<br></br>
-					<br></br>
+  					<br></br>
+  					<br></br>
 
-          <button>{ this.props.formType }</button>
+            <button className="form-button">{ (this.props.formType === 'login') ? 'Log In' : 'Create Account' }</button>
 
-        </form>
-      </section>
+          </form>
+        </section>
+      </div>
     );
   }
 }

@@ -23,8 +23,13 @@ nav {
   justify-content: right;
   font-family: sans-serif;
   color: #654F60;
+  padding: 5px;
 }
 
 .header-button:hover {
   background-color: #DFA36A;
+}
+
+.header-name {
+  font-size: 16px;
 }
