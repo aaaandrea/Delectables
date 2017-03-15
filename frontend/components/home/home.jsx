@@ -8,8 +8,10 @@ class Home extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className="home-container">
+        <nav className="home-nav">
 
+        </nav>
       </div>
     );
   }
