@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316175802) do
+ActiveRecord::Schema.define(version: 20170316182958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "recipes", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "ingredients", null: false
+    t.text     "directions",  null: false
+    t.text     "img"
+    t.integer  "tag_id",      null: false
+    t.integer  "user_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["directions"], name: "index_recipes_on_directions", using: :btree
+    t.index ["ingredients"], name: "index_recipes_on_ingredients", using: :btree
+    t.index ["name"], name: "index_recipes_on_name", using: :btree
+    t.index ["user_id"], name: "index_recipes_on_user_id", using: :btree
+  end
 
   create_table "tags", force: :cascade do |t|
     t.string   "name",       null: false
