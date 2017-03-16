@@ -30,10 +30,18 @@
   padding: 10px;
 }
 
+.form-button:hover {
+  background-color: #DFA36A;
+}
+
 .demo-button {
   background: #AD525E;
   color: white;
-  padding: 10px;
+  padding: 5px;
+}
+
+.demo-button:hover {
+  background-color: #DFA36A;
 }
 
 .form-label {

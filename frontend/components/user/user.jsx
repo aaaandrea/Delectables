@@ -18,7 +18,7 @@ const sessionLinks = () => {
         <button className="header-button" onClick={signup}>Sign Up</button>
       </div>
     </nav>
-);
+  );
 };
 
 const personalGreeting = (currentUser, logout) => (

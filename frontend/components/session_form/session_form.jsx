@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
 
   handleGuest(e) {
     e.preventDefault();
-    this.props.login({username: "guest", password: "password"});
+    this.props.login({username: "Guest", password: "password"});
   }
 
   render(){
@@ -51,23 +51,30 @@ class SessionForm extends React.Component {
 
           <p className="form-errors">{ this.props.errors }</p>
 
+            <br></br>
+            <br></br>
+
           <form onSubmit={ this.handleSubmit.bind(this) }>
   					<label className="form-label">Username</label>
-  					<br></br>
-  					<input className="form-attributes" type="text" value={this.state.username} onChange={this.updateAttributes('username')}/>
+    					<br></br>
+    					<input className="form-attributes" type="text" value={this.state.username} onChange={this.updateAttributes('username')}/>
 
   					<br></br>
   					<br></br>
 
   					<label className="form-label">Password</label>
-  					<br></br>
-            <input className="form-attributes" type='password' placeholder="Password" onChange={ this.updateAttributes('password') }/>
+    					<br></br>
+              <input className="form-attributes" type='password' placeholder="Password" onChange={ this.updateAttributes('password') }/>
 
   					<br></br>
   					<br></br>
 
             <button className="form-button">{ (this.props.formType === 'login') ? 'Log In' : 'Create Account' }</button>
-            <button className="demo-button" onClick={this.handleGuest} value="Demo"></button>
+
+            <br></br>
+            <br></br>
+
+            <button className="demo-button" onClick={this.handleGuest} value="Demo">Demo</button>
 
           </form>
         </section>
