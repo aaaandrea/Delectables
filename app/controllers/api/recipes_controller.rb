@@ -1,8 +1,4 @@
 class Api::RecipesController < ApplicationController
-  def new
-    @recipe = Recipe.new
-    # render :new
-  end
 
   def index
     @recipes = Recipe.all
@@ -15,32 +11,25 @@ class Api::RecipesController < ApplicationController
   def create
     @recipe = Recipe.create!(recipe_params)
     if @recipe.save
-      # render :show
+      render "api/recipes/show/:id"
     else
-      # errors
-      # render :new
+      render json: @recipe.errors.full_messages, status: 422
     end
-  end
-
-  def edit
-    @recipe = Recipe.find(params[:id])
-    # render :edit
   end
 
   def update
     @recipe = Recipe.find(params[:id])
+
     if @recipe.update(recipe_params)
-      # render :show
+      render "api/recipes/show/:id"
     else
-      # errors
-      # render :edit
+      render json: @recipe.errors.full_messages, status: 422
     end
   end
 
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    # render index
   end
 
   private
