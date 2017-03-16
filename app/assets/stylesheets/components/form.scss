@@ -30,6 +30,12 @@
   padding: 10px;
 }
 
+.demo-button {
+  background: #AD525E;
+  color: white;
+  padding: 10px;
+}
+
 .form-label {
   font-weight: bold;
 
@@ -41,4 +47,9 @@
 
 .form-image {
   display: inline-block;
+}
+
+.form-errors {
+  color: red;
+  font-weight: bold;
 }

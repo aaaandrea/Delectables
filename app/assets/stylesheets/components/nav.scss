@@ -23,13 +23,11 @@ nav {
 
 .header-title {
   font-size: 36px;
-  // display: flex;
-  // justify-content: flex-start;
+  font-family: 'Baloo Bhaina';
 }
 
 .header-buttons {
-  // display: flex;
-  // justify-content: flex-end;
+  margin-right: 20px;
 }
 
 .header-button {
@@ -45,6 +43,16 @@ nav {
   background-color: #DFA36A;
 }
 
-.header-name {
-  font-size: 16px;
+.personal-nav {
+  display: flex;
+  justify-content: space-between;
+
+  .header-name {
+    font-size: 12px;
+    justify-content: center;
+    margin-right: 100px;
+    font-style: italic;
+    float: left;
+  }
+
 }
