@@ -9,10 +9,10 @@
   * Solution:
 
 - Q: scss setup: demo-button (form.scss, and in session_form)
-  * Solution:
+  * Solution: bind in constructor (session form)
 
 - Q: images not appearing on heroku
-  * Solution:
+  * Solution: hosting on cloudinary
 
 - Q: colors rendering
   * Solution:

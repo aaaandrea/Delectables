@@ -13,11 +13,21 @@ column name      | data type | details
 -----------------|-----------|--------
 id               | integer   | not null, primary key
 name             | string    | not null, indexed
-category_id      | integer   | not null, indexed
+tag_id           | integer   | not null, indexed
 directions       | text      | not null
 image_url        | string    | not null
 user_id          | integer   | not null, indexed
-ingredients       |text       | not null
+ingredients      |text       | not null
+
+belongs_to user
+belongs_to tag
+
+## tags
+column name      | data type | details
+-----------------|-----------|--------
+id               | integer   | not null, primary key
+name             | string    | not null, indexed
+img              | string    | not null
 
 ## comments
 column name      | data type | details
