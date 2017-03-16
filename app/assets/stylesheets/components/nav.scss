@@ -4,26 +4,41 @@ nav {
   background-color: #C0768C;
   padding: 6px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   ul {
     display: flex;
     justify-content: flex-end;
   }
+}
 
+.login-signup {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-nav {
   background: pink;
 }
 
+.header-title {
+  font-size: 36px;
+  // display: flex;
+  // justify-content: flex-start;
+}
+
+.header-buttons {
+  // display: flex;
+  // justify-content: flex-end;
+}
+
 .header-button {
   background-color: #E1C6B8;
-  justify-content: right;
   font-family: sans-serif;
   color: #654F60;
   padding: 5px;
+  margin: 5px;
+  margin-right: 10px;
 }
 
 .header-button:hover {

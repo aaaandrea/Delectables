@@ -10,7 +10,7 @@ class Home extends React.Component {
     return(
       <div className="home-container">
         <nav className="home-nav">
-
+          <img src="/assets/lamb_carrots.jpeg" alt="lamb" />
         </nav>
       </div>
     );

@@ -4,7 +4,6 @@ import Home from './home';
 
 
 const mapStateToProps = ({ home }) => ({
-  errors: home.errors
 });
 
 const mapDispatchToProps = () => {

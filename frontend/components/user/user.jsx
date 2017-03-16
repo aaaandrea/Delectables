@@ -12,8 +12,11 @@ const sessionLinks = () => {
 
   return(
     <nav className="login-signup">
-      <button className="header-button" onClick={login}>Log In</button>
-      <button className="header-button" onClick={signup}>Sign Up</button>
+      <h1 className="header-title">Delectables</h1>
+      <div className="header-buttons">
+        <button className="header-button" onClick={login}>Log In</button>
+        <button className="header-button" onClick={signup}>Sign Up</button>
+      </div>
     </nav>
 );
 };
