@@ -4,7 +4,6 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const login = user => dispatch => {
-
   return (
     APIUtil.login(user)
     .then(returned => dispatch(receiveCurrentUser(returned)))

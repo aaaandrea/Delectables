@@ -12,7 +12,11 @@ const sessionLinks = () => {
 
   return(
     <nav className="login-signup">
+      
+      <Link to="/" className="header-link">
       <h1 className="header-title">Delectables</h1>
+      </Link>
+
       <div className="header-buttons">
         <button className="header-button" onClick={login}>Log In</button>
         <button className="header-button" onClick={signup}>Sign Up</button>

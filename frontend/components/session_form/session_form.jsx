@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
       username: "",
       password: ""
     };
+    this.handleGuest = this.handleGuest.bind(this);
   }
 
   componentDidUpdate() {
@@ -57,14 +58,14 @@ class SessionForm extends React.Component {
           <form onSubmit={ this.handleSubmit.bind(this) }>
   					<label className="form-label">Username</label>
     					<br></br>
-    					<input className="form-attributes" type="text" value={this.state.username} onChange={this.updateAttributes('username')}/>
+    					<input className="form-attributes" type="text" placeholder="username" value={this.state.username} onChange={this.updateAttributes('username')}/>
 
   					<br></br>
   					<br></br>
 
   					<label className="form-label">Password</label>
     					<br></br>
-              <input className="form-attributes" type='password' placeholder="Password" onChange={ this.updateAttributes('password') }/>
+              <input className="form-attributes" type='password' placeholder="password" onChange={ this.updateAttributes('password') }/>
 
   					<br></br>
   					<br></br>
