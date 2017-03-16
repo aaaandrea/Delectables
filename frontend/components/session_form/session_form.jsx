@@ -42,6 +42,7 @@ class SessionForm extends React.Component {
     return(
       <div className="form-container">
         <section className="form-setup">
+          <h1>THIS IS A FORM!!</h1>
 
           <h2 className="form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
 
