@@ -32,42 +32,44 @@ class Recipe extends React.Component {
 
   render(){
     return(
-      <div className="form-container">
-        <section className="form-setup">
+      <div className="recipe-form-container">
+        <section className="recipe-form-setup">
 
-          <h2 className="form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
+          <h2 className="recipe-form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
 
           <Link to={ this.props.formType === 'login' ? '/signup' : '/login' } />
 
             <br></br>
             <br></br>
 
-          <p className="form-errors">{ this.props.errors }</p>
+          <p className="recipe-form-errors">{ this.props.errors }</p>
 
             <br></br>
             <br></br>
 
           <form onSubmit={ this.handleSubmit.bind(this) }>
-            <label className="form-label">Username</label>
+            <label className="recipe-form-label">Recipe Name</label>
               <br></br>
-              <input className="form-attributes" type="text" placeholder="username" value={this.state.username} onChange={this.updateAttributes('username')}/>
+              <input className="recipe-form-attributes" type="string" placeholder="Recipe Name" value={this.state.username} onChange={this.updateAttributes('name')}/>
 
             <br></br>
             <br></br>
 
-            <label className="form-label">Password</label>
+            <label className="recipe-form-label">Ingredients</label>
               <br></br>
-              <input className="form-attributes" type='password' placeholder="password" onChange={ this.updateAttributes('password') }/>
+              <input className="recipe-form-attributes" type='text' placeholder="Ingredients" onChange={ this.updateAttributes('ingredients') }/>
 
             <br></br>
             <br></br>
 
-            <button className="form-button">{ (this.props.formType === 'login') ? 'Log In' : 'Create Account' }</button>
+            <label className="recipe-form-label">Ingredients</label>
+              <br></br>
+              <input className="recipe-form-attributes" type='text' placeholder="Ingredients" onChange={ this.updateAttributes('ingredients') }/>
 
             <br></br>
             <br></br>
 
-            <button className="demo-button" onClick={this.handleGuest} value="Demo">Demo</button>
+            <button className="recipe-form-button">{ 'Create Recipe' }</button>
 
           </form>
         </section>

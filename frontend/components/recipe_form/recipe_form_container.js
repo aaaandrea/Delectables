@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { login, logout, signup } from '../../actions/recipe_actions';
-import Recipe from './recipe';
+import Recipe from './recipe_form';
 
 
 const mapStateToProps = ({ recipe }) => ({

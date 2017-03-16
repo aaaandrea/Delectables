@@ -12,8 +12,8 @@
  *
  *= require_self
  */
-@import 'base/reset';
-@import 'base/layout';
+@import 'base/reset.scss';
+@import 'base/layout.scss';
 
-@import 'components/form';
-@import 'components/nav';
+@import 'components/form.scss';
+@import 'components/nav.scss';
