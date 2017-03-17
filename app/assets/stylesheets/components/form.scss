@@ -1,63 +1,72 @@
 
 .form-container {
-  background-image: url('http://res.cloudinary.com/dg0cmca7a/image/upload/v1489682008/chocolate-cake-1526438_1920_bcsuxz.jpg');
+  background-image: url('http://res.cloudinary.com/dg0cmca7a/image/upload/v1489704383/michael-browning-188999_agnvtl.jpg');
   background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
-}
 
-.form-setup {
-  border: 2px $tomato solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: $light-peach;
-  width: 300px;
-  height: 500px;
-  text-align: center;
-  margin-left: 100px;
-}
+  .form-setup {
+    border: 2px $peach solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
 
-.form-title {
-  font-size: 32px;
-}
+    .form-title {
+      font-family: 'Baloo Bhaina';
+      color: $mauve;
+      font-size: 48px;
+      line-height: 1;
+    }
 
-.form-button {
-  background: #AD525E;
-  color: white;
-  padding: 10px;
-}
+    .form-attributes {
+      color: $light-gray;
+      background-color: rgba(255, 255, 255, 0.9);
+      height: 30px;
+      width: 200px;
+    }
 
-.form-button:hover {
-  background-color: $pink-orange;
-}
+    .form-button {
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      margin-top: 20px;
+      height: 30px;
+      width: 200px;
+    }
 
-.demo-button {
-  background: #AD525E;
-  color: white;
-  padding: 5px;
-}
+    .form-button:hover {
+      background-color: $peach;
+    }
 
-.demo-button:hover {
-  background-color: $pink-orange;
-}
+    .demo-button {
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 200px;
+      margin-bottom: 20px;
+    }
 
-.form-label {
-  font-weight: bold;
+    .demo-button:hover {
+      background-color: $peach;
+    }
 
-}
+    .form-image {
+      display: inline-block;
+    }
 
-.form-attributes {
-  color: lightgray;
-}
-
-.form-image {
-  display: inline-block;
-}
-
-.form-errors {
-  color: red;
-  font-weight: bold;
+    .form-errors {
+      height: 30px;
+      font-size: 14px;
+      color: $bloodred;
+      font-weight: bold;
+    }
+  }
 }

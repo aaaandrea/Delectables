@@ -47,24 +47,15 @@ class SessionForm extends React.Component {
 
           <Link to={ this.props.formType === 'login' ? '/signup' : '/login' } />
 
-            <br></br>
-            <br></br>
-
           <p className="form-errors">{ this.props.errors }</p>
 
-            <br></br>
-            <br></br>
-
           <form onSubmit={ this.handleSubmit.bind(this) }>
-  					<label className="form-label">Username</label>
-    					<br></br>
+
     					<input className="form-attributes" type="text" placeholder="username" value={this.state.username} onChange={this.updateAttributes('username')}/>
 
   					<br></br>
   					<br></br>
 
-  					<label className="form-label">Password</label>
-    					<br></br>
               <input className="form-attributes" type='password' placeholder="password" onChange={ this.updateAttributes('password') }/>
 
   					<br></br>
