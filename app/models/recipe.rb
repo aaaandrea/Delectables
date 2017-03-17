@@ -13,7 +13,7 @@
 #
 
 class Recipe < ApplicationRecord
-  validates :name, :ingredients, :directions, :tag_id, :user_id, presence: true
+  validates :name, :directions, :tag_id, :user_id, presence: true
 
   belongs_to :tag
   belongs_to :user
