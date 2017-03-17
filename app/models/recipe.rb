@@ -2,15 +2,14 @@
 #
 # Table name: recipes
 #
-#  id          :integer          not null, primary key
-#  name        :string           not null
-#  ingredients :text             not null
-#  directions  :text             not null
-#  img         :text
-#  tag_id      :integer          not null
-#  user_id     :integer          not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  directions :text             not null
+#  img        :text
+#  tag_id     :integer          not null
+#  user_id    :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class Recipe < ApplicationRecord
@@ -18,5 +17,7 @@ class Recipe < ApplicationRecord
 
   belongs_to :tag
   belongs_to :user
-  
+
+  has_many :recipe_ingredients
+
 end
