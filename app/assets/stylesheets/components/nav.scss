@@ -1,7 +1,7 @@
 
 nav {
   width: 100%;
-  background-color: lightgray;
+  background-color: $bone;
   padding: 6px;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ nav {
 }
 
 .header-nav {
-  background: pink;
+  background: $light-peach;
 }
 
 .header-title {
@@ -40,7 +40,7 @@ nav {
 }
 
 .header-button:hover {
-  background-color: #DFA36A;
+  background-color: $pink-orange;
 }
 
 .personal-nav {
