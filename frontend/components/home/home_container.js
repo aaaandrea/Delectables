@@ -6,10 +6,10 @@ import Home from './home';
 const mapStateToProps = ({ home }) => ({
 });
 
-const mapDispatchToProps = () => {
+const mapDispatchToProps = (dispatch) => {
 
   return {
-
+    login: guest => dispatch(login(guest))
   };
 };
 

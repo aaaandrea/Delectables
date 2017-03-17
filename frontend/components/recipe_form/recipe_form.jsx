@@ -1,21 +1,45 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import merge from 'lodash/merge';
 
-class Recipe extends React.Component {
+class RecipeForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      username: "",
-      password: ""
+      name: "",
+      tag_id: "",
+      ingredients: "",
+      directions: "",
+      img: ""
     };
   }
 
-  componentDidUpdate() {
-
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li className="recipe-form-errors" key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
-  redirectIfLoggedIn() {
 
+  componentDidUpdate() {
+    this.props.clearErrors();
+    this.props.fetchRecipes().then(() => {
+      let newRecipe = merge({}, this.props.recipe);
+      newRecipe.ingredients = newRecipe.ingredients.map( el => el.name);
+      this.setState(merge({}, newRecipe));
+    });
+  }
+
+  redirectIfNotLoggedIn() {
+    if (!this.props.loggedIn) {
+      this.props.router.push("/");
+    }
   }
 
   updateAttributes(attribute){
@@ -35,9 +59,9 @@ class Recipe extends React.Component {
       <div className="recipe-form-container">
         <section className="recipe-form-setup">
 
-          <h2 className="recipe-form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
+          <h2 className="recipe-form-title">{ (this.props.formType === 'create') ? 'Create Recipe' : 'Edit Recipe' }</h2>
 
-          <Link to={ this.props.formType === 'login' ? '/signup' : '/login' } />
+          <Link to={ this.props.formType === 'create' ? '/recipes' : `/recipe/${id}` } />
 
             <br></br>
             <br></br>
@@ -55,6 +79,13 @@ class Recipe extends React.Component {
             <br></br>
             <br></br>
 
+            <label className="recipe-form-label">Category</label>
+              <br></br>
+              <input className="recipe-form-attributes" type='text' placeholder="tag" onChange={ this.updateAttributes('tag') }/>
+
+            <br></br>
+            <br></br>
+
             <label className="recipe-form-label">Ingredients</label>
               <br></br>
               <input className="recipe-form-attributes" type='text' placeholder="Ingredients" onChange={ this.updateAttributes('ingredients') }/>
@@ -64,7 +95,14 @@ class Recipe extends React.Component {
 
             <label className="recipe-form-label">Ingredients</label>
               <br></br>
-              <input className="recipe-form-attributes" type='text' placeholder="Ingredients" onChange={ this.updateAttributes('ingredients') }/>
+              <input className="recipe-form-attributes" type='text' placeholder="Directions" onChange={ this.updateAttributes('directions') }/>
+
+            <br></br>
+            <br></br>
+
+            <label className="recipe-form-label">Picture</label>
+              <br></br>
+              <input className="recipe-form-attributes" type='text' placeholder="Image" onChange={ this.updateAttributes('img') }/>
 
             <br></br>
             <br></br>
@@ -78,4 +116,4 @@ class Recipe extends React.Component {
   }
 }
 
-export default withRouter(Recipe);
+export default withRouter(RecipeForm);

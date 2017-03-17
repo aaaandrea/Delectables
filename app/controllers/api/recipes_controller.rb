@@ -11,6 +11,11 @@ class Api::RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    if @recipe
+      render "api/recipes/show"
+    else
+      render(json: ["This recipe does not exist"], status: 422)
+    end
   end
 
   def create
@@ -34,7 +39,11 @@ class Api::RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id])
-    @recipe.destroy
+    if @recipe.destroy
+      render 'api/recipes/show'
+    else
+      render json: ["This cannot be deleted"], status: 422
+    end
   end
 
   private
