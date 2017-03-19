@@ -34,54 +34,79 @@ class RecipeForm extends React.Component {
     }
 
     return(
-        <form className="recipe-form-container" onSubmit={ this.handleSubmit.bind(this) }>
+        <form
+          className="recipe-form-container"
+          onSubmit={ this.handleSubmit.bind(this) }>
 
-          <h2 className="recipe-form-title">{ this.props.formType === 'create' ? "Create" : "Update" } Recipe</h2>
+          <h2
+            className="recipe-form-title">{ this.props.formType === 'create' ? "Create" : "Update" } Recipe</h2>
 
-          <br></br>
-          <br></br>
+          <p
+            className="recipe-form-errors">{this.props.errors}</p>
 
-          <p className="recipe-form-errors">{this.props.errors}</p>
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Recipe Name"
+            value={this.state.name}
+            onChange={this.updateAttributes('name')}/>
 
-          <br></br>
-          <br></br>
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Ingredient"
+            value={this.ingredient.name}
+            onChange={this.updateAttributes('ingredient')}/>
+          // check update attributes for ingredient tables
 
-          <label className="recipe-form-title">Recipe name</label>
-          <input className="recipe-form-attribute"></input>
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Quantity"
+            value={this.recipe_ingredient.quantity}
+            onChange={this.updateAttributes('quantity')}/>
+            // add logic for recipe_id/ingredient_id/unit_id updates
+            // check update attributes for recipe_ingredients tables
+            // button handling
 
-          <br></br>
-          <br></br>
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Unit"
+            value={this.unit.name}
+            onChange={this.updateAttributes('name')}/>
+          // check updateAttributes for unit table
 
-          <label className="recipe-form-title">Ingredients</label>
-          <input className="recipe-form-attribute"></input>
+          <input
+            className="recipe-form-attribute"
+            type="textarea"
+            placeholder="Directions"
+            value={this.recipe.directions}
+            onChange={this.updateAttributes('directions')}/>
 
-          <br></br>
-          <br></br>
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Image Link"
+            value={this.recipe.img}
+            onChange={this.updateAttributes('img')}/>
 
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Category"
+            value={this.tag.name}
+            onChange={this.updateAttributes('name')}/>
 
-          <label className="recipe-form-title">Directions</label>
-          <input className="recipe-form-attribute"></input>
+          <input
+            type="hidden"
+            name="user[user_id]"
+            value="">{this.currentUser.id}</input>
+            // fix updating user_id logic
 
-          <br></br>
-          <br></br>
-
-
-          <label className="recipe-form-title">Image Link</label>
-          <input className="recipe-form-attribute"></input>
-
-          <br></br>
-          <br></br>
-
-
-          <label className="recipe-form-title">Category</label>
-          <input className="recipe-form-attribute"></input>
-
-          <br></br>
-          <br></br>
-
-          <input type="hidden" name="user[user_id]" value="">{this.currentUser.id}</input>
-
-          <button className="recipe-form-button">{ (this.props.formType === 'create ') ? 'Create' : 'Update' } Recipe</button>
+          <button
+            className="recipe-form-button">{ (this.props.formType === 'create ') ? 'Create' : 'Update' } Recipe
+          </button>
 
         </form>
     );

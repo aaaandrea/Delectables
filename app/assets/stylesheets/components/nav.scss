@@ -2,7 +2,6 @@
 nav {
   width: 100%;
   background-color: $bone;
-  padding: 6px;
   display: flex;
   align-items: center;
 
@@ -12,7 +11,7 @@ nav {
   }
 }
 
-.login-signup {
+.navbar {
   display: flex;
   justify-content: space-between;
 }
@@ -22,7 +21,8 @@ nav {
 }
 
 .header-title {
-  font-size: 48px;
+  padding-left: 4px;
+  font-size: 60px;
   font-family: 'Baloo Bhaina';
 }
 

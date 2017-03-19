@@ -40,33 +40,42 @@ class SessionForm extends React.Component {
 
   render(){
     return(
-      <div className="form-container">
-        <section className="form-setup">
+      <div className="session-form-container">
+        <section className="session-form-setup">
 
-          <h2 className="form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
+          <h2 className="session-form-title">{ (this.props.formType === 'login') ? 'Log In' : 'Sign Up' }</h2>
 
           <Link to={ this.props.formType === 'login' ? '/signup' : '/login' } />
 
-          <p className="form-errors">{ this.props.errors }</p>
+          <p className="session-form-errors">{ this.props.errors }</p>
 
           <form onSubmit={ this.handleSubmit.bind(this) }>
 
-    					<input className="form-attributes" type="text" placeholder="username" value={this.state.username} onChange={this.updateAttributes('username')}/>
+            <input
+                className="session-form-attributes"
+                type="text"
+                placeholder="username"
+                value={this.state.username}
+                onChange={this.updateAttributes('username')}/>
 
-  					<br></br>
-  					<br></br>
+              <input
+                className="session-form-attributes"
+                type='password'
+                placeholder="password"
+                onChange={ this.updateAttributes('password') }/>
 
-              <input className="form-attributes" type='password' placeholder="password" onChange={ this.updateAttributes('password') }/>
+              <br></br>
+              <br></br>
 
-  					<br></br>
-  					<br></br>
+            <button
+              className="session-form-button">{ (this.props.formType === 'login') ? 'Log In' : 'Create Account' }
+            </button>
 
-            <button className="form-button">{ (this.props.formType === 'login') ? 'Log In' : 'Create Account' }</button>
-
-            <br></br>
-            <br></br>
-
-            <button className="demo-button" onClick={this.handleGuest} value="Demo">Demo</button>
+            <button
+              className="session-form-button"
+              onClick={this.handleGuest}
+              value="Demo">Demo
+            </button>
 
           </form>
         </section>

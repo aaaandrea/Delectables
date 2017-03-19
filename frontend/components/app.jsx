@@ -1,9 +1,9 @@
 import React from 'react';
-import UserContainer from './user/user_container';
+import NavContainer from './nav/nav_container';
 
 const App = ({ children }) => (
   <div>
-    <UserContainer />
+    <NavContainer />
     { children }
   </div>
 );

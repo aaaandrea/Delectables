@@ -1,5 +1,5 @@
 
-.form-container {
+.session-form-container {
   background-image: url('http://res.cloudinary.com/dg0cmca7a/image/upload/v1489704383/michael-browning-188999_agnvtl.jpg');
   background-size: cover;
   width: 100vw;
@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
 
-  .form-setup {
+  .session-form-setup {
     border: 2px $peach solid;
     display: flex;
     flex-direction: column;
@@ -18,51 +18,53 @@
     text-align: center;
     margin: 0 auto;
 
-    .form-title {
+    .session-form-title {
       font-family: 'Baloo Bhaina';
       color: $mauve;
       font-size: 48px;
       line-height: 1;
     }
 
-    .form-attributes {
+    .session-form-attributes {
       color: $light-gray;
       background-color: rgba(255, 255, 255, 0.9);
       height: 30px;
       width: 200px;
+      margin: 5px;
     }
 
-    .form-button {
+    .session-form-button {
       font-size: 14px;
       background: $pink-orange;
       color: $bone;
-      margin-top: 20px;
       height: 30px;
       width: 200px;
+      margin: 5px;
     }
 
-    .form-button:hover {
+    .session-form-button:hover {
       background-color: $peach;
     }
 
-    .demo-button {
+    .session-demo-button {
       font-size: 14px;
       background: $pink-orange;
       color: $bone;
       height: 30px;
       width: 200px;
+      margin: 10px;
       margin-bottom: 20px;
     }
 
-    .demo-button:hover {
+    .session-demo-button:hover {
       background-color: $peach;
     }
 
-    .form-image {
+    .session-form-image {
       display: inline-block;
     }
 
-    .form-errors {
+    .session-form-errors {
       height: 30px;
       font-size: 14px;
       color: $bloodred;
