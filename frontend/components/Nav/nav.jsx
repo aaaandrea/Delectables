@@ -20,6 +20,10 @@ class Nav extends React.Component {
     hashHistory.push('/signup');
   }
 
+  createRecipe() {
+    hashHistory.push('/recipes/create');
+  }
+
   notLoggedIn() {
     return(
       <div className="header-buttons">
@@ -36,11 +40,12 @@ class Nav extends React.Component {
     );
   }
 
-  loggedIn(currentUser, logout) {
+  loggedIn() {
     return(
       <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.username}!</h2>
-        <button className="header-button" onClick={logout}>Log Out</button>
+        <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
+        <button className="header-button" onClick={this.createRecipe}>Create Recipe</button>
+        <button className="header-button" onClick={this.props.logout}>Log Out</button>
       </hgroup>
     );
   }
@@ -55,7 +60,7 @@ class Nav extends React.Component {
 
         <div className="header-buttons">
           { this.props.currentUser ?
-            this.loggedIn(this.props.currentUser, this.props.logout) :
+            this.loggedIn() :
             this.notLoggedIn() }
 
         </div>

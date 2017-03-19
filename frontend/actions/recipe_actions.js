@@ -13,7 +13,6 @@ export const REMOVE_SEARCHES = 'REMOVE_SEARCHES';
 export const RECEIVE_TAG = 'RECEIVE_TAG';
 export const RECEIVE_TAGS = 'RECEIVE_TAGS';
 
-
 const receiveRecipes = recipes => ({
   type: RECEIVE_RECIPES,
   recipes
@@ -47,12 +46,10 @@ const removeSearches = () => ({
   type: REMOVE_SEARCHES
 });
 
-
-
-const receiveTag = tag => ({
-  type: RECEIVE_TAG,
-  tag
-});
+// const receiveTag = tag => ({
+//   type: RECEIVE_TAG,
+//   tag
+// });
 
 const receiveTags = tags => ({
   type: RECEIVE_TAGS,
@@ -91,11 +88,11 @@ export const updateRecipe = recipe => dispatch => (
             err => dispatch(receiveRecipeErrors(err.responseJSON))
 );
 
+//
+// export const fetchTag = id => dispatch => (
+//   APIUtils.fetchTag(id).then(data => dispatch(receiveTag(data)))
+// );
 
-export const receiveTag = id => dispatch => (
-  APIUtils.receiveTag(id).then(data => dispatch(receiveTag(data)))
-);
-
-export const receiveTags = () => dispatch => (
-  APIUtils.receiveTags().then(data => dispatch(receiveTags(data)))
+export const fetchTagRecipes = () => dispatch => (
+  APIUtils.fetchTagRecipe().then(data => dispatch(receiveTags(data)))
 );

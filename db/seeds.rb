@@ -26,26 +26,6 @@ Tag.create(name: 'Dinner', img: 'http://res.cloudinary.com/dg0cmca7a/image/uploa
 Tag.create(name: 'Appetizers', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489707710/tapas-534200_1920_wha8cy.jpg')
 Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489707903/smoothie-1578240_1920_rhs0gm.jpg')
 
-# Units
-Unit.create(name: 'tsp')
-Unit.create(name: 'tbsp')
-Unit.create(name: 'fl oz')
-Unit.create(name: 'cup(s)')
-Unit.create(name: 'pt')
-Unit.create(name: 'qt')
-Unit.create(name: 'gal')
-Unit.create(name: 'ml')
-Unit.create(name: 'l')
-Unit.create(name: 'lb')
-Unit.create(name: 'oz')
-Unit.create(name: 'mg')
-Unit.create(name: 'g')
-Unit.create(name: 'kg')
-Unit.create(name: 'mm')
-Unit.create(name: 'cm')
-Unit.create(name: 'm')
-Unit.create(name: 'in')
-
 # Ingredients
 Ingredient.create(name: 'parsley')
 

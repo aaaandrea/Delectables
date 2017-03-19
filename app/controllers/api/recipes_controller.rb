@@ -20,7 +20,8 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create!(recipe_params)
-    if @recipe.save
+    @recipe_ingredients = RecipeIngredient.create!(recipe_ingredient_params)
+    if @recipe.save && @recipe_ingredients.save
       render "api/recipes/show/:id"
     else
       render json: @recipe.errors.full_messages, status: 422
@@ -29,7 +30,6 @@ class Api::RecipesController < ApplicationController
 
   def update
     @recipe = Recipe.find(params[:id])
-
     if @recipe.update(recipe_params)
       render "api/recipes/show/:id"
     else
@@ -50,5 +50,9 @@ class Api::RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit(:name, :ingredients, :directions)
+  end
+
+  def recipe_ingredient_params
+    params.require(recipe_ingredients: []).permit(:quantity, :ingredient_name, :unit_id)
   end
 end

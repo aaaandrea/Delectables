@@ -6,24 +6,72 @@ class RecipeForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      name: props.recipe.name,
-      directions: props.recipe.directions,
-      img: props.recipe.img,
-      tag_id: props.recipe.tag_id,
-      user_id: props.recipe.user_id
+      recipe: {
+        name: props.recipe.name,
+        directions: props.recipe.directions,
+        img: props.recipe.img,
+        tag_id: props.recipe.tag_id,
+        user_id: props.recipe.user_id
+      },
+      recipe_ingredients: []
+    };
+  }
+
+  updateRecipeIngredient(index, attribute) {
+    return(e) => {
+      const newState = Object.assign({}, this.state);
+      newState.recipe_ingredients[index][attribute] = e.currentTarget.value;
+      this.setState(newState);
     };
   }
 
   updateAttributes(attribute){
     return (e) => {
-      this.setState({ [attribute]: e.currentTarget.value });
+      this.setState({recipe: { [attribute]: e.currentTarget.value }});
     };
+  }
+
+  handleAddIngredient() {
+    const newState = Object.assign({}, this.state);
+    newState.recipe_ingredients.push({});
+    this.setState(newState);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const recipe = Object.assign({}, this.state);
     this.props.processForm(recipe);
+  }
+
+  renderIngredientInputs() {
+    return this.state.recipe_ingredients.map((ri, idx) => {
+      return (
+        <div>
+          <input
+            name="quantity"
+            onChange={this.updateRecipeIngredient(idx, 'quantity')} />
+          <select>
+            <option value="tsp">tsp</option>
+            <option value="tbsp">tbsp</option>
+            <option value="fl oz">fl oz</option>
+            <option value="cup(s)">cup</option>
+            <option value="pt">pt</option>
+            <option value="qt">qt</option>
+            <option value="gal">gal</option>
+            <option value="ml">ml</option>
+            <option value="l">l</option>
+            <option value="lb">oz</option>
+            <option value="mg">mg</option>
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+            <option value="kg">kg</option>
+            <option value="kg">kg</option>
+            <option value="kg">kg</option>
+            <option value="kg">kg</option>
+          </select>
+        </div>
+      );
+    });
   }
 
   render(){
@@ -48,8 +96,37 @@ class RecipeForm extends React.Component {
             className="recipe-form-attribute"
             type="text"
             placeholder="Recipe Name"
+            value={this.state.recipe.name}
+            onChange={this.updateAttributes('name')}/>
+
+          <input
+            className="recipe-form-attribute"
+            type="textarea"
+            placeholder="Directions"
+            value={this.state.recipe.directions}
+            onChange={this.updateAttributes('directions')}/>
+
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Image Link"
+            value={this.state.recipe.img}
+            onChange={this.updateAttributes('img')}/>
+
+          <input
+            type="hidden"
+            name="user[user_id]"
+            value="">{this.state.id}</input>
+            // fix updating user_id logic
+
+
+          <input
+            className="recipe-form-attribute"
+            type="text"
+            placeholder="Category"
             value={this.state.name}
             onChange={this.updateAttributes('name')}/>
+
 
           <input
             className="recipe-form-attribute"
@@ -63,7 +140,7 @@ class RecipeForm extends React.Component {
             className="recipe-form-attribute"
             type="text"
             placeholder="Quantity"
-            value={this.recipe_ingredient.quantity}
+            value={this.recipe_ingredients.quantity}
             onChange={this.updateAttributes('quantity')}/>
             // add logic for recipe_id/ingredient_id/unit_id updates
             // check update attributes for recipe_ingredients tables
@@ -76,33 +153,6 @@ class RecipeForm extends React.Component {
             value={this.unit.name}
             onChange={this.updateAttributes('name')}/>
           // check updateAttributes for unit table
-
-          <input
-            className="recipe-form-attribute"
-            type="textarea"
-            placeholder="Directions"
-            value={this.recipe.directions}
-            onChange={this.updateAttributes('directions')}/>
-
-          <input
-            className="recipe-form-attribute"
-            type="text"
-            placeholder="Image Link"
-            value={this.recipe.img}
-            onChange={this.updateAttributes('img')}/>
-
-          <input
-            className="recipe-form-attribute"
-            type="text"
-            placeholder="Category"
-            value={this.tag.name}
-            onChange={this.updateAttributes('name')}/>
-
-          <input
-            type="hidden"
-            name="user[user_id]"
-            value="">{this.currentUser.id}</input>
-            // fix updating user_id logic
 
           <button
             className="recipe-form-button">{ (this.props.formType === 'create ') ? 'Create' : 'Update' } Recipe
