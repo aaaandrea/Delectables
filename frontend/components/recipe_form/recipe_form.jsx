@@ -54,7 +54,7 @@ class RecipeForm extends React.Component {
             <option value="tsp">tsp</option>
             <option value="tbsp">tbsp</option>
             <option value="fl oz">fl oz</option>
-            <option value="cup(s)">cup</option>
+            <option value="cup(s)">cup(s)</option>
             <option value="pt">pt</option>
             <option value="qt">qt</option>
             <option value="gal">gal</option>
@@ -64,10 +64,10 @@ class RecipeForm extends React.Component {
             <option value="mg">mg</option>
             <option value="g">g</option>
             <option value="kg">kg</option>
-            <option value="kg">kg</option>
-            <option value="kg">kg</option>
-            <option value="kg">kg</option>
-            <option value="kg">kg</option>
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="in">in</option>
           </select>
         </div>
       );
