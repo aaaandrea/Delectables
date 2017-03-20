@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import merge from 'lodash/merge';
+import IngredientForm from './ingredient_form';
 
 class RecipeForm extends React.Component {
   constructor(props){
@@ -8,6 +9,8 @@ class RecipeForm extends React.Component {
     this.state = {
       recipe: props.recipe
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderAllIngredients = this.renderAllIngredients.bind(this);
   }
 
   updateIngredientAttributes(index, attribute) {
@@ -45,45 +48,13 @@ class RecipeForm extends React.Component {
     this.props.processForm(recipe);
   }
 
-  renderIngredientInputs() {
-    return this.state.recipe.ingredients.map((ri, idx) => {
-      return (
-        <div>
-          <input
-            type="text"
-            name="ingredient"
-            value={this.state.recipe.ingredients.title}
-            onChange={this.updateIngredientAttributes(idx, 'title')} />
-          <input
-            type="text"
-            name="quantity"
-            value={this.state.recipe.ingredients.quantity}
-            onChange={this.updateIngredientAttributes(idx, 'quantity')} />
-          <select
-            name="unit"
-            value={this.state.recipe.ingredients.unit}
-            onChange={this.updateIngredientAttributes(idx, 'unit')}>
-            <option value="tsp">tsp</option>
-            <option value="tbsp">tbsp</option>
-            <option value="fl oz">fl oz</option>
-            <option value="cup(s)">cup(s)</option>
-            <option value="pt">pt</option>
-            <option value="qt">qt</option>
-            <option value="gal">gal</option>
-            <option value="ml">ml</option>
-            <option value="l">l</option>
-            <option value="lb">oz</option>
-            <option value="mg">mg</option>
-            <option value="g">g</option>
-            <option value="kg">kg</option>
-            <option value="mm">mm</option>
-            <option value="cm">cm</option>
-            <option value="m">m</option>
-            <option value="in">in</option>
-          </select>
-        </div>
-      );
-    });
+  renderAllIngredients(){
+    return(
+      <ul>
+        {this.state.recipe.ingredients.map((el) => (
+            <IngredientForm ingredient={el} /> ))}
+      </ul>
+    );
   }
 
   render(){
@@ -111,40 +82,43 @@ class RecipeForm extends React.Component {
             type="text"
             placeholder="Recipe Name"
             value={this.state.recipe.name}
-            onChange={this.udpateRecipeAttributes('name')}/>
+            onChange={this.updateRecipeAttributes('name')}/>
 
           <input
             className="recipe-form-attribute"
             type="textarea"
             placeholder="Directions"
             value={this.state.recipe.directions}
-            onChange={this.udpateRecipeAttributes('directions')}/>
+            onChange={this.updateRecipeAttributes('directions')}/>
 
           <input
             className="recipe-form-attribute"
             type="text"
             placeholder="Image Link"
             value={this.state.recipe.img}
-            onChange={this.udpateRecipeAttributes('img')}/>
+            onChange={this.updateRecipeAttributes('img')}/>
 
-          <input
-            type="hidden"
-            name="user_id"
-            value={this.state.currentUser.id}
-            onChange={this.updateRecipeAttributes('user_id')}/>
+
+          {this.renderAllIngredients()}
+          <IngredientForm />
 
           <button
             className="add-ingredient-button"
-            onClick={this.renderIngredientInputs()}>Add Ingredient
+            onClick={this.renderIngredientInputs}>Add Ingredient
           </button>
 
-          <select>
-            <option
-              className="recipe-form-attribute"
-              placeholder="Category"
-              value={this.state.recipe.tag_id}
-              onChange={this.udpateRecipeAttributes('tag_id')}>
-            </option>
+          <select
+            className="recipe-form-attribute"
+            name="tag_id"
+            placeholder="Category"
+            value={this.state.recipe.tag_id}
+            onChange={this.updateRecipeAttributes('tag_id')}>
+            <option value="">-</option>
+            <option value="1">Breakfast</option>
+            <option value="2">Lunch</option>
+            <option value="3">Dinner</option>
+            <option value="4">Appetizer</option>
+            <option value="5">Drinks</option>
           </select>
 
           <button

@@ -8,7 +8,7 @@ import { hashHistory } from 'react-router';
 const mapStateToProps = ( state, ownProps ) => {
 
   let recipe = {name: "", directions: "", img: "", ingredients: [],
-                tag_id: 1, user_id: state.session.currentUser.id};
+                tag_id: "", user_id: state.session.currentUser.id};
   let formType = ownProps.location.pathname.slice(1);
   let errors = state.errors;
   if (ownProps.params.recipeId) {
@@ -18,17 +18,15 @@ const mapStateToProps = ( state, ownProps ) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  let action = recipe => dispatch(createRecipe(recipe)).then(
-    data => hashHistory.push(`/recipes/${Object.keys(data.recipe.id)}`));
+  // let action = recipe => dispatch(createRecipe(recipe)).then(
+  //   data => hashHistory.push(`/recipes/${Object.keys(data.recipe.id)}`));
 
   let formType = ownProps.location.pathname.slice(1);
 
-  if (formType === 'edit') {
-    action = recipe => dispatch(updateRecipe(recipe));
-  }
+  const action = (formType === 'edit') ? updateRecipe : createRecipe;
 
   return({
-    recipize: action,
+    processForm: recipe => dispatch(action(recipe))
   });
 };
 

@@ -10,7 +10,7 @@
 #
 
 class Tag < ApplicationRecord
-  validates :name, :img, uniqueness: true, presence: true
+  validates :name, :img, presence: true
 
   has_many :recipes
 
