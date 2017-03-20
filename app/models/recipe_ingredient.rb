@@ -6,17 +6,15 @@
 #  quantity      :string
 #  recipe_id     :integer          not null
 #  ingredient_id :integer          not null
-#  unit_id       :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  unit          :string
 #
 
 class RecipeIngredient < ApplicationRecord
-  validates :recipe_id, :ingredient_id, presence: true
+  validates :recipe, :ingredient, presence: true
 
   belongs_to :recipe
   belongs_to :ingredient
-  belongs_to :unit
-
 
 end

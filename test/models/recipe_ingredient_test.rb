@@ -6,9 +6,9 @@
 #  quantity      :string
 #  recipe_id     :integer          not null
 #  ingredient_id :integer          not null
-#  unit_id       :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  unit          :string
 #
 
 require 'test_helper'

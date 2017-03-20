@@ -6,7 +6,7 @@ class Api::RecipesController < ApplicationController
     else
       @recipes = Recipe.where(tag_id: params[:tag_id]).all
     end
-    render json:@recipes
+    render json: @recipes
   end
 
   def show
@@ -20,9 +20,16 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create!(recipe_params)
-    @recipe_ingredients = RecipeIngredient.create!(recipe_ingredient_params)
-    if @recipe.save && @recipe_ingredients.save
-      render "api/recipes/show/:id"
+    @recipe.tag_id = Tag.find_by(recipe_params[:id])
+    @recipe.user_id = current_user.id
+    if @recipe.save
+      params[:recipe][:ingredients].each do |ingredient|
+        ing = Ingredient.find_or_create_by(name: params[name])
+        RecipeIngredient.create(quantity: params[quantity],
+                                unit: params[unit], recipe_id: @recipe.id,
+                                ingredient_id: ing.id)
+      end
+      render "api/recipes/show"
     else
       render json: @recipe.errors.full_messages, status: 422
     end
@@ -31,28 +38,26 @@ class Api::RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
-      render "api/recipes/show/:id"
+      render "api/recipes/show"
     else
-      render json: @recipe.errors.full_messages, status: 422
+      render json: ["Update information is incorrect"], status: 422
     end
   end
 
   def destroy
     @recipe = Recipe.find(params[:id])
     if @recipe.destroy
-      render 'api/recipes/show'
+      render 'api/recipes/index'
     else
-      render json: ["This cannot be deleted"], status: 422
+      render json: ["Recipe cannot be deleted"], status: 422
     end
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :ingredients, :directions)
+    params.require(:recipe).permit(:name, :directions, :tag_name,
+                                   ingredients: [])
   end
 
-  def recipe_ingredient_params
-    params.require(recipe_ingredients: []).permit(:quantity, :ingredient_name, :unit_id)
-  end
 end

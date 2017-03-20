@@ -13,11 +13,14 @@
 #
 
 class Recipe < ApplicationRecord
-  validates :name, :directions, :tag_id, :user_id, presence: true
+  validates :name, :directions, :tag, :user, presence: true
 
   belongs_to :tag
   belongs_to :user
 
   has_many :recipe_ingredients
+  has_many :ingredients, through: :recipe_ingredients
+
+  has_many :comments
 
 end
