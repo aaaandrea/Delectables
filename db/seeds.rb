@@ -27,8 +27,8 @@ Tag.create(name: 'Appetizers', img: 'http://res.cloudinary.com/dg0cmca7a/image/u
 Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489707903/smoothie-1578240_1920_rhs0gm.jpg')
 
 # Ingredients
-Ingredient.create(name: 'parsley')
 
 # Recipes
 Recipe.create(name: 'great food', directions: 'blahblah', img: 'blah', tag_id: 1, user_id: 1)
 Recipe.create(name: 'food', directions: 'blahblah', img: 'blah', tag_id: 2, user_id: 1)
+Recipe.create!(name: 'recipe name', directions: 'do the thing', img: 'image.jpeg', tag_id: '2', user_id: '1')

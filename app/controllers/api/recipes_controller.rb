@@ -1,3 +1,5 @@
+require 'byebug'
+
 class Api::RecipesController < ApplicationController
 
   def index
@@ -20,14 +22,14 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create!(recipe_params)
-    @recipe.tag_id = Tag.find_by(recipe_params[:id])
+    @recipe.tag_id = Tag.find_by(recipe_params[:tag_id])
     @recipe.user_id = current_user.id
     if @recipe.save
-      params[:recipe][:ingredients].each do |ingredient|
-        ing = Ingredient.find_or_create_by(name: params[name])
-        RecipeIngredient.create(quantity: params[quantity],
-                                unit: params[unit], recipe_id: @recipe.id,
-                                ingredient_id: ing.id)
+      ingredient_params.each do |ingredient|
+        Ingredient.create(title: ingredient[title],
+                          quantity: ingredient[quantity],
+                          unit: ingredient[unit],
+                          recipe_id: @recipe.id)
       end
       render "api/recipes/show"
     else
@@ -56,8 +58,11 @@ class Api::RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :directions, :tag_name,
-                                   ingredients: [])
+    params.require(:recipe).permit(:name, :directions)
+  end
+
+  def ingredient_params
+    params.require(:recipe).permit(ingredients: [])
   end
 
 end

@@ -3,19 +3,18 @@
 # Table name: ingredients
 #
 #  id         :integer          not null, primary key
-#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  title      :string
+#  quantity   :string
+#  unit       :string
+#  recipe_id  :integer
 #
 
 class Ingredient < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
+  validates :title, presence: true, uniqueness: true
+  validates :recipe, presence: true
 
-  has_many :recipe_ingredients
-  has_many :recipes, through: :recipe_ingredients
+  belongs_to :recipe
 
-  def self.find_by_credentials(name)
-    ingredient = Ingredient.find_by(name: name)
-    ingredient ? ingredient : nil
-  end
 end

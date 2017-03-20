@@ -51,6 +51,10 @@ class Nav extends React.Component {
   }
 
   render() {
+    const navbuttons = this.props.currentUser ?
+      this.loggedIn() :
+      this.notLoggedIn();
+
     return(
       <nav className="navbar">
 
@@ -59,9 +63,7 @@ class Nav extends React.Component {
         </Link>
 
         <div className="header-buttons">
-          { this.props.currentUser ?
-            this.loggedIn() :
-            this.notLoggedIn() }
+          { navbuttons }
 
         </div>
       </nav>

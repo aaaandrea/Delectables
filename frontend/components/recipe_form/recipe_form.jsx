@@ -50,10 +50,12 @@ class RecipeForm extends React.Component {
       return (
         <div>
           <input
+            type="text"
             name="ingredient"
-            value={this.state.recipe.ingredients.name}
-            onChange={this.updateIngredientAttributes(idx, 'name')} />
+            value={this.state.recipe.ingredients.title}
+            onChange={this.updateIngredientAttributes(idx, 'title')} />
           <input
+            type="text"
             name="quantity"
             value={this.state.recipe.ingredients.quantity}
             onChange={this.updateIngredientAttributes(idx, 'quantity')} />
@@ -132,7 +134,8 @@ class RecipeForm extends React.Component {
             onChange={this.updateRecipeAttributes('user_id')}/>
 
           <button
-            className="add-ingredient-button">Add Ingredient
+            className="add-ingredient-button"
+            onClick={this.renderIngredientInputs()}>Add Ingredient
           </button>
 
           <select>

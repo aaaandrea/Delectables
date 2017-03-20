@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320021203) do
+ActiveRecord::Schema.define(version: 20170320183121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,21 +24,16 @@ ActiveRecord::Schema.define(version: 20170320021203) do
   end
 
   create_table "ingredients", force: :cascade do |t|
-    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_ingredients_on_name", unique: true, using: :btree
-  end
-
-  create_table "recipe_ingredients", force: :cascade do |t|
+    t.string   "title"
     t.string   "quantity"
-    t.integer  "recipe_id",     null: false
-    t.integer  "ingredient_id", null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
     t.string   "unit"
-    t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id", using: :btree
-    t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id", using: :btree
+    t.integer  "recipe_id"
+    t.index ["quantity"], name: "index_ingredients_on_quantity", using: :btree
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id", using: :btree
+    t.index ["title"], name: "index_ingredients_on_title", using: :btree
+    t.index ["unit"], name: "index_ingredients_on_unit", using: :btree
   end
 
   create_table "recipes", force: :cascade do |t|
