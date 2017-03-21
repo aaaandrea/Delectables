@@ -4,7 +4,7 @@ import RecipeReducer from './recipe_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  // recipe: RecipeReducer
+  recipe: RecipeReducer
 });
 
 export default RootReducer;
