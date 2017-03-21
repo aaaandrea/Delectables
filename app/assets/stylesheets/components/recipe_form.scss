@@ -1,0 +1,74 @@
+.recipe-form-container {
+  background-image: url('http://res.cloudinary.com/dg0cmca7a/image/upload/v1489704383/michael-browning-188999_agnvtl.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .recipe-form-setup {
+    border: 2px $peach solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+
+    .recipe-form-title {
+      font-family: 'Baloo Bhaina';
+      color: $mauve;
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    .recipe-form-attributes {
+      color: $light-gray;
+      background-color: rgba(255, 255, 255, 0.9);
+      height: 30px;
+      width: 200px;
+      margin: 5px;
+    }
+
+    .recipe-form-button {
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 200px;
+      margin: 5px;
+    }
+
+    .recipe-form-button:hover {
+      background-color: $peach;
+    }
+
+    .add-ingredient-button {
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 200px;
+      margin: 5px;
+    }
+
+    .add-ingredient-button:hover {
+      background-color: $peach;
+    }
+
+    .recipe-form-image {
+      display: inline-block;
+    }
+
+    .recipe-form-errors {
+      height: 30px;
+      font-size: 14px;
+      color: $bloodred;
+      font-weight: bold;
+    }
+
+  }
+
+}

@@ -21,7 +21,6 @@ class RecipeForm extends React.Component {
   }
 
   updateIngredientAttributes(index, attribute) {
-    console.log(index);
     return((e) => {
       e.preventDefault();
       const newState = Object.assign({}, this.state);
@@ -78,64 +77,65 @@ class RecipeForm extends React.Component {
         <form
           className="recipe-form-container"
           onSubmit={ this.handleSubmit.bind(this) }>
+          <section className="recipe-form-setup">
+            <h2
+              className="recipe-form-title">
+              { this.props.formType === 'edit' ? "Update" : "Create" } Recipe
+            </h2>
 
-          <h2
-            className="recipe-form-title">
-            { this.props.formType === 'create' ? "Create" : "Update" } Recipe
-          </h2>
+            <p
+              className="recipe-form-errors">{this.props.errors}</p>
 
-          <p
-            className="recipe-form-errors">{this.props.errors}</p>
-
-          <input
-            className="recipe-form-attribute"
-            type="text"
-            placeholder="Recipe Name"
-            value={this.state.recipe.name}
-            onChange={this.updateRecipeAttributes('name')}/>
-
-          <input
-            className="recipe-form-attribute"
-            type="textarea"
-            placeholder="Directions"
-            value={this.state.recipe.directions}
-            onChange={this.updateRecipeAttributes('directions')}/>
-
-          <input
-            className="recipe-form-attribute"
-            type="text"
-            placeholder="Image Link"
-            value={this.state.recipe.img}
-            onChange={this.updateRecipeAttributes('img')}/>
+            <input
+              className="recipe-form-attribute"
+              type="text"
+              placeholder="Recipe Name"
+              value={this.state.recipe.name}
+              onChange={this.updateRecipeAttributes('name')}/>
 
 
-          {this.renderAllIngredients()}
+            <select
+              className="recipe-form-selector"
+              name="tag_id"
+              placeholder="Category"
+              value={this.state.recipe.tag_id}
+              onChange={this.updateRecipeAttributes('tag_id')}>
+              <option value="">-</option>
+              <option value="1">Breakfast</option>
+              <option value="2">Lunch</option>
+              <option value="3">Dinner</option>
+              <option value="4">Appetizer</option>
+              <option value="5">Drinks</option>
+            </select>
 
-          <button
-            className="add-ingredient-button"
-            onClick={this.handleAddRecipeIngredient}>
-            Add Ingredient
-          </button>
+            <input
+              className="recipe-form-attribute"
+              type="textarea"
+              placeholder="Directions"
+              value={this.state.recipe.directions}
+              onChange={this.updateRecipeAttributes('directions')}/>
 
-          <select
-            className="recipe-form-attribute"
-            name="tag_id"
-            placeholder="Category"
-            value={this.state.recipe.tag_id}
-            onChange={this.updateRecipeAttributes('tag_id')}>
-            <option value="">-</option>
-            <option value="1">Breakfast</option>
-            <option value="2">Lunch</option>
-            <option value="3">Dinner</option>
-            <option value="4">Appetizer</option>
-            <option value="5">Drinks</option>
-          </select>
+            <input
+              className="recipe-form-attribute"
+              type="text"
+              placeholder="Image Link"
+              value={this.state.recipe.img}
+              onChange={this.updateRecipeAttributes('img')}/>
 
-          <button
-            className="recipe-form-button">
-            { (this.props.formType === 'create ') ? 'Create' : 'Update' } Recipe
-          </button>
 
+            {this.renderAllIngredients()}
+
+            <button
+              className="add-ingredient-button"
+              onClick={this.handleAddRecipeIngredient}>
+              Add Ingredient
+            </button>
+
+            <button
+              className="recipe-form-button">
+              { (this.props.formType === 'edit') ? 'Update' : 'Create' } Recipe
+            </button>
+          </section>
         </form>
     );
   }
