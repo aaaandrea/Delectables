@@ -21,29 +21,20 @@ class IngredientForm extends React.Component {
     }
   }
 
-  updateIngredientAttributes(index, attribute) {
-    return(e) => {
-      e.preventDefault();
-      // const newState = Object.assign({}, this.state);
-      // newState.recipe.ingredients[index][attribute] = e.currentTarget.value;
-      // this.setState(newState);
-    };
-  }
-
   render() {
     return (
         <div>
           <input
             type="text"
             name="ingredient"
-            onChange={this.updateIngredientAttributes('title')} />
+            onChange={this.props.updateIngredientAttributes(this.props.idx, 'title')} />
           <input
             type="text"
             name="quantity"
-            onChange={this.updateIngredientAttributes('quantity')} />
+            onChange={this.props.updateIngredientAttributes(this.props.idx, 'quantity')} />
           <select
             name="unit"
-            onChange={this.updateIngredientAttributes('unit')}>
+            onChange={this.props.updateIngredientAttributes(this.props.idx, 'unit')}>
             <option value="">-</option>
             <option value="tsp">tsp</option>
             <option value="tbsp">tbsp</option>

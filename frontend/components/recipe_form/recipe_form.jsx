@@ -11,20 +11,30 @@ class RecipeForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderAllIngredients = this.renderAllIngredients.bind(this);
+    this.updateRecipeAttributes = this.updateRecipeAttributes.bind(this);
+    this.handleAddRecipeIngredient = this.handleAddRecipeIngredient.bind(this);
+    this.updateIngredientAttributes = this.updateIngredientAttributes.bind(this);
+  }
+
+  componentDidMount() {
+    window.component = this;
   }
 
   updateIngredientAttributes(index, attribute) {
-    return(e) => {
+    console.log(index);
+    return((e) => {
       e.preventDefault();
       const newState = Object.assign({}, this.state);
       newState.recipe.ingredients[index][attribute] = e.currentTarget.value;
       this.setState(newState);
-    };
+    }).bind(this);
   }
 
   updateRecipeAttributes(attribute){
     return (e) => {
-      this.setState({recipe: { [attribute]: e.currentTarget.value }});
+      const newState = Object.assign({}, this.state);
+      newState.recipe[attribute] = e.currentTarget.value;
+      this.setState(newState);
     };
   }
 
@@ -44,15 +54,15 @@ class RecipeForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const recipe = Object.assign({}, this.state);
+    const recipe = Object.assign({}, this.state.recipe);
     this.props.processForm(recipe);
   }
 
   renderAllIngredients(){
     return(
       <ul>
-        {this.state.recipe.ingredients.map((el) => (
-            <IngredientForm ingredient={el} /> ))}
+        {this.state.recipe.ingredients.map((el, idx) => (
+            <IngredientForm ingredient={el} key={idx} idx={idx} updateIngredientAttributes={this.updateIngredientAttributes} /> ))}
       </ul>
     );
   }
@@ -100,11 +110,11 @@ class RecipeForm extends React.Component {
 
 
           {this.renderAllIngredients()}
-          <IngredientForm />
 
           <button
             className="add-ingredient-button"
-            onClick={this.renderIngredientInputs}>Add Ingredient
+            onClick={this.handleAddRecipeIngredient}>
+            Add Ingredient
           </button>
 
           <select

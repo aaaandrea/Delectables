@@ -21,14 +21,15 @@ class Api::RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create!(recipe_params)
-    @recipe.tag_id = Tag.find_by(recipe_params[:tag_id])
+    @recipe = Recipe.new(recipe_params)
+    @recipe.tag = Tag.find(recipe_params[:tag_id])
     @recipe.user_id = current_user.id
     if @recipe.save
-      ingredient_params.each do |ingredient|
-        Ingredient.create(title: ingredient[title],
-                          quantity: ingredient[quantity],
-                          unit: ingredient[unit],
+      ingredients_params[:ingredients].each do |ingredient|
+        debugger
+        Ingredient.create(title: ingredient[:title],
+                          quantity: ingredient[:quantity],
+                          unit: ingredient[:unit],
                           recipe_id: @recipe.id)
       end
       render "api/recipes/show"
@@ -58,11 +59,16 @@ class Api::RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :directions)
+    params.require(:recipe).permit(
+      :name,
+      :directions,
+      :tag_id,
+      :user_id,
+      :img
+    )
   end
 
-  def ingredient_params
-    params.require(:recipe).permit(ingredients: [])
+  def ingredients_params
+    params.require(:recipe).permit(ingredients: [:title, :quantity, :unit])
   end
-
 end
