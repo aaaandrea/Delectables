@@ -1,5 +1,3 @@
-require 'byebug'
-
 class Api::RecipesController < ApplicationController
 
   def index
@@ -26,7 +24,6 @@ class Api::RecipesController < ApplicationController
     @recipe.user_id = current_user.id
     if @recipe.save
       ingredients_params[:ingredients].each do |ingredient|
-        debugger
         Ingredient.create(title: ingredient[:title],
                           quantity: ingredient[:quantity],
                           unit: ingredient[:unit],

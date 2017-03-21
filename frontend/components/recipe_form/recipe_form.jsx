@@ -84,7 +84,7 @@ class RecipeForm extends React.Component {
             </h2>
 
             <p
-              className="recipe-form-errors">{this.props.errors}</p>
+              className="recipe-form-errors">{ this.props.errors }</p>
 
             <input
               className="recipe-form-attribute"

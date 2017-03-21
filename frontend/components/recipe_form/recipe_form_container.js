@@ -22,9 +22,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   //   data => hashHistory.push(`/recipes/${Object.keys(data.recipe.id)}`));
 
   let formType = ownProps.location.pathname.slice(1);
-
   const action = (formType === 'edit') ? updateRecipe : createRecipe;
-
   return({
     processForm: recipe => dispatch(action(recipe))
   });
