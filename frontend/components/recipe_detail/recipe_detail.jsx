@@ -42,14 +42,14 @@ class RecipeDetail extends React.Component {
   }
 
   render(){
-    let div = (<h1>Loading...</h1>);
+    let div = (<label>Loading...</label>);
     if (Object.keys(this.props.recipeDetail).length !== 0) {
       div = (
         <section
           className="recipe-detail-container">
-          <h2
+          <label
             className="recipe-detail-title">{this.props.recipeDetail.name}
-          </h2>
+          </label>
           <label>by {this.props.recipeDetail.user.username}</label>
           <figure>
             <img

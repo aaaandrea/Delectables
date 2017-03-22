@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router';
 import merge from 'lodash/merge';
 import IngredientForm from './ingredient_form';
 
+
 class RecipeForm extends React.Component {
   constructor(props){
     super(props);
@@ -118,6 +119,7 @@ class RecipeForm extends React.Component {
               onChange={this.updateRecipeAttributes('directions')}/>
 
             <label className="recipe-form-label">Image</label>
+
             <input
               className="recipe-form-attribute"
               type="text"
