@@ -10,8 +10,6 @@ const RecipeReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_RECIPES:
       return action.recipes;
-    case RECEIVE_RECIPE:
-      return merge({}, state, action.recipe);
     case RECEIVE_RECIPE_ERRORS:
       const errors = action.errors;
       return merge({}, {
