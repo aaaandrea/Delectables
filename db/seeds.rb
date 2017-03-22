@@ -138,6 +138,7 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
 
                     r1.ingredients.create(title: 'Freshly grated Parmesan and nutmeg for servind')
 
+
 # appetizers
   a1 = Recipe.create(name: 'Artichoke Hummus',
                      img: 'blah',
@@ -177,6 +178,95 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
 
                     a1.ingredients.create(title: 'small squirt of Sriracha (optional)',
                                           quantity: '1')
+
+  a2 = Recipe.create(name: 'Brushetta sl Pomodoro',
+                     img: 'blah',
+                     tag_id: a.id,
+                     user_id: u1.id,
+                     directions: 'Mix together and enjoy')
+
+                     a2.ingredients.create(title: 'Cherry tomatoes, diced')
+
+                      a2.ingredients.create(title: 'Fresh garlic, minced')
+
+                     a2.ingredients.create(title: 'Fresh basil, minced')
+
+                    a2.ingredients.create(title: 'Crushed red pepper (just a pinch)')
+
+                     a2.ingredients.create(title: 'Extra virgin olive oil')
+
+                    a2.ingredients.create(title: 'Balsamic vinegar (just a dash)')
+
+                    a2.ingredients.create(title: 'Pinch of salt')
+
+  a3 = Recipe.create(name: 'Blood orange salad',
+                     img: 'blah',
+                     tag_id: a.id,
+                     user_id: u1.id,
+                     directions: '1. Peel and section oranges with a sharp knife, leaving the pith and membrane behind.
+
+                      2. Arrange orange slices on a plate, drizzle with olive oil, then add a sprinkling of coarse salt.
+
+                      3. Scatter some green olives over the plate and serve.')
+
+                     a3.ingredients.create(title: 'Blood oranges, one per person')
+
+                      a3.ingredients.create(title: 'Green olives, handful per person (preferably oil cured)')
+
+                     a3.ingredients.create(title: 'extra virgin olive oil')
+
+                    a3.ingredients.create(title: 'coarse salt')
+
+  a4 = Recipe.create(name: 'Easy Black Bean Dip',
+                     img: 'blah',
+                     tag_id: a.id,
+                     user_id: u1.id,
+                     directions: '1. Drain beans, reserving 2 tablespoons of liquid, then rinse in a strainer.
+
+                      2. Add beans, reserved liquid, lemon juice and all remaining ingredients to a food processor, mini food processor or blender.
+
+                      3. Process until smooth then taste and adjust seasonings as desired.
+
+                      4. Serve with pita chips, corn chips, or your favorite crackers.
+
+                      Make Chips:
+
+                      1. Preheat oven to 450 degrees.
+
+                      2. Using a basting brush, lightly coat both sides of pita with olive oil.
+
+                      3. If using whole pita, cut each round in half then cut each half into four triangles. You should end up with 16 pieces.
+
+                      4. Line a baking sheet with parchment (optional but makes clean up a breeze) then spread pita pieces out in a single layer. Sprinkle lightly with coarse salt. Turn pieces over and sprinkle the other sides lightly with salt.
+
+                      5. Place baking sheet in oven and set timer for 5 minutes. Bake pita until the edges are brown and crisp, checking the first time at five minutes and then watching closely. Total baking time will be less than 10 minutes.
+
+                      6. Remove from oven and let cool for a few minutes before serving.
+
+                      7. Serve with your favorite dip.')
+
+                     a4.ingredients.create(title: 'whole rounds of whole wheat pita bread (or four halves)',
+                                           quantity: '2')
+
+                     a4.ingredients.create(title: 'extra virgin olive oil')
+
+                    a4.ingredients.create(title: 'coarse salt')
+
+                    a4.ingredients.create(title: 'can black beans',
+                                          quantity: '1')
+
+                    a4.ingredients.create(title: 'liquid from the can of beans',
+                                          quantity: '2',
+                                          unit: 'tbsp')
+
+                    a4.ingredients.create(title: 'onion powder',
+                                          quantity: '1/4',
+                                          unit: 'tsp')
+
+                    a4.ingredients.create(title: 'garlic powder',
+                                          quantity: '1/4',
+                                          unit: 'tsp')
+
 
 # drinks
 dr1 = Recipe.create(name: 'Easy Banana Milkshake',
@@ -264,7 +354,6 @@ dr3 = Recipe.create(name: 'Fresh Strawberry Margaritas for Two',
                    dr3.ingredients.create(title: 'triple sec',
                                           quantity: '1/4',
                                           unit: 'cup(s)')
-
 
 dr4 = Recipe.create(name: 'Strawberry Milk',
                   img: 'blah',
