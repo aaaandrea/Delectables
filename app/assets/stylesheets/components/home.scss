@@ -24,9 +24,11 @@
     flex-wrap: wrap;
 
     .recipe_container {
+      border: 2px $gray solid;
+      padding: 30px;
 
       .recipe-image {
-
+        display: inline-block;
       }
 
       .recipe-name {

@@ -15,6 +15,7 @@ class RecipeForm extends React.Component {
     this.updateRecipeAttributes = this.updateRecipeAttributes.bind(this);
     this.handleAddRecipeIngredient = this.handleAddRecipeIngredient.bind(this);
     this.updateIngredientAttributes = this.updateIngredientAttributes.bind(this);
+    // this.handleCloudinary = this.handleCloudinary.bind(this);
   }
 
   componentDidMount() {
@@ -51,6 +52,41 @@ class RecipeForm extends React.Component {
     newState.tag = {};
     this.newState(newState);
   }
+
+  // handleCloudinary() {
+  //   e.preventDefault();
+  //   cloudinary.openUploadWidget(
+  //     {
+  //       cloud_name: '',
+  //       upload_preset: '',
+  //     },
+  // (errors, image,Info) => {
+  //   if (errors === null) {
+  //     let cloud_url = imageInfo[0].url;
+  //     this.setState({
+  //       image_url: cloud_url
+  //     });
+  //   }
+  // }
+  //   )
+  // }
+
+  // removeImage() {
+  //   this.setState({
+  //     image_url: ""
+  //   });
+  // }
+
+  // handleImageSubmit() {
+  //   if (this.state.image_url === "") {
+  //     return(
+  //       <div>
+  //         <img src={this.state.image_url}/>
+  //         <button onClick={this.removeImage}>Replace Image</button>
+  //       </div>
+  //     );
+  //   }
+  // }
 
   handleSubmit(e) {
     e.preventDefault();

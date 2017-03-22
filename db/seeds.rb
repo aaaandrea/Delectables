@@ -141,7 +141,7 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
 
 # appetizers
   a1 = Recipe.create(name: 'Artichoke Hummus',
-                     img: 'blah',
+                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212029/ff-artichoke-hummus-feature_l29jyr.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
@@ -179,8 +179,8 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
                     a1.ingredients.create(title: 'small squirt of Sriracha (optional)',
                                           quantity: '1')
 
-  a2 = Recipe.create(name: 'Brushetta sl Pomodoro',
-                     img: 'blah',
+  a2 = Recipe.create(name: 'Brushetta al Pomodoro',
+                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212107/maxresdefault_xhyfng.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: 'Mix together and enjoy')
@@ -200,7 +200,7 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
                     a2.ingredients.create(title: 'Pinch of salt')
 
   a3 = Recipe.create(name: 'Blood orange salad',
-                     img: 'blah',
+                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212196/img_1773_c4pjza.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: '1. Peel and section oranges with a sharp knife, leaving the pith and membrane behind.
@@ -218,7 +218,7 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
                     a3.ingredients.create(title: 'coarse salt')
 
   a4 = Recipe.create(name: 'Easy Black Bean Dip',
-                     img: 'blah',
+                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212272/Black-Bean-Dip_ootvwn.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: '1. Drain beans, reserving 2 tablespoons of liquid, then rinse in a strainer.
@@ -270,7 +270,7 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
 
 # drinks
 dr1 = Recipe.create(name: 'Easy Banana Milkshake',
-                   img: 'blah',
+                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490211942/skinny-banana-pudding-milkshakes-1_wyheni.jpg',
                    tag_id: dr.id,
                    user_id: u7.id,
                    directions: 'Blend all ingredients until smooth using a hand blender or traditional blender. Drink immediately.')

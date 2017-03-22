@@ -50,7 +50,8 @@ class RecipeDetail extends React.Component {
           <label
             className="recipe-detail-title">{this.props.recipeDetail.name}
           </label>
-          <label>by {this.props.recipeDetail.user.username}</label>
+          <br></br>
+          <label> by {this.props.recipeDetail.user.username}</label>
           <figure>
             <img
               className="recipe-detail-img"
