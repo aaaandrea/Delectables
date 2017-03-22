@@ -90,7 +90,6 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-
 # dinner
   r1 = Recipe.create(name: 'Chicken Bolognese with Tagliatelle',
                      img: 'blah',
@@ -140,7 +139,147 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
                     r1.ingredients.create(title: 'Freshly grated Parmesan and nutmeg for servind')
 
 # appetizers
+  a1 = Recipe.create(name: 'Artichoke Hummus',
+                     img: 'blah',
+                     tag_id: a.id,
+                     user_id: u1.id,
+                     directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
+
+    Spoon hummus onto a plate, creating a bit of a well in the center. Drizzle with olive oil and garnish with fresh chopped parsley. Serve with your favorite flat bread, crackers, chips, or fresh vegetables.')
+
+                     a1.ingredients.create(title: 'can of garbanzo beans (chickpeas), drained and rinsed',
+                                           quantity: '1')
+
+                      a1.ingredients.create(title: 'marinated artichoke hearts, drained and rinsed',
+                                            quantity: '6',
+                                            unit: 'oz')
+
+                     a1.ingredients.create(title: 'clove garlic, peeled and chopped or pressed',
+                                           quantity: '1')
+
+                    a1.ingredients.create(title: 'tahini (sesame seed paste)',
+                                          quantity: '2',
+                                          unit: 'tbsp')
+
+                     a1.ingredients.create(title: 'juice of half a lemon (or more, to taste)')
+
+                    a1.ingredients.create(title: ' extra virgin olive oil',
+                                          quantity: '2',
+                                          unit: 'tbsp')
+
+                    a1.ingredients.create(title: 'cup water',
+                                          quantity: '1/4',
+                                          unit: 'cup(s)')
+
+                    a1.ingredients.create(title: 'kosher salt (or to taste)',
+                                          quantity: '1/2',
+                                          unit: 'tsp')
+
+                    a1.ingredients.create(title: 'small squirt of Sriracha (optional)',
+                                          quantity: '1')
 
 # drinks
+dr1 = Recipe.create(name: 'Easy Banana Milkshake',
+                   img: 'blah',
+                   tag_id: dr.id,
+                   user_id: u7.id,
+                   directions: 'Blend all ingredients until smooth using a hand blender or traditional blender. Drink immediately.')
 
-r3 = Recipe.create!(name: 'recipe name', tag_id: b.id, user_id: u2.id, directions: 'do the thing', img: 'image.jpeg')
+                   dr1.ingredients.create(title: 'frozen banana',
+                                         quantity: '1')
+
+                    dr1.ingredients.create(title: 'whole milk',
+                                          quantity: '1',
+                                          unit: 'cup(s)')
+
+                   dr1.ingredients.create(title: 'sugar',
+                                         quantity: '1',
+                                         unit: 'tbsp')
+
+                  dr1.ingredients.create(title: 'tahini (sesame seed paste)',
+                                        quantity: '1 - 2',
+                                        unit: 'tbsp')
+
+                   dr1.ingredients.create(title: 'vanilla extract',
+                                          quantity: '1/8',
+                                          unit: 'tsp')
+
+dr2 = Recipe.create(name: 'Fresh Lemonade',
+                   img: 'blah',
+                   tag_id: a.id,
+                   user_id: u1.id,
+                   directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
+
+  Spoon hummus onto a plate, creating a bit of a well in the center. Drizzle with olive oil and garnish with fresh chopped parsley. Serve with your favorite flat bread, crackers, chips, or fresh vegetables.')
+
+                   dr2.ingredients.create(title: 'fresh-squeezed lemon juice',
+                                         quantity: '1',
+                                         unit: 'cup(s)')
+
+                    dr2.ingredients.create(title: 'ice cubes')
+
+                   dr2.ingredients.create(title: 'sugar',
+                                         quantity: '3/4',
+                                         unit: 'cup(s)')
+
+                  dr2.ingredients.create(title: 'water',
+                                        quantity: '4',
+                                        unit: 'cup(s)')
+
+                   dr2.ingredients.create(title: 'lemon slices')
+
+dr3 = Recipe.create(name: 'Fresh Strawberry Margaritas for Two',
+                  img: 'blah',
+                  tag_id: a.id,
+                  user_id: u1.id,
+                  directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
+
+ Spoon hummus onto a plate, creating a bit of a well in the center. Drizzle with olive oil and garnish with fresh chopped parsley. Serve with your favorite flat bread, crackers, chips, or fresh vegetables.')
+
+                  dr3.ingredients.create(title: 'crushed ice',
+                                        quantity: '2',
+                                        unit: 'cup(s)')
+
+                   dr3.ingredients.create(title: 'wedge of lime and coarse salt to rim the glass!')
+
+                  dr3.ingredients.create(title: 'fresh-cut strawberries',
+                                        quantity: '6')
+
+                 dr3.ingredients.create(title: 'shot of lime juice',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                  dr3.ingredients.create(title: 'pinch of salt')
+
+                  dr3.ingredients.create(title: 'pinch of sugar')
+
+                  dr3.ingredients.create(title: 'shot of lime juice',
+                                        quantity: '1/4',
+                                        unit: 'cup(s)')
+
+                   dr3.ingredients.create(title: 'shot of tequila',
+                                          quantity: '3/4',
+                                          unit: 'cup(s)')
+
+                   dr3.ingredients.create(title: 'triple sec',
+                                          quantity: '1/4',
+                                          unit: 'cup(s)')
+
+
+dr4 = Recipe.create(name: 'Strawberry Milk',
+                  img: 'blah',
+                  tag_id: a.id,
+                  user_id: u1.id,
+                  directions: 'Blend all ingredients until smooth using a hand blender or traditional blender.')
+
+                  dr4.ingredients.create(title: 'whole milk',
+                                        quantity: '1',
+                                        unit: 'cup(s)')
+
+                  dr4.ingredients.create(title: 'fresh-cut strawberry halves',
+                                        quantity: '1',
+                                        unit: 'cup(s)')
+
+                 dr4.ingredients.create(title: 'sugar',
+                                       quantity: '1-2',
+                                       unit: 'tbsp')

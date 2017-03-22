@@ -34,6 +34,7 @@ class RecipeDetail extends React.Component {
       return(
         <div>
         <button>Delete</button>
+        <button>Update</button>
         </div>
       );
     }
