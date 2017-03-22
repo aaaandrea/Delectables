@@ -6,6 +6,10 @@ export const selectRecipe = ({ recipe }, recipeId) => {
   return foundRecipe || {};
 };
 
+export const selectIngredients = ({ ingredients }) => {
+  return values(ingredients);
+};
+
 export const selectAllRecipes = ({ recipe }) => {
   return values(recipe);
 };

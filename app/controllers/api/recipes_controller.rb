@@ -38,6 +38,12 @@ class Api::RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
+      ingredients_params[:ingredients].each do |ingredient|
+        Ingredient.create(title: ingredient[:title],
+                          quantity: ingredient[:quantity],
+                          unit: ingredient[:unit],
+                          recipe_id: @recipe.id)
+      end
       render "api/recipes/show"
     else
       render json: ["Update information is incorrect"], status: 422
@@ -46,7 +52,9 @@ class Api::RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id])
+    @ingredients = Ingredient.all.where(recipe_id == @recipe.id)
     if @recipe.destroy
+      @ingredients.destroy
       render 'api/recipes/index'
     else
       render json: ["Recipe cannot be deleted"], status: 422

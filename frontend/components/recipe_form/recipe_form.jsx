@@ -86,6 +86,7 @@ class RecipeForm extends React.Component {
             <p
               className="recipe-form-errors">{ this.props.errors }</p>
 
+            <label className="recipe-form-label">Recipe Name</label>
             <input
               className="recipe-form-attribute"
               type="text"
@@ -93,7 +94,7 @@ class RecipeForm extends React.Component {
               value={this.state.recipe.name}
               onChange={this.updateRecipeAttributes('name')}/>
 
-
+            <label className="recipe-form-label">Category</label>
             <select
               className="recipe-form-selector"
               name="tag_id"
@@ -108,6 +109,7 @@ class RecipeForm extends React.Component {
               <option value="5">Drinks</option>
             </select>
 
+            <label className="recipe-form-label">Directions</label>
             <input
               className="recipe-form-attribute"
               type="textarea"
@@ -115,6 +117,7 @@ class RecipeForm extends React.Component {
               value={this.state.recipe.directions}
               onChange={this.updateRecipeAttributes('directions')}/>
 
+            <label className="recipe-form-label">Image</label>
             <input
               className="recipe-form-attribute"
               type="text"
@@ -122,13 +125,12 @@ class RecipeForm extends React.Component {
               value={this.state.recipe.img}
               onChange={this.updateRecipeAttributes('img')}/>
 
-
             {this.renderAllIngredients()}
 
             <button
               className="add-ingredient-button"
               onClick={this.handleAddRecipeIngredient}>
-              Add Ingredient
+              Add Another Ingredient
             </button>
 
             <button

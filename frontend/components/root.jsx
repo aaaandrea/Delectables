@@ -7,7 +7,7 @@ import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import HomeContainer from './home/home_container';
 import RecipeFormContainer from './recipe_form/recipe_form_container';
-
+import RecipeDetail from './recipe_detail/recipe_detail_container';
 
 const Root = ({ store }) => {
 
@@ -42,6 +42,9 @@ const Root = ({ store }) => {
           path="/recipes/create"
           component={RecipeFormContainer}
           onEnter={_ensureLoggedIn}/>
+        <Route
+          path="/recipes/:recipeId"
+          component={RecipeDetail}/>
       </Route>
     </Router>
   </Provider>

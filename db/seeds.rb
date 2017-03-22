@@ -10,14 +10,19 @@
 # { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Tag.destroy_all
+Recipe.destroy_all
+Ingredient.destroy_all
+
 # Users
-User.create(username: 'Guest', password: 'password')
-User.create(username: 'Andrea', password: 'password')
-User.create(username: 'Guac Amole', password: 'password')
-User.create(username: 'Earth, Wind, & Flour', password: 'password')
-User.create(username: 'Life of Pie', password: 'password')
-User.create(username: 'Grillenium Falcon', password: 'password')
-User.create(username: 'Bean Me Up', password: 'password')
+u1 = User.create(username: 'Guest', password: 'password')
+u2 = User.create(username: 'Andrea', password: 'password')
+u3 = User.create(username: 'Guac Amole', password: 'password')
+u4 = User.create(username: 'Earth, Wind, & Flour', password: 'password')
+u5 = User.create(username: 'Life of Pie', password: 'password')
+u6 = User.create(username: 'Grillenium Falcon', password: 'password')
+u7 = User.create(username: 'Bean Me Up', password: 'password')
 
 # Tags/Categories
 b = Tag.create(name: 'Breakfast', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489706037/StockSnap_OC8WX0E0X3_leigtd.jpg')
@@ -29,8 +34,8 @@ dr = Tag.create(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/
 # Recipes
 r1 = Recipe.create(name: 'Chicken Bolognese with Tagliatelle',
                    img: 'blah',
-                   tag_id: 1,
-                   user_id: 1,
+                   tag_id: b.id,
+                   user_id: u3.id,
                    directions: 'Heat a large skillet over medium-high. Swirl in oil. Add onion, celery, and carrots; season with salt and pepper. Cook, stirring, until softened, 5 to 7 minutes. Add chicken; season with salt and pepper. Cook, breaking into bite-size pieces, until no longer pink, 3 to 4 minutes. Stir in tomato paste; cook 2 minutes. Add wine; boil until almost evaporated, 1 to 2 minutes. Add milk and tomatoes; reduce heat and simmer until thickened, 12 to 15 minutes. Cook pasta in a large pot of salted water. Drain, reserving 1 cup pasta water; return to pot. Add sauce, then pasta water, a little at a time, until sauce evenly coats pasta. Drizzle with oil and top with celery leaves, cheese, and a pinch of nutmeg; serve.')
 
                    r1.ingredients.create(title: 'celery stalk, finely chopped (plus leaves for serving)',
@@ -129,4 +134,4 @@ r2 = Recipe.create(name: 'Roasted Beet and Citrus Salad With Ricotta and Pistach
                                         unit: 'cup(s)')
 
 
-r3 = Recipe.create!(name: 'recipe name', directions: 'do the thing', img: 'image.jpeg', tag_id: '2', user_id: '1')
+r3 = Recipe.create!(name: 'recipe name', tag_id: b.id, user_id: u2.id, directions: 'do the thing', img: 'image.jpeg')
