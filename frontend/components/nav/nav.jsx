@@ -59,7 +59,10 @@ class Nav extends React.Component {
       <nav className="navbar">
 
         <Link to="/" className="header-link">
-        <h1 className="header-title">Delectables</h1>
+        <h1 className="header-title">Delectables
+          <h2 className="sub-header-title">find and upload your favorite recipes</h2>
+        </h1>
+
         </Link>
 
         <div className="header-buttons">

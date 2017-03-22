@@ -4,7 +4,7 @@ import RecipeDetail from './recipe_detail';
 
 const mapStateToProps = (state, ownProps) => {
   let recipeDetail = state.recipeDetail;
-  let user = state.session.currentUser;
+  let user = state.session;
   return {recipeDetail, user};
 };
 

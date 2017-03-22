@@ -37,11 +37,9 @@ class RecipeIndex extends React.Component {
   render(){
     let recipes = this.renderRecipes();
     return(
-      <div className="recipes-background">
         <div className="recipes-container">
           { recipes }
         </div>
-      </div>
     );
   }
 

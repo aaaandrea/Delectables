@@ -1,0 +1,48 @@
+.recipe-detail-container {
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 10px;
+
+  .recipe-detail-title {
+    font-family: 'Baloo Bhaina';
+    color: $mauve;
+    font-size: 24px;
+    padding: 0;
+  }
+  .recipe-detail-img {
+    float: right;
+  }
+
+  .recipe-detail-h3 {
+    font-family: 'Baloo Bhaina';
+  }
+
+  .recipe-dir-container{
+    float: left;
+
+    .recipe-detail-p {
+    }
+  }
+
+  .recipe-ing-container{
+    float: left;
+
+    .recipe-detail-ul {
+      .recipe-detail-list {
+      }
+    }
+  }
+
+  .recipe-detail-button {
+    font-size: 14px;
+    background: $pink-orange;
+    color: $bone;
+    height: 30px;
+    width: 200px;
+    margin: 5px;
+  }
+
+  .recipe-detail-button:hover {
+    background-color: $peach;
+  }
+}

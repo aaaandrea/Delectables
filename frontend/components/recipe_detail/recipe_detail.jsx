@@ -19,22 +19,23 @@ class RecipeDetail extends React.Component {
       return null;
     }
     return(
-      <ul>
+      <ul className="recipe-detail-ul">
         {this.props.recipeDetail.ingredients.map((el, idx) => {
-          return(<li key={idx}>{el.quantity} {el.unit} - {el.title}</li>);
+          return(<li className="recipe-detail-list" key={idx}>{el.quantity} {el.unit} - {el.title}</li>);
         })}
       </ul>
     );
   }
 
   renderDeleteButton() {
-    if (!this.props.user.username) {
+    console.log(this.props.user);
+    if (!this.props.recipeDetail.user.username) {
       return null;
     } else if (this.props.user.id === this.props.recipeDetail.user.id) {
       return(
         <div>
-        <button>Delete</button>
-        <button>Update</button>
+        <button className="recipe-detail-button">Delete</button>
+        <button className="recipe-detail-button">Update</button>
         </div>
       );
     }
@@ -49,17 +50,21 @@ class RecipeDetail extends React.Component {
           <h2
             className="recipe-detail-title">{this.props.recipeDetail.name}
           </h2>
-          <label>{this.props.user.username}</label>
+          <label>by {this.props.recipeDetail.user.username}</label>
           <figure>
             <img
               className="recipe-detail-img"
               src={this.props.recipeDetail.img}
               alt={this.props.recipeDetail.name}/>
           </figure>
-          <h3>Ingredients</h3>
-          {this.renderIngredients()}
-          <h3>Directions</h3>
-          <p>{this.props.recipeDetail.directions}</p>
+          <div className="recipe-ing-container">
+            <h3 className="recipe-detail-h3">Ingredients</h3>
+            {this.renderIngredients()}
+          </div>
+          <div className="recipe-dir-container">
+            <h3 className="recipe-detail-h3">Directions</h3>
+            <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
+          </div>
           {this.renderDeleteButton()}
         </section>
       );
