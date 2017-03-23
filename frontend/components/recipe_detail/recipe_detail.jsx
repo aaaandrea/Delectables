@@ -39,7 +39,7 @@ class RecipeDetail extends React.Component {
   }
 
   renderDeleteButton() {
-    if (!this.props.user.currentUser.username) {
+    if (!this.props.user.currentUser) {
       return null;
     } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
       return(
