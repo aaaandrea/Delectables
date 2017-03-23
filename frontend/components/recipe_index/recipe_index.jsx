@@ -43,7 +43,6 @@ class RecipeIndex extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     let recipes = this.renderRecipes();
     return(
         <ul className="recipes-container">

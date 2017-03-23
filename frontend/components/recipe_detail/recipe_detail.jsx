@@ -73,7 +73,6 @@ class RecipeDetail extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     let div = (<label>Loading...</label>);
     if (Object.keys(this.props.recipeDetail).length !== 0) {
       div = (

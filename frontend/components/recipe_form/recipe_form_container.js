@@ -9,7 +9,6 @@ const mapStateToProps = ( state, ownProps ) => {
   let recipe = {name: "", directions: "", img: "", ingredients: [{}],
                 tag_id: "", user_id: state.session.currentUser.id};
   let formType = ownProps.location.pathname.slice(1);
-  console.log(formType);
   let errors = state.errors;
 
   return({recipe, formType, errors});

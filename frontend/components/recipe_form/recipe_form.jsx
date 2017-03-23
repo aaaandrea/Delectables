@@ -61,10 +61,8 @@ class RecipeForm extends React.Component {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS,
     (errors, imageInfo) => {
-      console.log(errors);
       if (errors === null) {
         const cloudUrl = imageInfo[0].url;
-        console.log(imageInfo);
         this.setState(
           merge({}, this.state, {recipe: { img: cloudUrl }})
         );
@@ -106,7 +104,6 @@ class RecipeForm extends React.Component {
   }
 
   render(){
-    console.log(this.state.recipe);
     let { errors } = this.props;
     if (errors) {
       errors = errors.map( (error, i ) => <li key={i}>{error}</li>);
