@@ -5,13 +5,15 @@ import RecipeIndex from './recipe_index';
 
 const mapStateToProps = (state, ownProps) => {
   return{
-  recipes: selectAllRecipes(state),
+  recipes: selectAllRecipes(state).filter((recipe) => {
+    return recipe;
+  })
   // recipe: selectRecipe(state, ownProps.params.recipeId)
   // tag: ownProps.params.tagTitle,
 };};
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchRecipes: () => dispatch(fetchRecipes()),
+  fetchRecipes: () => dispatch(fetchRecipes())
   // fetchRecipe: () => dispatch(fetchRecipe())
   // fetchTagRecipes: () => dispatch(fetchTagRecipes(ownProps.params.tagTitle))
 });

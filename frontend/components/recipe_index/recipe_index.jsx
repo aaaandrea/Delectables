@@ -23,9 +23,6 @@ class RecipeIndex extends React.Component {
   }
 
   renderImage(recipe){
-    if (recipe.img === "") {
-      return null;
-    }
     return(
       <img
       className="recipe-image"
@@ -33,13 +30,12 @@ class RecipeIndex extends React.Component {
   }
 
   renderRecipes(){
-    console.log(this.props.recipes);
     return(
         this.props.recipes.map( (recipe, idx) => (
           <li key={idx}
             className="recipe-container col col-1-3"
             onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
-            {this.renderImage(recipe)}
+            {(recipe.img === "") ? null : this.renderImage(recipe)}
             <p className="recipe-name">{recipe.name}</p>
           </li>
         ))
@@ -47,6 +43,7 @@ class RecipeIndex extends React.Component {
   }
 
   render(){
+    console.log(this.props);
     let recipes = this.renderRecipes();
     return(
         <ul className="recipes-container">

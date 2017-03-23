@@ -12,7 +12,7 @@ const RecipeReducer = (state = {}, action) => {
       return action.recipes;
     case RECEIVE_RECIPE_ERRORS:
       const errors = action.errors;
-      return merge({}, {
+      return merge({}, state, {
         errors
       });
     case REMOVE_RECIPE:
