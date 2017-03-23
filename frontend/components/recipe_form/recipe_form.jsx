@@ -63,10 +63,10 @@ class RecipeForm extends React.Component {
     (errors, imageInfo) => {
       console.log(errors);
       if (errors === null) {
-        let cloud_url = imageInfo[0].url;
+        const cloudUrl = imageInfo[0].url;
         console.log(imageInfo);
         this.setState(
-          merge({}, this.state, {recipe: { img: cloud_url }})
+          merge({}, this.state, {recipe: { img: cloudUrl }})
         );
       }
     });
