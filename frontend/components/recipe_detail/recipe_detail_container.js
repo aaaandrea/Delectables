@@ -1,9 +1,12 @@
 import { connect } from 'react-redux';
 import { fetchRecipe, deleteRecipe } from '../../actions/recipe_actions';
 import RecipeDetail from './recipe_detail';
+import { merge } from 'lodash';
+
+const defaultRecipe = {user: {}};
 
 const mapStateToProps = (state, ownProps) => {
-  let recipeDetail = state.recipeDetail;
+  let recipeDetail = merge({}, defaultRecipe, state.recipeDetail) || defaultRecipe;
   let user = state.session;
   return {recipeDetail, user};
 };
@@ -15,5 +18,5 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps 
+  mapDispatchToProps
 )(RecipeDetail);

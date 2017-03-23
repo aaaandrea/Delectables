@@ -22,6 +22,16 @@ class RecipeIndex extends React.Component {
     this.props.fetchRecipes();
   }
 
+  renderImage(recipe){
+    if (recipe.img === "") {
+      return null;
+    }
+    return(
+      <img
+      className="recipe-image"
+      src={recipe.img}/>);
+  }
+
   renderRecipes(){
     console.log(this.props.recipes);
     return(
@@ -29,9 +39,7 @@ class RecipeIndex extends React.Component {
           <li key={idx}
             className="recipe-container col col-1-3"
             onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
-            <img
-              className="recipe-image"
-              src={recipe.img}/>
+            {this.renderImage(recipe)}
             <p className="recipe-name">{recipe.name}</p>
           </li>
         ))

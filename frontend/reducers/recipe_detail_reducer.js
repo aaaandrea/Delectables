@@ -10,7 +10,7 @@ const RecipeDetailReducer = (state = {}, action) => {
       return merge({}, state, action.recipe);
     case RECEIVE_RECIPE_ERRORS:
       const errors = action.errors;
-      return merge({}, {
+      return merge({}, state, {
         errors
       });
     default:

@@ -25,6 +25,10 @@ class RecipeDetail extends React.Component {
       .then(data => hashHistory.push('/'));
   }
 
+  addComment() {
+
+  }
+
   renderIngredients() {
     if (!this.props.recipeDetail.ingredients) {
       return null;
@@ -39,16 +43,19 @@ class RecipeDetail extends React.Component {
   }
 
   renderComments() {
-    console.log(this.props.recipeDetail);
     if (!this.props.recipeDetail.comments) {
       return null;
     }
     return(
-      <ul className="recipe-detail-ul-container">
-        {this.props.recipeDetail.comments.map((el, idx) => {
-          return(<li className="recipe-detail-comment" key={idx}>{el.body}</li>);
-        })}
-      </ul>
+      <div className="recipe-comments-container">
+        <label className="recipe-comments-title">Comments</label>
+
+        <ul className="recipe-comments-ul-container">
+          {this.props.recipeDetail.comments.map((el, idx) => {
+            return(<li className="recipe-comment" key={idx}>{el.body}</li>);
+          })}
+        </ul>
+      </div>
     );
   }
 
@@ -66,6 +73,7 @@ class RecipeDetail extends React.Component {
   }
 
   render(){
+    console.log(this.props);
     let div = (<label>Loading...</label>);
     if (Object.keys(this.props.recipeDetail).length !== 0) {
       div = (

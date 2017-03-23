@@ -90,9 +90,8 @@ class RecipeForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const recipe = Object.assign({}, this.state.recipe);
-    this.props.processForm(recipe);
-    hashHistory.push('/');
-    //  .then(resp => hashHistory.push(`/recipes/${resp.id}`));
+    this.props.processForm(recipe)
+     .then(resp => hashHistory.push(`/recipes/${resp.id}`));
   }
 
   renderAllIngredients(){
