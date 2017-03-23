@@ -11,3 +11,8 @@ json.user do
   json.id recipe.user.id
   json.username recipe.user.username
 end
+
+json.comments recipe.comments do |comment|
+  json.id comment.id
+  json.body comment.body
+end

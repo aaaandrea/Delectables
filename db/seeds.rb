@@ -14,6 +14,7 @@ User.destroy_all
 Tag.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
+Comment.destroy_all
 
 # Users
 u1 = User.create(username: 'Guest', password: 'password')
@@ -88,10 +89,10 @@ b1 = Recipe.create(name: 'Bacon and Cheese Quiche',
                                         quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  b1.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                  b1.comments.create(body: 'Needs more olive oil', user_id: u4)
-                  b1.comments.create(body: "I'll be making this one again.", user_id: u2)
-                  b1.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                  b1.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                  b1.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                  b1.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                  b1.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b2 = Recipe.create(name: 'Apricot Cream Scones',
                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241066/apricot-cream-scones_pg3zif.jpg',
@@ -147,11 +148,11 @@ b2 = Recipe.create(name: 'Apricot Cream Scones',
                                       quantity: '1/2',
                                       unit: 'cup(s)')
 
-                b2.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                b2.comments.create(body: 'Needs more olive oil', user_id: u4)
-                b2.comments.create(body: "I'll be making this one again.", user_id: u2)
+                b2.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                b2.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                b2.comments.create(body: "I'll be making this one again.", user_id: u2.id)
 
-                b2.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                b2.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b3 = Recipe.create(name: 'Lemon Pancakes',
                    img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241190/Lemon_Pancakes_3970_ebbndw.jpg',
@@ -207,10 +208,10 @@ b3 = Recipe.create(name: 'Lemon Pancakes',
                                         quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  b3.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                  b3.comments.create(body: 'Needs more olive oil', user_id: u4)
-                  b3.comments.create(body: "I'll be making this one again.", user_id: u2)
-                  b3.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                  b3.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                  b3.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                  b3.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                  b3.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b4 = Recipe.create(name: 'Persimmon Bread',
                    img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241233/5138645664_e79edbe1d3_z_w62hpv.jpg',
@@ -266,10 +267,10 @@ b4 = Recipe.create(name: 'Persimmon Bread',
                                         quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  b4.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                  b4.comments.create(body: 'Needs more olive oil', user_id: u4)
-                  b4.comments.create(body: "I'll be making this one again.", user_id: u2)
-                  b4.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                  b4.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                  b4.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                  b4.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                  b4.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b5 = Recipe.create(name: 'Egg in a Nest',
                img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241311/Egg_in_NestJPG_diebck.jpg',
@@ -325,10 +326,10 @@ b5 = Recipe.create(name: 'Egg in a Nest',
                                     quantity: '1/2',
                                     unit: 'cup(s)')
 
-              b5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-              b5.comments.create(body: 'Needs more olive oil', user_id: u4)
-              b5.comments.create(body: "I'll be making this one again.", user_id: u2)
-              b5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+              b5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+              b5.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+              b5.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+              b5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b6 = Recipe.create(name: 'Pumpkin Doughnuts',
                img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241366/DSC_27051_stqqwn.jpg',
@@ -384,10 +385,10 @@ b6 = Recipe.create(name: 'Pumpkin Doughnuts',
                                     quantity: '1/2',
                                     unit: 'cup(s)')
 
-              b6.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-              b6.comments.create(body: 'Needs more olive oil', user_id: u4)
-              b6.comments.create(body: "I'll be making this one again.", user_id: u2)
-              b6.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+              b6.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+              b6.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+              b6.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+              b6.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b7 = Recipe.create(name: 'French Toast',
                    img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241476/french-toast-recipe_ijevms.jpg',
@@ -443,10 +444,10 @@ b7 = Recipe.create(name: 'French Toast',
                                         quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  b7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                  b7.comments.create(body: 'Needs more olive oil', user_id: u4)
-                  b7.comments.create(body: "I'll be making this one again.", user_id: u2)
-                  b7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                  b7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                  b7.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                  b7.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                  b7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 # lunch
   l1 = Recipe.create(name: 'Roasted Beet and Citrus Salad With Ricotta and Pistachio Vinaigrette',
@@ -503,10 +504,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    l1.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    l1.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    l1.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    l1.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    l1.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    l1.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    l1.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    l1.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l2 = Recipe.create(name: 'Curry Artichoke Rice Salad',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241554/curry-rice-salad-a_dv9jeh.jpg',
@@ -562,10 +563,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    l2.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    l2.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    l2.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    l2.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    l2.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    l2.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    l2.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    l2.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l3 = Recipe.create(name: 'Grilled Corn, Mango and Jicama Salad with Honey Vinaigrette',
                    img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241628/Salad-Creole-green-salad-baby-arugula-and-baby-greens-roast-fennel-naval-and-blood-oranges-candied-cayenne-pecans-goat-cheese-in-creole-mustard-vinaigrette.-Accompanied-a-Cajun-menu_s7yvxb.jpg',
@@ -621,11 +622,11 @@ b7 = Recipe.create(name: 'French Toast',
                                         quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  l3.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                  l3.comments.create(body: 'Needs more olive oil', user_id: u4)
-                  l3.comments.create(body: "I'll be making this one again.", user_id: u2)
+                  l3.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                  l3.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                  l3.comments.create(body: "I'll be making this one again.", user_id: u2.id)
 
-                  l3.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                  l3.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l4 = Recipe.create(name: 'Orange Cranberry Green Salad with Walnuts and Blue Cheese',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241751/green-salad-with-cranberries_ubfres.jpg',
@@ -681,10 +682,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    l4.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    l4.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    l4.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    l4.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    l4.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    l4.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    l4.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    l4.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l5 = Recipe.create(name: 'Spicy Pumpkin Soup with Cilantro Pepita Pesto',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241818/CvEkhpVUAAA5oYG_glmzax.jpg',
@@ -740,10 +741,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    l5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    l5.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    l5.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    l5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    l5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    l5.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    l5.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    l5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l6 = Recipe.create(name: 'Roasted Autumn Vegetable Chowder',
                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241911/cornchowder5_ya37vl.jpg',
@@ -799,10 +800,10 @@ b7 = Recipe.create(name: 'French Toast',
                                       quantity: '1/2',
                                       unit: 'cup(s)')
 
-                l6.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                l6.comments.create(body: 'Needs more olive oil', user_id: u4)
-                l6.comments.create(body: "I'll be making this one again.", user_id: u2)
-                l6.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                l6.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                l6.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                l6.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                l6.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l7 = Recipe.create(name: 'Potato Leek Soup',
                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242014/Skinny-Crockpot-Potato-Leek-Soup_sy8jwh.jpg',
@@ -858,10 +859,10 @@ b7 = Recipe.create(name: 'French Toast',
                                       quantity: '1/2',
                                       unit: 'cup(s)')
 
-                l7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                l7.comments.create(body: 'Needs more olive oil', user_id: u4)
-                l7.comments.create(body: "I'll be making this one again.", user_id: u2)
-                l7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                l7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                l7.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                l7.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                l7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l8 = Recipe.create(name: 'B.L.A.T. Sandwich with Spicy Chipotle Mayonnaise',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242125/BLTA-bacon-lettuce-tomato-sandwich-toast-avocado-5_lkfvzm.jpg',
@@ -917,10 +918,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    l8.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    l8.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    l8.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    l8.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    l8.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    l8.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    l8.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    l8.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 
 # dinner
@@ -971,10 +972,10 @@ b7 = Recipe.create(name: 'French Toast',
 
                     d1.ingredients.create(title: 'Freshly grated Parmesan and nutmeg for servind')
 
-                    d1.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    d1.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    d1.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    d1.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    d1.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    d1.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    d1.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    d1.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d2 = Recipe.create(name: 'Paella with Tomatoes',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242201/paella_ui10c8.jpg',
@@ -1030,10 +1031,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    d2.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    d2.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    d2.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    d2.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    d2.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    d2.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    d2.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    d2.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d3 = Recipe.create(name: 'Spice Rubbed Flank Steak',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242285/1427695310729_cat1dd.jpg',
@@ -1089,10 +1090,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    d3.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    d3.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    d3.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    d3.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    d3.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    d3.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    d3.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    d3.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d4 = Recipe.create(name: 'Horseradish Meatloaf',
                    img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242412/FN_CHARITY-BOYD-MOMS-MEATLOAF_s4x3.jpg.rend.hgtvcom.616.462_wdf4m2.jpg',
@@ -1148,11 +1149,11 @@ b7 = Recipe.create(name: 'French Toast',
                                         quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  d4.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                  d4.comments.create(body: 'Needs more olive oil', user_id: u4)
-                  d4.comments.create(body: "I'll be making this one again.", user_id: u2)
+                  d4.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                  d4.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                  d4.comments.create(body: "I'll be making this one again.", user_id: u2.id)
 
-                  d4.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                  d4.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d5 = Recipe.create(name: 'Macaroni and Cheese with Bacon, Leeks, and Thyme',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242460/MTI1NjQ2NjcwNTk0NjEwNDUw_av3oun.jpg',
@@ -1208,10 +1209,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    d5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    d5.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    d5.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    d5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    d5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    d5.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    d5.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    d5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 
   d7 = Recipe.create(name: 'Tofu in Coconut Sauce with Ginger and Lemongrass',
@@ -1268,10 +1269,10 @@ b7 = Recipe.create(name: 'French Toast',
                                       quantity: '1/2',
                                       unit: 'cup(s)')
 
-                d7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                d7.comments.create(body: 'Needs more olive oil', user_id: u4)
-                d7.comments.create(body: "I'll be making this one again.", user_id: u2)
-                d7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                d7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                d7.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                d7.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                d7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d8 = Recipe.create(name: 'Hearty Spinach and Sausage Soup',
                      img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242706/IMG_1062_gxfozx.jpg',
@@ -1327,10 +1328,10 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/2',
                                           unit: 'cup(s)')
 
-                    d8.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3)
-                    d8.comments.create(body: 'Needs more olive oil', user_id: u4)
-                    d8.comments.create(body: "I'll be making this one again.", user_id: u2)
-                    d8.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6)
+                    d8.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                    d8.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                    d8.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                    d8.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 # appetizers
   a1 = Recipe.create(name: 'Artichoke Hummus',

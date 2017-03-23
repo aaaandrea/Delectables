@@ -38,6 +38,20 @@ class RecipeDetail extends React.Component {
     );
   }
 
+  renderComments() {
+    console.log(this.props.recipeDetail);
+    if (!this.props.recipeDetail.comments) {
+      return null;
+    }
+    return(
+      <ul className="recipe-detail-ul">
+        {this.props.recipeDetail.comments.map((el, idx) => {
+          return(<li className="recipe-detail-comment" key={idx}>{el.body}</li>);
+        })}
+      </ul>
+    );
+  }
+
   renderDeleteButton() {
     if (!this.props.user.currentUser) {
       return null;
@@ -77,6 +91,7 @@ class RecipeDetail extends React.Component {
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
           {this.renderDeleteButton()}
+          {this.renderComments()}
         </section>
       );
     }
