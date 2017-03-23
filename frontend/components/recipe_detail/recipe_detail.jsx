@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, hashHistory, withRouter } from 'react-router';
 import merge from 'lodash/merge';
 
 class RecipeDetail extends React.Component {
@@ -12,6 +12,16 @@ class RecipeDetail extends React.Component {
 
   componentDidMount() {
     this.props.fetchRecipe(this.props.params.recipeId);
+  }
+
+  edit(recipe) {
+    hashHistory.push('/edit');
+    hashHistory.push(`/recipes/${recipe.id}`);
+  }
+
+
+  delete() {
+    hashHistory.push('/delete');
   }
 
   renderIngredients() {
@@ -28,13 +38,15 @@ class RecipeDetail extends React.Component {
   }
 
   renderDeleteButton() {
-    if (!this.props.recipeDetail.user.username) {
+    console.log(this.props.user.currentUser.id);
+    console.log(this.props.recipeDetail.user.id);
+    if (!this.props.user.username) {
       return null;
     } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
       return(
         <div>
-        <button className="recipe-detail-button">Delete</button>
-        <button className="recipe-detail-button">Update</button>
+        <button className="recipe-detail-button" onClick={this.delete}>Delete</button>
+        <button className="recipe-detail-button" onClick={this.edit}>Update</button>
         </div>
       );
     }
@@ -65,7 +77,7 @@ class RecipeDetail extends React.Component {
             <h3 className="recipe-detail-h3">Directions</h3>
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
-          {this.renderDeleteButton()}
+          {this.renderDeleteButton(this.props.recipeDetail)}
         </section>
       );
     }

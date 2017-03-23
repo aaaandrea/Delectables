@@ -22,10 +22,6 @@ class RecipeForm extends React.Component {
     window.component = this;
   }
 
-  edit() {
-    hashHistory.push('/edit');
-  }
-
   create() {
     hashHistory.push('/create');
   }
