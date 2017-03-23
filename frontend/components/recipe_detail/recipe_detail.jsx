@@ -28,10 +28,9 @@ class RecipeDetail extends React.Component {
   }
 
   renderDeleteButton() {
-    console.log(this.props.user);
     if (!this.props.recipeDetail.user.username) {
       return null;
-    } else if (this.props.user.id === this.props.recipeDetail.user.id) {
+    } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
       return(
         <div>
         <button className="recipe-detail-button">Delete</button>

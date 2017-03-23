@@ -25,25 +25,23 @@ class IngredientForm extends React.Component {
     return (
         <div>
           <input
-            className="recipe-form-attribute"
+            className="ing-form-attribute"
             type="text"
             name="ingredient"
             placeholder="Ingredient Name"
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'title')} />
           <input
-            className="recipe-form-attribute"
+            className="ing-form-attribute"
             type="text"
             name="quantity"
             placeholder="Ingredient Qty"
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'quantity')} />
 
-          <label className="recipe-form-selector">Units</label>
           <select
-            className="recipe-form-attribute"
+            className="recipe-form-units"
             name="unit"
             placeholder="Units"
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'unit')}>
-            <option value="">-</option>
             <option value="tsp">tsp</option>
             <option value="tbsp">tbsp</option>
             <option value="fl oz">fl oz</option>

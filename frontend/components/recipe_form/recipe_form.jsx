@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, hashHistory, withRouter } from 'react-router';
 import merge from 'lodash/merge';
 import IngredientForm from './ingredient_form';
 
@@ -15,11 +15,19 @@ class RecipeForm extends React.Component {
     this.updateRecipeAttributes = this.updateRecipeAttributes.bind(this);
     this.handleAddRecipeIngredient = this.handleAddRecipeIngredient.bind(this);
     this.updateIngredientAttributes = this.updateIngredientAttributes.bind(this);
-    // this.handleCloudinary = this.handleCloudinary.bind(this);
+    this.handleCloudinary = this.handleCloudinary.bind(this);
   }
 
   componentDidMount() {
     window.component = this;
+  }
+
+  edit() {
+    hashHistory.push('/edit');
+  }
+
+  create() {
+    hashHistory.push('/create');
   }
 
   updateIngredientAttributes(index, attribute) {
@@ -53,40 +61,35 @@ class RecipeForm extends React.Component {
     this.newState(newState);
   }
 
-  // handleCloudinary() {
-  //   e.preventDefault();
-  //   cloudinary.openUploadWidget(
-  //     {
-  //       cloud_name: '',
-  //       upload_preset: '',
-  //     },
-  // (errors, image,Info) => {
-  //   if (errors === null) {
-  //     let cloud_url = imageInfo[0].url;
-  //     this.setState({
-  //       image_url: cloud_url
-  //     });
-  //   }
-  // }
-  //   )
-  // }
+  handleCloudinary(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS),
+    (errors, imageInfo) => {
+      if (errors === null) {
+        let cloud_url = imageInfo[0].url;
+        this.setState({
+          image_url: cloud_url
+        });
+      }
+    };
+  }
 
-  // removeImage() {
-  //   this.setState({
-  //     image_url: ""
-  //   });
-  // }
+  removeImage() {
+    this.setState({
+      image_url: ""
+    });
+  }
 
-  // handleImageSubmit() {
-  //   if (this.state.image_url === "") {
-  //     return(
-  //       <div>
-  //         <img src={this.state.image_url}/>
-  //         <button onClick={this.removeImage}>Replace Image</button>
-  //       </div>
-  //     );
-  //   }
-  // }
+  handleImageSubmit() {
+    if (this.state.img === "") {
+      return(
+        <div>
+          <img src={this.state.img}/>
+          <button onClick={this.removeImage}>Replace Image</button>
+        </div>
+      );
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -158,18 +161,22 @@ class RecipeForm extends React.Component {
 
             <input
               className="recipe-form-attribute"
-              type="text"
+              // type="text"
               placeholder="Image Link"
               value={this.state.recipe.img}
               onChange={this.updateRecipeAttributes('img')}/>
 
-            {this.renderAllIngredients()}
 
-            <button
-              className="add-ingredient-button"
-              onClick={this.handleAddRecipeIngredient}>
-              Add Another Ingredient
-            </button>
+            <div className="ing-form-container">
+              {this.renderAllIngredients()}
+              <button
+                className="add-ingredient-button"
+                onClick={this.handleAddRecipeIngredient}>
+                Add Another Ingredient
+              </button>
+            </div>
+
+            <button onClick={this.handleCloudinary}>Upload Image</button>
 
             <button
               className="recipe-form-button">

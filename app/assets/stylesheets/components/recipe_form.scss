@@ -12,10 +12,10 @@
     flex-direction: column;
     justify-content: center;
     background: rgba(255, 255, 255, 0.7);
-    width: 300px;
-    height: 400px;
+    width: 400px;
     text-align: center;
     margin: 0 auto;
+    padding: 20px;
 
     .recipe-form-title {
       font-family: 'Baloo Bhaina';
@@ -24,12 +24,25 @@
       line-height: 1;
     }
 
-    .recipe-form-attributes {
+    .recipe-form-label {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .recipe-form-attribute {
+      font-weight: bold;
       color: $light-gray;
-      background-color: rgba(255, 255, 255, 0.9);
-      height: 30px;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 5px auto;
+      padding: 2px;
       width: 200px;
-      margin: 10px;
+    }
+
+    .recipe-form-selector {
+      max-width: 70%;
+      min-width: 50px;
+      margin: 0 auto;
     }
 
     .recipe-form-button {
@@ -38,19 +51,38 @@
       color: $bone;
       height: 30px;
       width: 200px;
-      margin: 5px;
+      margin: 5px auto;
     }
 
     .recipe-form-button:hover {
       background-color: $peach;
     }
 
+    .ing-form-container {
+      padding-top: 20px;
+      margin-bottom: 20px;
+
+      .ing-form-attribute {
+        font-weight: bold;
+        color: $light-gray;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 5px auto;
+        padding: 2px;
+        width: 100px;
+      }
+    }
+    .recipe-form-units option {
+      -webkit-appearance: none;
+      color: $gray;
+    }
+
     .add-ingredient-button {
-      font-size: 14px;
+      float: right;
+      font-size: 10px;
       background: $pink-orange;
       color: $bone;
       height: 30px;
-      width: 200px;
+      width: 130px;
       margin: 5px;
     }
 

@@ -20,26 +20,24 @@ class RecipeIndex extends React.Component {
 
   renderRecipes(){
     return(
-      <div>
-        {this.props.recipes.map( (recipe, idx) => (
-          <div key={recipe.id} className="recipe-container">
+        this.props.recipes.map( (recipe, idx) => (
+          <li key={recipe.id} className="recipe-container col col-1-3">
             <img
-              className = "recipe-image"
+              className="recipe-image"
               src={recipe.img}
               onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}/>
             <p className="recipe-name">{recipe.name}</p>
-          </div>
-        ))}
-      </div>
+          </li>
+        ))
     );
   }
 
   render(){
     let recipes = this.renderRecipes();
     return(
-        <div className="recipes-container">
+        <ul className="recipes-container">
           { recipes }
-        </div>
+        </ul>
     );
   }
 

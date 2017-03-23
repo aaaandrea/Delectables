@@ -8,14 +8,12 @@
   flex-direction: column;
   padding: 10px;
 
-  .home-nav {
-
-  }
-
   .home-img {
     position: static;
-    height: auto;;
+    max-height: 500px;
+    height: auto;
     width: 100%;
+    margin-bottom: 5px;
   }
 
   .recipes-container {
@@ -23,9 +21,11 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    .recipe_container {
-      border: 2px $gray solid;
-      padding: 30px;
+    .recipe-container {
+      max-width: 300px;
+      border: 1px $light-gray solid;
+      margin: 2px;
+      padding: 5px;
 
       .recipe-image {
         display: inline-block;

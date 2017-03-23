@@ -22,11 +22,13 @@ nav {
 
 .header-link {
   flex-direction: column;
-  padding-left: 4px;
+  padding: 10px;
 
   .header-title {
     font-size: 60px;
     font-family: 'Baloo Bhaina';
+    display: block;
+    line-height: 1;
   }
 
   .sub-header-title {

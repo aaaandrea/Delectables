@@ -61,7 +61,6 @@ class Nav extends React.Component {
         <Link to="/" className="header-link">
 
           <label className="header-title">Delectables </label>
-          <br></br>
           <label className="sub-header-title">find and upload your favorite recipes</label>
 
         </Link>
