@@ -9,9 +9,22 @@ export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
 export const REMOVE_SEARCHES = 'REMOVE_SEARCHES';
 
-
 export const RECEIVE_TAG = 'RECEIVE_TAG';
 export const RECEIVE_TAGS = 'RECEIVE_TAGS';
+
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
+
+const receiveComment = comment => ({
+  type: RECEIVE_COMMENT,
+  comment
+});
+
+const receiveCommentErrors = errors => ({
+  type: RECEIVE_COMMENT_ERRORS,
+  errors
+});
 
 const receiveRecipes = recipes => ({
   type: RECEIVE_RECIPES,
@@ -21,6 +34,11 @@ const receiveRecipes = recipes => ({
 const receiveRecipe = recipe => ({
   type: RECEIVE_RECIPE,
   recipe
+});
+
+const removeComment = id => ({
+  type: REMOVE_COMMENT,
+  id
 });
 
 const receiveRecipeErrors = errors => ({
@@ -56,7 +74,15 @@ const receiveTags = tags => ({
   tags
 });
 
+export const createComment = comment => dispatch => (
+  APIUtils.createComment(comment).then(data => dispatch(receiveComment(data)),
+            err => dispatch(receiveCommentErrors(err.responseJSON)))
+);
 
+export const deleteComment = id => dispatch => (
+  APIUtils.deleteComment(id).then(() => dispatch(removeComment(id)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
+);
 
 export const createRecipe = recipe => dispatch => (
   APIUtils.createRecipe(recipe).then(data => dispatch(receiveRecipe(data)),

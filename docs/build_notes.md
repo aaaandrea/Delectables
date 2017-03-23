@@ -29,4 +29,16 @@
   - Option 1: Place ingredients as a text field column in the Recipe table and iterate over it when new ingredients are entered into the form to display a bulleted list.
     - Potential Issues: formatting depending on how a user inputs text, also with quantity/units
   - Option 2: Have 4 tables: a) Recipes b) Ingredients c) Units d) RecipeIngredients. Thus when a user inputs they can select units from a dropdown, they can still store ingredients as a string, and just tab into the next box.
-    - Potential Issues: possibility for duplicate ingredients given the users can type in ingredients differently. 
+    - Potential Issues: possibility for duplicate ingredients given the users can type in ingredients differently.
+
+
+
+center index
+add on hover to delectables/icon AND each recipe container in index
+add light opacity to recipe container when hover
+
+
+production readme:
+add image of index
+add code snippet of promises with description
+searching : add code snippet of filtering

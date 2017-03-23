@@ -26,7 +26,28 @@ class RecipeDetail extends React.Component {
   }
 
   addComment() {
+    this.props.createComment(this.props.comment.id);
+  }
 
+  removeComment() {
+    this.props.deleteComment(this.props.comment.id);
+  }
+
+  renderCommentBox() {
+    if (!this.props.user.currentUser) {
+      return null;
+    } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
+      return(
+        <div className="recipe-comment-create-container">
+          <input
+            className="recipe-comment-body"
+            type="text"
+            value=""/>
+          <button className="recipe-comment-button" onClick={this.addComment}>Create</button>
+          <button className="recipe-comment-button" onClick={this.removeComment}>Delete</button>
+        </div>
+      );
+    }
   }
 
   renderIngredients() {
@@ -98,7 +119,9 @@ class RecipeDetail extends React.Component {
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
           {this.renderDeleteButton()}
+          {this.renderCommentBox()}
           {this.renderComments()}
+
         </section>
       );
     }

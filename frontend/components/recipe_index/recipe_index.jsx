@@ -45,9 +45,11 @@ class RecipeIndex extends React.Component {
   render(){
     let recipes = this.renderRecipes();
     return(
+      <section className="recipes-wrapper">
         <ul className="recipes-container">
           { recipes }
         </ul>
+      </section>
     );
   }
 
