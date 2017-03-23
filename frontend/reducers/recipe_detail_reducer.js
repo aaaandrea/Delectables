@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 import {
-  RECEIVE_RECIPE, REMOVE_RECIPE, RECEIVE_RECIPE_ERRORS
+  RECEIVE_RECIPE, RECEIVE_RECIPE_ERRORS
   } from '../actions/recipe_actions';
 
 const RecipeDetailReducer = (state = {}, action) => {
@@ -13,10 +13,6 @@ const RecipeDetailReducer = (state = {}, action) => {
       return merge({}, {
         errors
       });
-    case REMOVE_RECIPE:
-      const newState = merge({}, state);
-      delete newState[Object.keys(action.recipe)[0]];
-      return newState;
     default:
       return state;
   }

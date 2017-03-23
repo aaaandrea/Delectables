@@ -56,7 +56,6 @@ class Api::RecipesController < ApplicationController
     # debugger
     if @recipe.destroy
       # @ingredients.destroy
-      render 'api/recipes/index'
     else
       render json: ["Recipe cannot be deleted"], status: 422
     end

@@ -16,8 +16,14 @@ const RecipeReducer = (state = {}, action) => {
         errors
       });
     case REMOVE_RECIPE:
-      const newState = merge({}, state);
-      delete newState[Object.keys(action.recipe)[0]];
+      let newState = merge([], state);
+      let index;
+      state.forEach((el, idx) => {
+        if (el.id === action.id) {
+          index = idx;
+        }
+      });
+      newState = newState.splice(index, 1);
       return newState;
     default:
       return state;

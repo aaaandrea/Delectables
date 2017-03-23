@@ -28,9 +28,9 @@ const receiveRecipeErrors = errors => ({
   errors
 });
 
-const removeRecipe = recipe => ({
+const removeRecipe = id => ({
   type: REMOVE_RECIPE,
-  recipe
+  id
 });
 
 export const clearErrors = () => ({
@@ -64,7 +64,7 @@ export const createRecipe = recipe => dispatch => (
 );
 
 export const deleteRecipe = id => dispatch => (
-  APIUtils.deleteRecipe(id).then(data => dispatch(removeRecipe(data)),
+  APIUtils.deleteRecipe(id).then(() => dispatch(removeRecipe(id)),
             err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
