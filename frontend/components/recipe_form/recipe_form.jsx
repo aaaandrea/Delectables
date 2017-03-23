@@ -118,7 +118,7 @@ class RecipeForm extends React.Component {
           <section className="recipe-form-setup">
             <h2
               className="recipe-form-title">
-              { this.props.formType === 'edit' ? "Update" : "Create" } Recipe
+              { (this.props.params.recipeId) ? "Update" : "Create" } Recipe
             </h2>
 
             <p
@@ -178,7 +178,7 @@ class RecipeForm extends React.Component {
 
             <button
               className="recipe-form-button">
-              { (this.props.formType === 'edit') ? 'Update' : 'Create' } Recipe
+              { (this.props.params.recipeId) ? 'Update' : 'Create' } Recipe
             </button>
           </section>
         </form>

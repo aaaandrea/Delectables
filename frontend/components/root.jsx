@@ -49,10 +49,6 @@ const Root = ({ store }) => {
           path="/recipes/:recipeId/edit"
           component={RecipeFormContainer}
           onEnter={_ensureLoggedIn}/>
-        <Route
-          path="/recipes/delete"
-          component={RecipeFormContainer}
-          onEnter={_ensureLoggedIn}/>
       </Route>
     </Router>
   </Provider>

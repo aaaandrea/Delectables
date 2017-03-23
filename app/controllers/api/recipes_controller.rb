@@ -52,9 +52,10 @@ class Api::RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id])
-    @ingredients = Ingredient.all.where(recipe_id == @recipe.id)
+    # @ingredients = Ingredient.all.where(recipe_id == @recipe.id)
+    # debugger
     if @recipe.destroy
-      @ingredients.destroy
+      # @ingredients.destroy
       render 'api/recipes/index'
     else
       render json: ["Recipe cannot be deleted"], status: 422

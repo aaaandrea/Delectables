@@ -21,8 +21,8 @@ class RecipeDetail extends React.Component {
   }
 
   delete() {
-    this.props.deleteRecipe(this.props.recipeDetail.id);
-    hashHistory.push('/');
+    this.props.deleteRecipe(this.props.recipeDetail.id)
+      .then(data => hashHistory.push('/'));
   }
 
   renderIngredients() {

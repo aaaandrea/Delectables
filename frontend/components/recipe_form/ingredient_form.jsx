@@ -21,6 +21,35 @@ class IngredientForm extends React.Component {
     }
   }
 
+
+  renderUnits() {
+    const unitArray = [
+      '',
+      'tsp',
+      'tbsp',
+      'fl oz',
+      'cup(s)',
+      'pt',
+      'qt',
+      'gal',
+      'ml',
+      'l',
+      'lb',
+      'mg',
+      'g',
+      'kg',
+      'mm',
+      'cm',
+      'm',
+      'in'
+    ];
+
+    return unitArray.map((el, idx) => (
+      <option value={el} key={idx}>{el}</option>
+    ));
+
+  }
+
   render() {
     return (
         <div>
@@ -29,36 +58,23 @@ class IngredientForm extends React.Component {
             type="text"
             name="ingredient"
             placeholder="Ingredient Name"
+            value={this.state.title || ''}
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'title')} />
           <input
             className="ing-form-attribute"
             type="text"
             name="quantity"
             placeholder="Ingredient Qty"
+            value={this.state.quantity || ''}
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'quantity')} />
 
           <select
             className="recipe-form-units"
             name="unit"
             placeholder="Units"
+            defaultValue={this.state.unit}
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'unit')}>
-            <option value="tsp">tsp</option>
-            <option value="tbsp">tbsp</option>
-            <option value="fl oz">fl oz</option>
-            <option value="cup(s)">cup(s)</option>
-            <option value="pt">pt</option>
-            <option value="qt">qt</option>
-            <option value="gal">gal</option>
-            <option value="ml">ml</option>
-            <option value="l">l</option>
-            <option value="lb">oz</option>
-            <option value="mg">mg</option>
-            <option value="g">g</option>
-            <option value="kg">kg</option>
-            <option value="mm">mm</option>
-            <option value="cm">cm</option>
-            <option value="m">m</option>
-            <option value="in">in</option>
+            {this.renderUnits()}
           </select>
         </div>
     );
