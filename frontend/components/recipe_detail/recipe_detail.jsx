@@ -8,20 +8,21 @@ class RecipeDetail extends React.Component {
     this.state = {
       recipe: props.recipe
     };
+    this.edit = this.edit.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchRecipe(this.props.params.recipeId);
   }
 
-  edit(recipe) {
-    hashHistory.push('/edit');
-    hashHistory.push(`/recipes/${recipe.id}`);
+  edit() {
+    hashHistory.push(`/recipes/${this.props.recipeDetail.id}/edit`);
   }
 
-
   delete() {
-    hashHistory.push('/delete');
+    this.props.deleteRecipe(this.props.recipeDetail.id);
+    hashHistory.push('/');
   }
 
   renderIngredients() {
@@ -38,9 +39,7 @@ class RecipeDetail extends React.Component {
   }
 
   renderDeleteButton() {
-    console.log(this.props.user.currentUser.id);
-    console.log(this.props.recipeDetail.user.id);
-    if (!this.props.user.username) {
+    if (!this.props.user.currentUser.username) {
       return null;
     } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
       return(
@@ -77,7 +76,7 @@ class RecipeDetail extends React.Component {
             <h3 className="recipe-detail-h3">Directions</h3>
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
-          {this.renderDeleteButton(this.props.recipeDetail)}
+          {this.renderDeleteButton()}
         </section>
       );
     }

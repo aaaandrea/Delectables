@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchRecipe: id => dispatch(fetchRecipe(id))
+  fetchRecipe: id => dispatch(fetchRecipe(id)),
+  deleteRecipe: id => dispatch(deleteRecipe(id))
 });
 
 export default connect(

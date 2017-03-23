@@ -19,11 +19,11 @@ class RecipeForm extends React.Component {
   }
 
   componentDidMount() {
-    window.component = this;
-  }
-
-  create() {
-    hashHistory.push('/create');
+    const boundSetState = this.setState.bind(this);
+    this.props.fetchRecipe(this.props.params.recipeId)
+      .then(({ recipe }) => {
+        boundSetState({ recipe });
+      });
   }
 
   updateIngredientAttributes(index, attribute) {
@@ -91,6 +91,8 @@ class RecipeForm extends React.Component {
     e.preventDefault();
     const recipe = Object.assign({}, this.state.recipe);
     this.props.processForm(recipe);
+    hashHistory.push('/');
+    //  .then(resp => hashHistory.push(`/recipes/${resp.id}`));
   }
 
   renderAllIngredients(){

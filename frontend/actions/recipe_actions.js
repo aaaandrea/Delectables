@@ -59,33 +59,33 @@ const receiveTags = tags => ({
 
 
 export const createRecipe = recipe => dispatch => (
-  APIUtils.createRecipe(recipe).then(data => dispatch(receiveRecipe(data))),
-            err => dispatch(receiveRecipeErrors(err.responseJSON))
+  APIUtils.createRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 export const deleteRecipe = id => dispatch => (
-  APIUtils.deleteRecipe(id).then(data => dispatch(removeRecipe(data))),
-            err => dispatch(receiveRecipeErrors(err.responseJSON))
+  APIUtils.deleteRecipe(id).then(data => dispatch(removeRecipe(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 export const fetchRecipes = () => dispatch => (
-  APIUtils.fetchRecipes().then(data => dispatch(receiveRecipes(data))),
-            err => dispatch(receiveRecipeErrors(err.responseJSON))
+  APIUtils.fetchRecipes().then(data => dispatch(receiveRecipes(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 export const fetchRecipe = id => dispatch => (
-  APIUtils.fetchRecipe(id).then(data => dispatch(receiveRecipe(data))),
-  err => dispatch(receiveRecipeErrors(err.responseJSON))
+  APIUtils.fetchRecipe(id).then(data => dispatch(receiveRecipe(data)),
+  err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 export const searchRecipes = recipes => dispatch => (
-  APIUtils.searchRecipes(recipes).then(data => dispatch(receiveSearch(data))),
-            err => dispatch(receiveRecipeErrors(err.responseJSON))
+  APIUtils.searchRecipes(recipes).then(data => dispatch(receiveSearch(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 export const updateRecipe = recipe => dispatch => (
-  APIUtils.updateRecipe(recipe).then(data => dispatch(receiveRecipe(data))),
-            err => dispatch(receiveRecipeErrors(err.responseJSON))
+  APIUtils.updateRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 //
