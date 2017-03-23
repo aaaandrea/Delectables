@@ -58,14 +58,15 @@ class IngredientForm extends React.Component {
             type="text"
             name="ingredient"
             placeholder="Ingredient Name"
-            value={this.state.title || ''}
+            value={this.state.title}
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'title')} />
+
           <input
             className="ing-form-attribute"
             type="text"
             name="quantity"
             placeholder="Ingredient Qty"
-            value={this.state.quantity || ''}
+            value={this.state.quantity}
             onChange={this.props.updateIngredientAttributes(this.props.idx, 'quantity')} />
 
           <select

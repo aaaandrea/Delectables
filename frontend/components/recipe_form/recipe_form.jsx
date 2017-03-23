@@ -63,16 +63,16 @@ class RecipeForm extends React.Component {
     (errors, imageInfo) => {
       if (errors === null) {
         let cloud_url = imageInfo[0].url;
-        this.setState({
-          image_url: cloud_url
-        });
+        this.setState({recipe: {
+          img: cloud_url
+        }});
       }
     };
   }
 
   removeImage() {
     this.setState({
-      image_url: ""
+      img: ""
     });
   }
 
@@ -155,16 +155,6 @@ class RecipeForm extends React.Component {
               value={this.state.recipe.directions}
               onChange={this.updateRecipeAttributes('directions')}/>
 
-            <label className="recipe-form-label">Image</label>
-
-            <input
-              className="recipe-form-attribute"
-              // type="text"
-              placeholder="Image Link"
-              value={this.state.recipe.img}
-              onChange={this.updateRecipeAttributes('img')}/>
-
-
             <div className="ing-form-container">
               {this.renderAllIngredients()}
               <button
@@ -174,9 +164,12 @@ class RecipeForm extends React.Component {
               </button>
             </div>
 
-            <button onClick={this.handleCloudinary}>Upload Image</button>
+            <button
+              className="upload-img-button"
+              onClick={this.handleCloudinary}>Upload Image</button>
 
             <button
+              type="submit"
               className="recipe-form-button">
               { (this.props.params.recipeId) ? 'Update' : 'Create' } Recipe
             </button>

@@ -8,7 +8,7 @@ class RecipeIndex extends React.Component {
     this.state = {recipes: []};
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchRecipes();
     // this.props.fetchRecipe();
     // this.props.fetchTagRecipes().then(() => (
@@ -18,10 +18,15 @@ class RecipeIndex extends React.Component {
     // ));
   }
 
+  componentDidMount() {
+    this.props.fetchRecipes();
+  }
+
   renderRecipes(){
+    console.log(this.props.recipes);
     return(
         this.props.recipes.map( (recipe, idx) => (
-          <li key={recipe.id}
+          <li key={idx}
             className="recipe-container col col-1-3"
             onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
             <img

@@ -38,6 +38,14 @@
       width: 200px;
     }
 
+    .recipe-form-dir {
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.5);
+      margin: 5px auto;
+      padding: 2px;
+      width: 200px;
+    }
+
     .recipe-form-selector {
       max-width: 70%;
       min-width: 50px;
@@ -57,6 +65,29 @@
       background-color: $peach;
     }
 
+    .upload-img-button {
+      font-size: 10px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 130px;
+      margin: 5px auto;
+    }
+
+    .add-ingredient-button {
+      float: right;
+      font-size: 10px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 130px;
+      margin: 5px;
+    }
+
+    .add-ingredient-button:hover {
+      background-color: $peach;
+    }
+
     .ing-form-container {
       padding-top: 20px;
       margin-bottom: 20px;
@@ -72,20 +103,6 @@
     .recipe-form-units option {
       -webkit-appearance: none;
       color: $gray;
-    }
-
-    .add-ingredient-button {
-      float: right;
-      font-size: 10px;
-      background: $pink-orange;
-      color: $bone;
-      height: 30px;
-      width: 130px;
-      margin: 5px;
-    }
-
-    .add-ingredient-button:hover {
-      background-color: $peach;
     }
 
     .recipe-form-image {
