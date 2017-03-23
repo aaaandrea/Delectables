@@ -33,6 +33,29 @@ PostgresSQL RDBMS is necessary for Heroku
 ## Frontend
 Delectables uses the React.js framework and follows the Redux architecture.
 
+This proved particularly useful using promises in order to make asynchronous calls.
+```
+export const createRecipe = recipe => dispatch => (
+  APIUtils.createRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
+);
+
+export const deleteRecipe = id => dispatch => (
+  APIUtils.deleteRecipe(id).then(() => dispatch(removeRecipe(id)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
+);
+
+export const fetchRecipes = () => dispatch => (
+  APIUtils.fetchRecipes().then(data => dispatch(receiveRecipes(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
+);
+
+export const fetchRecipe = id => dispatch => (
+  APIUtils.fetchRecipe(id).then(data => dispatch(receiveRecipe(data)),
+  err => dispatch(receiveRecipeErrors(err.responseJSON)))
+);
+```
+
 ### npm
 Node package manage(npm) is used to install all frontend dependecies.
 
