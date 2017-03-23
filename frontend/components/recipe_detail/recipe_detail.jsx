@@ -44,7 +44,7 @@ class RecipeDetail extends React.Component {
       return null;
     }
     return(
-      <ul className="recipe-detail-ul">
+      <ul className="recipe-detail-ul-container">
         {this.props.recipeDetail.comments.map((el, idx) => {
           return(<li className="recipe-detail-comment" key={idx}>{el.body}</li>);
         })}

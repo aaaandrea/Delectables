@@ -2,6 +2,8 @@
   margin: 0 auto;
   font-size: 16px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 
   .recipe-detail-title {
     font-family: 'Baloo Bhaina';
@@ -25,7 +27,7 @@
   }
 
   .recipe-ing-container{
-    float: left;
+    float: right;
 
     .recipe-detail-ul {
       .recipe-detail-list {
@@ -44,5 +46,21 @@
 
   .recipe-detail-button:hover {
     background-color: $peach;
+  }
+
+  .recipe-detail-ul-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: $gray;
+    padding-top: 40px;
+
+
+    .recipe-detail-comment {
+      border: 1px $light-gray solid;
+      margin: 2px;
+      padding: 5px;
+      background-color: white;
+
+    }
   }
 }
