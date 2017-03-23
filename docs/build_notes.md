@@ -42,3 +42,4 @@ production readme:
 add image of index
 add code snippet of promises with description
 searching : add code snippet of filtering
+fix everything else
