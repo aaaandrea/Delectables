@@ -11,9 +11,9 @@
   .home-img {
     position: static;
     max-height: 500px;
-    height: 500px;
+    min-height: 200px;
     max-width: 1000px;
-    min-width: 900px;
+    min-width: 500px;
     margin-bottom: 5px;
     padding-top: 10px;
   }
@@ -32,7 +32,7 @@
       flex-wrap: wrap;
 
       .recipe-container {
-        max-width: 300px;
+        max-width: 200px;
         border: 1px $light-gray solid;
         margin: 2px;
         padding: 5px;

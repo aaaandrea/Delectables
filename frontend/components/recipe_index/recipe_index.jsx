@@ -33,7 +33,7 @@ class RecipeIndex extends React.Component {
     return(
         this.props.recipes.map( (recipe, idx) => (
           <li key={idx}
-            className="recipe-container col col-1-3"
+            className="recipe-container col col-1-4"
             onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
             {(recipe.img === "") ? null : this.renderImage(recipe)}
             <p className="recipe-name">{recipe.name}</p>

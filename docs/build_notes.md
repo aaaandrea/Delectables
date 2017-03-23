@@ -48,3 +48,4 @@ extras:
 - center detail update/delete buttons
 - render errors for create/delete recipe
 - when search is complete: add code snippet of filtering to production readme
+- fix gray text for session form

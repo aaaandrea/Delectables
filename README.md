@@ -16,6 +16,8 @@ Delectables is a personal project developed by Andrea del Rio.
 Delectables was designed and built in a two week period.
 A proposal was drafted to help provide a timeline during the development process.
 
+![index page](/docs/delectables_index_screenshot.jpg?raw=true "Home Page")
+
 # Technology
 ## Backend
 ### Heroku
