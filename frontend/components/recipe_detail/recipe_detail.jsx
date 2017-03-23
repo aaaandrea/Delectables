@@ -39,9 +39,8 @@ class RecipeDetail extends React.Component {
     }
       return(
         <form className="recipe-comment-create-container">
-          <input
-            className="recipe-comment-body"
-            type="textarea"/>
+          <textarea
+            className="recipe-comment-body"/>
           <button className="recipe-comment-button" onClick={this.addComment}>Create</button>
           <button className="recipe-comment-button" onClick={this.removeComment}>Delete</button>
         </form>
@@ -71,7 +70,7 @@ class RecipeDetail extends React.Component {
         <label className="recipe-comments-title">Comments</label>
 
         {this.renderCommentBox()}
-        
+
         <ul className="recipe-comments-ul-container">
           {this.props.recipeDetail.comments.map((el, idx) => {
             return(<li className="recipe-comment" key={idx}>{el.body}</li>);

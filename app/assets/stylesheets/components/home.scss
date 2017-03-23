@@ -25,6 +25,8 @@
     width: 80%;
 
     .recipes-container {
+      align-items: center;
+      justify-content: center;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -49,6 +51,7 @@
       .recipe-container:hover {
         background: rgba(100, 50, 50, 0.7);
         color: white;
+        cursor: pointer;
       }
 
     }
