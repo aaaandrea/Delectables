@@ -36,18 +36,17 @@ class RecipeDetail extends React.Component {
   renderCommentBox() {
     if (!this.props.user.currentUser) {
       return null;
-    } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
+    }
       return(
-        <div className="recipe-comment-create-container">
+        <form className="recipe-comment-create-container">
           <input
             className="recipe-comment-body"
-            type="text"
-            value=""/>
+            type="textarea"/>
           <button className="recipe-comment-button" onClick={this.addComment}>Create</button>
           <button className="recipe-comment-button" onClick={this.removeComment}>Delete</button>
-        </div>
+        </form>
       );
-    }
+
   }
 
   renderIngredients() {
@@ -71,6 +70,8 @@ class RecipeDetail extends React.Component {
       <div className="recipe-comments-container">
         <label className="recipe-comments-title">Comments</label>
 
+        {this.renderCommentBox()}
+        
         <ul className="recipe-comments-ul-container">
           {this.props.recipeDetail.comments.map((el, idx) => {
             return(<li className="recipe-comment" key={idx}>{el.body}</li>);
@@ -119,7 +120,7 @@ class RecipeDetail extends React.Component {
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
           {this.renderDeleteButton()}
-          {this.renderCommentBox()}
+
           {this.renderComments()}
 
         </section>

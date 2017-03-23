@@ -43,3 +43,8 @@ add image of index
 add code snippet of promises with description
 searching : add code snippet of filtering
 fix everything else
+
+extras:
+- center detail update/delete buttons
+- render errors for create/delete recipe
+- when search is complete: add code snippet of filtering to production readme
