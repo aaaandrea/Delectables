@@ -49,6 +49,32 @@
     background-color: $peach;
   }
 
+.recipe-comment-create-container{
+  display: flex;
+  flex-direction: column;
+
+  .recipe-comment-body {
+    background: white;
+
+  }
+
+  .recipe-comment-button {
+    font-size: 14px;
+    background: $pink-orange;
+    color: $bone;
+    height: 30px;
+    width: 200px;
+    margin: 5px;
+    justify-content: center;
+    margin-left: 0 auto;
+  }
+
+  .recipe-comment-button:hover {
+    background-color: $peach;
+  }
+}
+
+
 .recipe-comments-container {
   padding-top: 40px;
 

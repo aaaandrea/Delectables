@@ -32,18 +32,6 @@
     - Potential Issues: possibility for duplicate ingredients given the users can type in ingredients differently.
 
 
-
-center index
-add on hover to delectables/icon AND each recipe container in index
-add light opacity to recipe container when hover
-
-
-production readme:
-add image of index
-add code snippet of promises with description
-searching : add code snippet of filtering
-fix everything else
-
 extras:
 - center detail update/delete buttons
 - render errors for create/delete recipe

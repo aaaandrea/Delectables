@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchRecipe, deleteRecipe } from '../../actions/recipe_actions';
+import { fetchRecipe, deleteRecipe, createComment, deleteComment } from '../../actions/recipe_actions';
 import RecipeDetail from './recipe_detail';
 import { merge } from 'lodash';
 
@@ -13,7 +13,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchRecipe: id => dispatch(fetchRecipe(id)),
-  deleteRecipe: id => dispatch(deleteRecipe(id))
+  deleteRecipe: id => dispatch(deleteRecipe(id)),
+  createComment: comment => dispatch(createComment(comment)),
+  deleteComment: id => dispatch(deleteComment(id))
 });
 
 export default connect(

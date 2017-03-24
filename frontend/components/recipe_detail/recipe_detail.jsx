@@ -26,7 +26,7 @@ class RecipeDetail extends React.Component {
   }
 
   addComment() {
-    this.props.createComment(this.props.comment.id);
+    this.props.createComment(this.props.comment);
   }
 
   removeComment() {
@@ -41,8 +41,7 @@ class RecipeDetail extends React.Component {
         <form className="recipe-comment-create-container">
           <textarea
             className="recipe-comment-body"/>
-          <button className="recipe-comment-button" onClick={this.addComment}>Create</button>
-          <button className="recipe-comment-button" onClick={this.removeComment}>Delete</button>
+          <button className="recipe-comment-button" onClick={this.addComment}>Add Comment</button>
         </form>
       );
 

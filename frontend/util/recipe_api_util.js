@@ -1,3 +1,19 @@
+export const createComment = comment => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/recipes',
+    data: comment
+  })
+);
+
+export const deleteComment = id => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/recipes/${id}`
+  })
+);
+
+
 export const createRecipe = (recipe) => (
   $.ajax({
     method: 'POST',
