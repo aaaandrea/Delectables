@@ -6,7 +6,11 @@ class RecipeDetail extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      recipe: props.recipeDetail
+      recipe: props.recipeDetail,
+      comment: {
+        body: "",
+        user_id: props.user.currentUser.id,
+        recipe_id: props.recipeDetail.id}
     };
     this.edit = this.edit.bind(this);
     this.delete = this.delete.bind(this);
@@ -26,34 +30,40 @@ class RecipeDetail extends React.Component {
       .then(data => hashHistory.push('/'));
   }
 
-  addComment(e) {
-    e.preventDefault();
-    const comment = {
-      body: e.currentTarget.value,
-      user_id: this.props.user.currentUser.id,
-      recipe_id: this.props.recipeDetail.id
-    };
-    console.log(comment);
-    this.props.createComment({comment})
-      .then(recipe => this.fetchRecipe(this.props.recipeDetail.id));
-
+  updateComment() {
+    return e => this.setState({
+      comment: {
+        body: e.currentTarget.value,
+        user_id: this.props.user.currentUser.id,
+        recipe_id: this.props.recipeDetail.id
+      }
+    });
   }
 
+  addComment(e) {
+    e.preventDefault();
+    const newComment = this.state.comment;
+    this.props.createComment({newComment});
+      // .then(recipe => this.fetchRecipe(this.props.recipeDetail.id));
+  }
   removeComment() {
     this.props.deleteComment(this.props.comment.id);
   }
 
   renderCommentBox() {
-    console.log(this.props);
-    console.log(this.state);
     if (!this.props.user.currentUser) {
       return null;
     }
       return(
-        <form className="recipe-comment-create-container">
+        <form
+          className="recipe-comment-create-container">
           <textarea
-            className="recipe-comment-body"/>
-          <button className="recipe-comment-button" onClick={this.addComment}>Add Comment</button>
+            className="recipe-comment-body"
+            value={this.state.comment.body}
+            onChange={this.updateComment()}/>
+          <button
+            className="recipe-comment-button"
+            onClick={this.addComment}>Add Comment</button>
         </form>
       );
 

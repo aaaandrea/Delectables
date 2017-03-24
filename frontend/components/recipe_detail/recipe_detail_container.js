@@ -4,6 +4,7 @@ import RecipeDetail from './recipe_detail';
 import { merge } from 'lodash';
 
 const defaultRecipe = {user: {}};
+const defaultComment = {body: {}};
 
 const mapStateToProps = (state, ownProps) => {
   let recipeDetail = merge({}, defaultRecipe, state.recipeDetail) || defaultRecipe;
