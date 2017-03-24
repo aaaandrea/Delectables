@@ -1456,6 +1456,111 @@ b7 = Recipe.create(name: 'French Toast',
                                           quantity: '1/4',
                                           unit: 'tsp')
 
+a5 = Recipe.create(name: 'Chili Garlic Corn Chips',
+                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490395883/p1110489_mru1zp.jpg',
+                   tag_id: a.id,
+                   user_id: u7.id,
+                   directions: 'Blend all ingredients until smooth using a hand blender or traditional blender. Drink immediately.')
+
+                   a5.ingredients.create(title: 'frozen banana',
+                                         quantity: '1')
+
+                    a5.ingredients.create(title: 'whole milk',
+                                          quantity: '1',
+                                          unit: 'cup(s)')
+
+                   a5.ingredients.create(title: 'sugar',
+                                         quantity: '1',
+                                         unit: 'tbsp')
+
+                  a5.ingredients.create(title: 'tahini (sesame seed paste)',
+                                        quantity: '1 - 2',
+                                        unit: 'tbsp')
+
+                   a5.ingredients.create(title: 'vanilla extract',
+                                          quantity: '1/8',
+                                          unit: 'tsp')
+
+a6 = Recipe.create(name: 'Coconut Shrimp Poppers with Chili Mango Cream',
+                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490395960/3673f370-34c2-4974-9ad2-8f0368df924d_rfj9zg.jpg',
+                   tag_id: a.id,
+                   user_id: u1.id,
+                   directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
+
+  Spoon hummus onto a plate, creating a bit of a well in the center. Drizzle with olive oil and garnish with fresh chopped parsley. Serve with your favorite flat bread, crackers, chips, or fresh vegetables.')
+
+                   a6.ingredients.create(title: 'fresh-squeezed lemon juice',
+                                         quantity: '1',
+                                         unit: 'cup(s)')
+
+                    a6.ingredients.create(title: 'ice cubes')
+
+                   a6.ingredients.create(title: 'sugar',
+                                         quantity: '3/4',
+                                         unit: 'cup(s)')
+
+                  a6.ingredients.create(title: 'water',
+                                        quantity: '4',
+                                        unit: 'cup(s)')
+
+                   a6.ingredients.create(title: 'lemon slices')
+
+a7 = Recipe.create(name: 'Creamy Blue Cheese Dip with Lemon and Chives',
+                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396021/bluecheese_m8twag.jpg',
+                  tag_id: a.id,
+                  user_id: u1.id,
+                  directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
+
+                     Spoon hummus onto a plate, creating a bit of a well in the center. Drizzle with olive oil and garnish with fresh chopped parsley. Serve with your favorite flat bread, crackers, chips, or fresh vegetables.')
+
+                  a7.ingredients.create(title: 'crushed ice',
+                                        quantity: '2',
+                                        unit: 'cup(s)')
+
+                   a7.ingredients.create(title: 'wedge of lime and coarse salt to rim the glass!')
+
+                  a7.ingredients.create(title: 'fresh-cut strawberries',
+                                        quantity: '6')
+
+                 a7.ingredients.create(title: 'shot of lime juice',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                  a7.ingredients.create(title: 'pinch of salt')
+
+                  a7.ingredients.create(title: 'pinch of sugar')
+
+                  a7.ingredients.create(title: 'shot of lime juice',
+                                        quantity: '1/4',
+                                        unit: 'cup(s)')
+
+                   a7.ingredients.create(title: 'shot of tequila',
+                                          quantity: '3/4',
+                                          unit: 'cup(s)')
+
+                   a7.ingredients.create(title: 'triple sec',
+                                          quantity: '1/4',
+                                          unit: 'cup(s)')
+
+a8 = Recipe.create(name: 'Kettle Corn',
+                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396103/Old-Fashioned-Kettle-Corn-1_ob4fng.jpg',
+                  tag_id: a.id,
+                  user_id: u1.id,
+                  directions: 'Blend all ingredients until smooth using a hand blender or traditional blender.')
+
+                  a8.ingredients.create(title: 'whole milk',
+                                        quantity: '1',
+                                        unit: 'cup(s)')
+
+                  a8.ingredients.create(title: 'fresh-cut strawberry halves',
+                                        quantity: '1',
+                                        unit: 'cup(s)')
+
+                 a8.ingredients.create(title: 'sugar',
+                                       quantity: '1-2',
+                                       unit: 'tbsp')
+
+
 
 # drinks
 dr1 = Recipe.create(name: 'Easy Banana Milkshake',
@@ -1561,3 +1666,239 @@ dr4 = Recipe.create(name: 'Strawberry Milk',
                  dr4.ingredients.create(title: 'sugar',
                                        quantity: '1-2',
                                        unit: 'tbsp')
+
+dr5 = Recipe.create(name: 'Lemon Drop',
+                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396344/Make-a-Lemon-Drop-Step-10_xdmd4s.jpg',
+                  tag_id: dr.id,
+                  user_id: 1,
+                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+
+                  2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+
+                  3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+
+                  4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+
+                 dr5.ingredients.create(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                                       quantity: '2',
+                                       unit: 'lb')
+
+                 dr5.ingredients.create(title: 'extra-virgin olive oil, divided',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                 dr5.ingredients.create(title: 'sprigs thyme or rosemary (optional)',
+                                       quantity: '2')
+
+                 dr5.ingredients.create(title: 'Kosher salt and freshly ground black pepper')
+
+                 dr5.ingredients.create(title: 'toasted shelled pistachios',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                 dr5.ingredients.create(title: 'grapefruit, cut into suprèmes or wedges',
+                                       quantity: '1')
+
+                 dr5.ingredients.create(title: 'orange, cut into suprèmes or wedges',
+                                       quantity: '1')
+
+                 dr5.ingredients.create(title: 'juice from 1 lemon',
+                                       quantity: '2',
+                                       unit: 'tsp')
+
+                 dr5.ingredients.create(title: 'small shallot, finely minced',
+                                       quantity: '1')
+
+                 dr5.ingredients.create(title: 'minced fresh parsley, tarragon, or chervil',
+                                       quantity: '2',
+                                       unit: 'tsp')
+
+                 dr5.ingredients.create(title: 'honey',
+                                       quantity: '1',
+                                       unit: 'tbsp')
+
+                 dr5.ingredients.create(title: 'fresh ricotta',
+                                       quantity: '1/2',
+                                       unit: 'cup(s)')
+
+                 dr5.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                 dr5.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                 dr5.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                 dr5.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+
+dr6 = Recipe.create(name: 'Mojito Perfecto',
+                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396395/Mojito-de-frutas-de-la-pasi_C3_B3n_kmpgbl.jpg',
+                  tag_id: dr.id,
+                  user_id: 1,
+                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+
+                  2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+
+                  3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+
+                  4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+
+                 dr6.ingredients.create(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                                       quantity: '2',
+                                       unit: 'lb')
+
+                 dr6.ingredients.create(title: 'extra-virgin olive oil, divided',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                 dr6.ingredients.create(title: 'sprigs thyme or rosemary (optional)',
+                                       quantity: '2')
+
+                 dr6.ingredients.create(title: 'Kosher salt and freshly ground black pepper')
+
+                 dr6.ingredients.create(title: 'toasted shelled pistachios',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                 dr6.ingredients.create(title: 'grapefruit, cut into suprèmes or wedges',
+                                       quantity: '1')
+
+                 dr6.ingredients.create(title: 'orange, cut into suprèmes or wedges',
+                                       quantity: '1')
+
+                 dr6.ingredients.create(title: 'juice from 1 lemon',
+                                       quantity: '2',
+                                       unit: 'tsp')
+
+                 dr6.ingredients.create(title: 'small shallot, finely minced',
+                                       quantity: '1')
+
+                 dr6.ingredients.create(title: 'minced fresh parsley, tarragon, or chervil',
+                                       quantity: '2',
+                                       unit: 'tsp')
+
+                 dr6.ingredients.create(title: 'honey',
+                                       quantity: '1',
+                                       unit: 'tbsp')
+
+                 dr6.ingredients.create(title: 'fresh ricotta',
+                                       quantity: '1/2',
+                                       unit: 'cup(s)')
+
+                 dr6.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                 dr6.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                 dr6.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                 dr6.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+
+dr7 = Recipe.create(name: 'Eggnog',
+                        img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396441/10758_best_eggnog_yt6zrw.jpg',
+                        tag_id: dr.id,
+                        user_id: 1,
+                        directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+
+                        2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+
+                        3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+
+                        4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+
+                       dr7.ingredients.create(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                                             quantity: '2',
+                                             unit: 'lb')
+
+                       dr7.ingredients.create(title: 'extra-virgin olive oil, divided',
+                                             quantity: '1/4',
+                                             unit: 'cup(s)')
+
+                       dr7.ingredients.create(title: 'sprigs thyme or rosemary (optional)',
+                                             quantity: '2')
+
+                       dr7.ingredients.create(title: 'Kosher salt and freshly ground black pepper')
+
+                       dr7.ingredients.create(title: 'toasted shelled pistachios',
+                                             quantity: '1/4',
+                                             unit: 'cup(s)')
+
+                       dr7.ingredients.create(title: 'grapefruit, cut into suprèmes or wedges',
+                                             quantity: '1')
+
+                       dr7.ingredients.create(title: 'orange, cut into suprèmes or wedges',
+                                             quantity: '1')
+
+                       dr7.ingredients.create(title: 'juice from 1 lemon',
+                                             quantity: '2',
+                                             unit: 'tsp')
+
+                       dr7.ingredients.create(title: 'small shallot, finely minced',
+                                             quantity: '1')
+
+                       dr7.ingredients.create(title: 'minced fresh parsley, tarragon, or chervil',
+                                             quantity: '2',
+                                             unit: 'tsp')
+
+                       dr7.ingredients.create(title: 'honey',
+                                             quantity: '1',
+                                             unit: 'tbsp')
+
+                       dr7.ingredients.create(title: 'fresh ricotta',
+                                             quantity: '1/2',
+                                             unit: 'cup(s)')
+
+                       dr7.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                       dr7.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                       dr7.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                       dr7.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+
+dr8 = Recipe.create(name: 'Mimosa',
+                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396488/maxresdefault_qfkrbe.jpg',
+                  tag_id: dr.id,
+                  user_id: 1,
+                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+
+                  2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+
+                  3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+
+                  4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+
+                 dr8.ingredients.create(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                                       quantity: '2',
+                                       unit: 'lb')
+
+                 dr8.ingredients.create(title: 'extra-virgin olive oil, divided',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                 dr8.ingredients.create(title: 'sprigs thyme or rosemary (optional)',
+                                       quantity: '2')
+
+                 dr8.ingredients.create(title: 'Kosher salt and freshly ground black pepper')
+
+                 dr8.ingredients.create(title: 'toasted shelled pistachios',
+                                       quantity: '1/4',
+                                       unit: 'cup(s)')
+
+                 dr8.ingredients.create(title: 'grapefruit, cut into suprèmes or wedges',
+                                       quantity: '1')
+
+                 dr8.ingredients.create(title: 'orange, cut into suprèmes or wedges',
+                                       quantity: '1')
+
+                 dr8.ingredients.create(title: 'juice from 1 lemon',
+                                       quantity: '2',
+                                       unit: 'tsp')
+
+                 dr8.ingredients.create(title: 'small shallot, finely minced',
+                                       quantity: '1')
+
+                 dr8.ingredients.create(title: 'minced fresh parsley, tarragon, or chervil',
+                                       quantity: '2',
+                                       unit: 'tsp')
+
+                 dr8.ingredients.create(title: 'honey',
+                                       quantity: '1',
+                                       unit: 'tbsp')
+
+                 dr8.ingredients.create(title: 'fresh ricotta',
+                                       quantity: '1/2',
+                                       unit: 'cup(s)')
+
+                 dr8.comments.create(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+                 dr8.comments.create(body: 'Needs more olive oil', user_id: u4.id)
+                 dr8.comments.create(body: "I'll be making this one again.", user_id: u2.id)
+                 dr8.comments.create(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
