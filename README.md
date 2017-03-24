@@ -1,6 +1,6 @@
 # Delectables
 
-[Delectables][https://delectables.herokuapp.com/#/] is a web application for users to learn new recipes based on meal. Delectables users are allowed to upload their own recipes, discover new recipes, and comment on them.
+[Delectables](https://delectables.herokuapp.com/#/) is a web application for users to learn new recipes based on meal. Delectables users are allowed to upload their own recipes, discover new recipes, and comment on them.
 
 Delectables is a personal project developed by Andrea del Rio.
 
@@ -13,7 +13,7 @@ Delectables is a personal project developed by Andrea del Rio.
   * Recipes are searchable by meal category
 
 # Project Design
-Delectables was designed and built in a two week period.
+[Delectables](https://delectables.herokuapp.com/#/) was designed and built in a two week period.
 A proposal was drafted to help provide a timeline during the development process.
 
 ![index page](/docs/delectables_index_screenshot.jpg?raw=true "Home Page")
@@ -31,7 +31,7 @@ PostgresSQL RDBMS is necessary for Heroku
   * BCrypt for password-salting and hashing for a secure authentication system
 
 ## Frontend
-Delectables uses the React.js framework and follows the Redux architecture.
+[Delectables](https://delectables.herokuapp.com/#/) uses the React.js framework and follows the Redux architecture.
 
 This proved particularly useful using promises in order to make asynchronous calls.
 ```
