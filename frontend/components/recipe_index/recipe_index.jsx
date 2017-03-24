@@ -6,10 +6,12 @@ class RecipeIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {recipes: []};
+    this.findRecipes = this.findRecipes.bind(this);
   }
 
-  findRecipes() {
+  findRecipes(e) {
     // this.props.fetchRecipes();
+    hashHistory.push(`/${e.currentTarget.value}`);
     this.props.fetchTagRecipes().then(() => (
       this.setState({
         recipes: this.props.recipes
@@ -48,27 +50,32 @@ class RecipeIndex extends React.Component {
         <section className="index-filter-container">
           <button
             className="index-filter"
-            onClick={() => hashHistory.push(`/recipes/breakfast`)}
+            value="breakfast"
+            onClick={this.findRecipes}
             >Breakfast
           </button>
           <button
             className="index-filter"
-            onClick={() => hashHistory.push(`/recipes/lunch`)}
+            value="lunch"
+            onClick={this.findRecipes}
             >Lunch
           </button>
           <button
             className="index-filter"
-            onClick={() => hashHistory.push(`/recipes/dinner`)}
+            value="dinner"
+            onClick={this.findRecipes}
             >Dinner
           </button>
           <button
             className="index-filter"
-            onClick={() => hashHistory.push(`/recipes/appetizers`)}
+            value="appetizers"
+            onClick={this.findRecipes}
             >Appetizers
           </button>
           <button
             className="index-filter"
-            onClick={() => hashHistory.push(`/recipes/drinks`)}
+            value="drinks"
+            onClick={this.findRecipes}
             >Drinks
           </button>
         </section>

@@ -131,6 +131,6 @@ export const updateRecipe = recipe => dispatch => (
 //   APIUtils.fetchTag(id).then(data => dispatch(receiveTag(data)))
 // );
 
-export const fetchTagRecipes = () => dispatch => (
-  APIUtils.fetchTagRecipe().then(data => dispatch(receiveTags(data)))
+export const fetchTagRecipes = id => dispatch => (
+  APIUtils.fetchTagRecipe(id).then(data => dispatch(receiveTags(data)))
 );

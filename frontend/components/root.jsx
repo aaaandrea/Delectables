@@ -50,23 +50,15 @@ const Root = ({ store }) => {
           component={RecipeFormContainer}
           onEnter={_ensureLoggedIn}/>
         <Route
-          path="/recipes/breakfast"
-          component={RecipeFormContainer}
-          onEnter={_ensureLoggedIn}/>
+          path="/breakfast"/>
         <Route
-          path="/recipes/lunch"
-          component={RecipeDetail}/>
+          path="/lunch"/>
         <Route
-          path="/recipes/dinner"
-          component={RecipeFormContainer}
-          onEnter={_ensureLoggedIn}/>
+          path="/dinner"/>
         <Route
-          path="/recipes/apperizers"
-          component={RecipeDetail}/>
+          path="/appetizers"/>
         <Route
-          path="/recipes/drinks"
-          component={RecipeFormContainer}
-          onEnter={_ensureLoggedIn}/>
+          path="/drinks"/>
       </Route>
     </Router>
   </Provider>

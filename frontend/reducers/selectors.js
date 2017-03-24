@@ -13,3 +13,7 @@ export const selectIngredients = ({ ingredients }) => {
 export const selectAllRecipes = ({ recipe }) => {
   return values(recipe);
 };
+
+export const selectAllTags = ({ tags }) => {
+  return values(tags);
+};
