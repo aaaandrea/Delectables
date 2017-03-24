@@ -18,7 +18,7 @@ class RecipeIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.props.recipes) {
+    if (nextProps.recipes.length > 0) {
       this.setState({ recipes: nextProps.recipes });
     }
   }
@@ -31,7 +31,7 @@ class RecipeIndex extends React.Component {
   }
 
   renderRecipes() {
-    return this.props.recipes.map( (recipe, idx) => (
+    return this.state.recipes.map( (recipe, idx) => (
       <li key={idx}
         className="recipe-container col col-1-4"
         onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
@@ -46,7 +46,7 @@ class RecipeIndex extends React.Component {
       e.preventDefault();
       let recipes = [];
       this.props.recipes.forEach(recipe => {
-        if (recipe.id === id) {
+        if (recipe.tag_id === id) {
           recipes.push(recipe);
         }
       });
