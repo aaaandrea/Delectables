@@ -18,45 +18,75 @@
     padding-top: 10px;
   }
 
-  .recipes-wrapper {
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 80%;
+  .recipe-index-container {
+    margin: 10px;
 
-    .recipes-container {
+    .index-filter-container {
+      display: flex;
       align-items: center;
       justify-content: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      margin-bottom: 20px;
 
-      .recipe-container {
+      .index-filter {
+        font-size: 14px;
+        background: $pink-orange;
+        color: $bone;
+        height: 30px;
         max-width: 200px;
-        border: 1px $light-gray solid;
-        margin: 2px;
-        padding: 5px;
-        background-color: white;
-
-        .recipe-image {
-          display: inline-block;
-        }
-
-        .recipe-name {
-          font-size: 16px;
-          font-weight: bold;
-        }
+        min-width: 75px;
+        margin: 5px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
       }
 
-      .recipe-container:hover {
-        background: rgba(100, 50, 50, 0.7);
-        color: white;
-        cursor: pointer;
+      .index-filter:hover {
+        background-color: $peach;
       }
-
     }
 
+    .recipes-wrapper {
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 80%;
+
+      .recipes-container {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .recipe-container {
+          max-width: 200px;
+          border: 1px $light-gray solid;
+          margin: 2px;
+          padding: 5px;
+          background-color: white;
+
+          .recipe-image {
+            display: inline-block;
+          }
+
+          .recipe-name {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+
+        .recipe-container:hover {
+          background: rgba(100, 50, 50, 0.7);
+          color: white;
+          cursor: pointer;
+        }
+
+      }
+
+
+    }
   }
+
 
 
 }

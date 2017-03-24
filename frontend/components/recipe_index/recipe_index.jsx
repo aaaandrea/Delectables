@@ -44,11 +44,41 @@ class RecipeIndex extends React.Component {
   render(){
     let recipes = this.renderRecipes();
     return(
-      <section className="recipes-wrapper">
-        <ul className="recipes-container">
-          { recipes }
-        </ul>
-      </section>
+      <div className="recipe-index-container">
+        <section className="index-filter-container">
+          <button
+            className="index-filter"
+            onClick={() => hashHistory.push(`/recipes/breakfast`)}
+            >Breakfast
+          </button>
+          <button
+            className="index-filter"
+            onClick={() => hashHistory.push(`/recipes/lunch`)}
+            >Lunch
+          </button>
+          <button
+            className="index-filter"
+            onClick={() => hashHistory.push(`/recipes/dinner`)}
+            >Dinner
+          </button>
+          <button
+            className="index-filter"
+            onClick={() => hashHistory.push(`/recipes/appetizers`)}
+            >Appetizers
+          </button>
+          <button
+            className="index-filter"
+            onClick={() => hashHistory.push(`/recipes/drinks`)}
+            >Drinks
+          </button>
+        </section>
+
+        <section className="recipes-wrapper">
+          <ul className="recipes-container">
+            { recipes }
+          </ul>
+        </section>
+      </div>
     );
   }
 
