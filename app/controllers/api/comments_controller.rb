@@ -1,17 +1,19 @@
 class Api::CommentsController < ApplicationController
   def create
-    @comment.create(comment_params)
+    @comment = Comment.new(comment_params)
     if @comment.save
-      render "api/comments/show"
+      @recipe = Recipe.find(comment_params[:recipe_id])
+      render "api/recipes/show"
     else
       render json: ['Cannot submit comment at this time'], status: 422
     end
   end
 
   def index
-    @comments = Comment.where(recipe_id: params[:recipeId])
+    @comments = Comment.where(recipe_id: params[:recipe_id])
     if @comments
-      render 'api/comments/index'
+      @recipe = Recipe.find(params[:comment][:recipe_id])
+      render "api/recipes/show"
     else
       render json: ['There are no comments'], status: 401
     end

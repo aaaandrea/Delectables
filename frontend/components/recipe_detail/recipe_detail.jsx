@@ -42,9 +42,20 @@ class RecipeDetail extends React.Component {
 
   addComment(e) {
     e.preventDefault();
-    const newComment = this.state.comment;
-    this.props.createComment({newComment});
-      // .then(recipe => this.fetchRecipe(this.props.recipeDetail.id));
+    const comment = this.state.comment;
+    this.props.createComment({comment})
+      .then(() => (
+        this.props.fetchComments()
+          .then( () =>
+            this.setState({
+              recipe: this.props.recipeDetail,
+              comment: {
+                body: "",
+                user_id: this.props.user.currentUser.id,
+                recipe_id: this.props.recipeDetail.id}
+            })
+          )
+      ));
   }
   removeComment() {
     this.props.deleteComment(this.props.comment.id);
@@ -70,7 +81,6 @@ class RecipeDetail extends React.Component {
   }
 
   renderIngredients() {
-    console.log(this.props.recipeDetail.in);
     if (!this.props.recipeDetail.ingredients) {
       return null;
     }

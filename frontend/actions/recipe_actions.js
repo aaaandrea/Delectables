@@ -13,12 +13,18 @@ export const RECEIVE_TAG = 'RECEIVE_TAG';
 export const RECEIVE_TAGS = 'RECEIVE_TAGS';
 
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
 
 const receiveComment = comment => ({
   type: RECEIVE_COMMENT,
   comment
+});
+
+const receiveComments = comments => ({
+  type: RECEIVE_COMMENTS,
+  comments
 });
 
 const receiveCommentErrors = errors => ({
@@ -81,7 +87,12 @@ export const createComment = comment => dispatch => (
 
 export const deleteComment = id => dispatch => (
   APIUtils.deleteComment(id).then(() => dispatch(removeComment(id)),
-            err => dispatch(receiveRecipeErrors(err.responseJSON)))
+            err => dispatch(receiveCommentErrors(err.responseJSON)))
+);
+
+export const fetchComments = recipeId => dispatch => (
+  APIUtils.fetchComments(recipeId).then(data => dispatch(receiveComments(data)),
+            err => dispatch(receiveCommentErrors(err.responseJSON)))
 );
 
 
