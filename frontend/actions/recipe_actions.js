@@ -9,9 +9,6 @@ export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
 export const REMOVE_SEARCHES = 'REMOVE_SEARCHES';
 
-export const RECEIVE_TAG = 'RECEIVE_TAG';
-export const RECEIVE_TAGS = 'RECEIVE_TAGS';
-
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
@@ -70,16 +67,6 @@ const removeSearches = () => ({
   type: REMOVE_SEARCHES
 });
 
-// const receiveTag = tag => ({
-//   type: RECEIVE_TAG,
-//   tag
-// });
-
-const receiveTags = tags => ({
-  type: RECEIVE_TAGS,
-  tags
-});
-
 export const createComment = comment => dispatch => (
   APIUtils.createComment(comment).then(data => dispatch(receiveComment(data)),
             err => dispatch(receiveCommentErrors(err.responseJSON)))
@@ -124,13 +111,4 @@ export const searchRecipes = recipes => dispatch => (
 export const updateRecipe = recipe => dispatch => (
   APIUtils.updateRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
             err => dispatch(receiveRecipeErrors(err.responseJSON)))
-);
-
-//
-// export const fetchTag = id => dispatch => (
-//   APIUtils.fetchTag(id).then(data => dispatch(receiveTag(data)))
-// );
-
-export const fetchTagRecipes = id => dispatch => (
-  APIUtils.fetchTagRecipe(id).then(data => dispatch(receiveTags(data)))
 );

@@ -5,22 +5,22 @@ import NavContainer from '../nav/nav_container';
 class RecipeIndex extends React.Component {
   constructor(props){
     super(props);
-    this.state = {recipes: []};
-    this.findRecipes = this.findRecipes.bind(this);
+    this.state = {
+      recipes: this.props.recipes
+    };
+    this.filterRecipes = this.filterRecipes.bind(this);
+    this.renderRecipes = this.renderRecipes.bind(this);
   }
 
-  findRecipes(e) {
-    // this.props.fetchRecipes();
-    hashHistory.push(`/${e.currentTarget.value}`);
-    this.props.fetchTagRecipes().then(() => (
-      this.setState({
-        recipes: this.props.recipes
-      })
-    ));
-  }
-
-  componentDidMount() {
+  componentWillMount() {
+    this.props.fetchTags();
     this.props.fetchRecipes();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.recipes) {
+      this.setState({ recipes: nextProps.recipes });
+    }
   }
 
   renderImage(recipe){
@@ -30,54 +30,53 @@ class RecipeIndex extends React.Component {
       src={recipe.img}/>);
   }
 
-  renderRecipes(){
+  renderRecipes() {
+    return this.props.recipes.map( (recipe, idx) => (
+      <li key={idx}
+        className="recipe-container col col-1-4"
+        onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
+        {(recipe.img === "") ? null : this.renderImage(recipe)}
+        <p className="recipe-name">{recipe.name}</p>
+      </li>
+    ));
+  }
+
+  filterRecipes(id) {
+    return (e) => {
+      e.preventDefault();
+      let recipes = [];
+      this.props.recipes.forEach(recipe => {
+        if (recipe.id === id) {
+          recipes.push(recipe);
+        }
+      });
+      this.setState({ recipes });
+    };
+  }
+
+  renderRecipeTags() {
+    if (!this.props.tags) {
+      return null;
+    }
     return(
-        this.props.recipes.map( (recipe, idx) => (
-          <li key={idx}
-            className="recipe-container col col-1-4"
-            onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
-            {(recipe.img === "") ? null : this.renderImage(recipe)}
-            <p className="recipe-name">{recipe.name}</p>
-          </li>
-        ))
+      this.props.tags.map((tag, idx) => (
+        <button
+          className="index-filter"
+          key={idx}
+          value={tag.id}
+          onClick={this.filterRecipes(tag.id)}
+          >{tag.name}</button>
+      ))
     );
   }
 
   render(){
     let recipes = this.renderRecipes();
+    let tagButtons = this.renderRecipeTags();
     return(
       <div className="recipe-index-container">
         <section className="index-filter-container">
-          <button
-            className="index-filter"
-            value="breakfast"
-            onClick={this.findRecipes}
-            >Breakfast
-          </button>
-          <button
-            className="index-filter"
-            value="lunch"
-            onClick={this.findRecipes}
-            >Lunch
-          </button>
-          <button
-            className="index-filter"
-            value="dinner"
-            onClick={this.findRecipes}
-            >Dinner
-          </button>
-          <button
-            className="index-filter"
-            value="appetizers"
-            onClick={this.findRecipes}
-            >Appetizers
-          </button>
-          <button
-            className="index-filter"
-            value="drinks"
-            onClick={this.findRecipes}
-            >Drinks
-          </button>
+          { tagButtons }
         </section>
 
         <section className="recipes-wrapper">

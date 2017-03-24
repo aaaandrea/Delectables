@@ -1,6 +1,6 @@
 # Delectables
 
-Delectables is a web application for users to learn new recipes based on meal. Delectables users are allowed to upload their own recipes, discover new recipes, and comment on them.
+[Delectables][https://delectables.herokuapp.com/#/] is a web application for users to learn new recipes based on meal. Delectables users are allowed to upload their own recipes, discover new recipes, and comment on them.
 
 Delectables is a personal project developed by Andrea del Rio.
 

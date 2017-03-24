@@ -59,20 +59,17 @@ export const updateRecipe = (recipe) => (
   })
 );
 
-
-export const fetchTagRecipes = (tag_id) => (
-  $.ajax({
-    method: 'GET',
-    url: "/api/recipes",
-    data: { tag_id }
-  })
-);
-
-
 export const searchRecipes = search => (
   $.ajax({
     method: 'GET',
     url: "/api/recipes",
     data: { search }
+  })
+);
+
+export const fetchTags = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/tags'
   })
 );

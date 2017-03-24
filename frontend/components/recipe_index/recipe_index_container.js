@@ -1,24 +1,19 @@
 import { connect } from 'react-redux';
-import {  fetchRecipes, fetchRecipe, fetchTagRecipes } from '../../actions/recipe_actions';
+import {  fetchRecipes, fetchRecipe } from '../../actions/recipe_actions';
+import { fetchTags } from '../../actions/tag_actions';
 import { selectAllRecipes, selectRecipe, selectAllTags } from '../../reducers/selectors';
 import RecipeIndex from './recipe_index';
 
 const mapStateToProps = (state, ownProps) => {
   return{
-  recipes: selectAllRecipes(state).filter((recipe) => {
-    return recipe;
-  }),
-  tags: selectAllTags(state).filter((tags) => {
-    return tags;
-  })
-  // recipe: selectRecipe(state, ownProps.params.recipeId)
-  // tag: ownProps.params.tagTitle,
-};};
+    recipes: selectAllRecipes(state),
+    tags: state.tags
+  };
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchRecipes: () => dispatch(fetchRecipes()),
-  // fetchRecipe: () => dispatch(fetchRecipe())
-  fetchTagRecipes: () => dispatch(fetchTagRecipes(ownProps.params.recipeId))
+  fetchTags: () => dispatch(fetchTags())
 });
 
 export default connect(
