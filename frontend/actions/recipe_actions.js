@@ -91,10 +91,9 @@ export const deleteComment = id => dispatch => (
 );
 
 export const fetchComments = recipeId => dispatch => (
-  APIUtils.fetchComments(recipeId).then(data => dispatch(receiveComments(data)),
+  APIUtils.fetchComments(recipeId).then(data => dispatch(receiveRecipe(data)),
             err => dispatch(receiveCommentErrors(err.responseJSON)))
 );
-
 
 
 export const createRecipe = recipe => dispatch => (

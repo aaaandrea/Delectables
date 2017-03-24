@@ -6,7 +6,6 @@ class RecipeDetail extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      recipe: props.recipeDetail,
       comment: {
         body: "",
         user_id: props.user.currentUser.id,
@@ -45,10 +44,9 @@ class RecipeDetail extends React.Component {
     const comment = this.state.comment;
     this.props.createComment({comment})
       .then(() => (
-        this.props.fetchComments()
+        this.props.fetchComments(this.props.recipeDetail.id)
           .then( () =>
             this.setState({
-              recipe: this.props.recipeDetail,
               comment: {
                 body: "",
                 user_id: this.props.user.currentUser.id,

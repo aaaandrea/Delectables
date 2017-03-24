@@ -12,7 +12,8 @@ json.user do
   json.username recipe.user.username
 end
 
-json.comments recipe.comments do |comment|
+json.comments recipe.comments.order(created_at: :desc) do |comment|
+
   json.id comment.id
   json.body comment.body
 end

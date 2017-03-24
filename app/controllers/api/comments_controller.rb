@@ -12,7 +12,7 @@ class Api::CommentsController < ApplicationController
   def index
     @comments = Comment.where(recipe_id: params[:recipe_id])
     if @comments
-      @recipe = Recipe.find(params[:comment][:recipe_id])
+      @recipe = Recipe.find(params[:recipe_id])
       render "api/recipes/show"
     else
       render json: ['There are no comments'], status: 401

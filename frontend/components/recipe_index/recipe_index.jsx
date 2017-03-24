@@ -8,14 +8,13 @@ class RecipeIndex extends React.Component {
     this.state = {recipes: []};
   }
 
-  componentWillMount() {
-    this.props.fetchRecipes();
-    // this.props.fetchRecipe();
-    // this.props.fetchTagRecipes().then(() => (
-    //   this.setState({
-    //     recipes: this.props.recipes
-    //   })
-    // ));
+  findRecipes() {
+    // this.props.fetchRecipes();
+    this.props.fetchTagRecipes().then(() => (
+      this.setState({
+        recipes: this.props.recipes
+      })
+    ));
   }
 
   componentDidMount() {

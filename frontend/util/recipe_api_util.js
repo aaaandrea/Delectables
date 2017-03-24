@@ -16,8 +16,7 @@ export const deleteComment = id => (
 export const fetchComments = (recipeId) => (
   $.ajax({
     method: 'GET',
-    url: '/api/comments',
-    data: { recipeId }
+    url: `/api/recipes/${recipeId}`
   })
 );
 
