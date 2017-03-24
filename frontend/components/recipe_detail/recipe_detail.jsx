@@ -6,10 +6,11 @@ class RecipeDetail extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      recipe: props.recipe
+      recipe: props.recipeDetail
     };
     this.edit = this.edit.bind(this);
     this.delete = this.delete.bind(this);
+    this.addComment = this.addComment.bind(this);
   }
 
   componentDidMount() {
@@ -25,8 +26,17 @@ class RecipeDetail extends React.Component {
       .then(data => hashHistory.push('/'));
   }
 
-  addComment() {
-    this.props.createComment(this.props.comment);
+  addComment(e) {
+    e.preventDefault();
+    const comment = {
+      body: e.currentTarget.value,
+      user_id: this.props.user.currentUser.id,
+      recipe_id: this.props.recipeDetail.id
+    };
+    console.log(comment);
+    this.props.createComment({comment})
+      .then(recipe => this.fetchRecipe(this.props.recipeDetail.id));
+
   }
 
   removeComment() {
@@ -34,6 +44,8 @@ class RecipeDetail extends React.Component {
   }
 
   renderCommentBox() {
+    console.log(this.props);
+    console.log(this.state);
     if (!this.props.user.currentUser) {
       return null;
     }
@@ -48,6 +60,7 @@ class RecipeDetail extends React.Component {
   }
 
   renderIngredients() {
+    console.log(this.props.recipeDetail.in);
     if (!this.props.recipeDetail.ingredients) {
       return null;
     }

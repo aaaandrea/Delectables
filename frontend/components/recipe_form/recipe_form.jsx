@@ -37,6 +37,7 @@ class RecipeForm extends React.Component {
 
   updateRecipeAttributes(attribute){
     return (e) => {
+      e.preventDefault();
       const newState = Object.assign({}, this.state);
       newState.recipe[attribute] = e.currentTarget.value;
       this.setState(newState);
@@ -54,7 +55,7 @@ class RecipeForm extends React.Component {
     e.preventDefault();
     const newState = Object.assign({}, this.state);
     newState.tag = {};
-    this.newState(newState);
+    this.setState(newState);
   }
 
   handleCloudinary(e) {

@@ -10,11 +10,6 @@
 # { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Tag.destroy_all
-Recipe.destroy_all
-Ingredient.destroy_all
-Comment.destroy_all
 
 # Users
 u1 = User.create(username: 'Guest', password: 'password')
