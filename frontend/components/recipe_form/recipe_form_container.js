@@ -9,6 +9,7 @@ const mapStateToProps = ( state, ownProps ) => {
   let recipe = {name: "", directions: "", img: "", ingredients: [{}],
                 tag_id: "", user_id: state.session.currentUser.id};
   let formType = ownProps.location.pathname.slice(1);
+  formType = formType.slice(-4);
   let errors = state.errors;
 
   return({recipe, formType, errors});
@@ -19,6 +20,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   //   data => hashHistory.push(`/recipes/${Object.keys(data.recipe.id)}`));
 
   let formType = ownProps.location.pathname.slice(1);
+  formType = formType.slice(-4);
   const processFormAction = (formType === 'edit') ? updateRecipe : createRecipe;
   return({
     fetchRecipe: id => dispatch(fetchRecipe(id)),

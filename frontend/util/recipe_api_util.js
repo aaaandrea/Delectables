@@ -30,6 +30,15 @@ export const createRecipe = (recipe) => (
   })
 );
 
+export const updateRecipe = (recipe) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/recipes/${recipe.id}`,
+    contentType: 'application/json',
+    data: JSON.stringify({ recipe })
+  })
+);
+
 export const deleteRecipe = (id) => (
   $.ajax({
     method: 'DELETE',
@@ -48,14 +57,6 @@ export const fetchRecipe = (id) => (
   $.ajax({
     method: 'GET',
     url: `/api/recipes/${id}`
-  })
-);
-
-export const updateRecipe = (recipe) => (
-  $.ajax({
-    method: 'PATCH',
-    url: `/api/recipes/${recipe.id}`,
-    data: { recipe }
   })
 );
 

@@ -38,6 +38,8 @@ class Api::RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
+      ings = Ingredient.where(recipe_id: @recipe.id).all
+      ings.destroy_all
       ingredients_params[:ingredients].each do |ingredient|
         Ingredient.create(title: ingredient[:title],
                           quantity: ingredient[:quantity],

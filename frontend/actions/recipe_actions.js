@@ -93,6 +93,11 @@ export const deleteRecipe = id => dispatch => (
             err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
+export const updateRecipe = recipe => dispatch => (
+  APIUtils.updateRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
+);
+
 export const fetchRecipes = () => dispatch => (
   APIUtils.fetchRecipes().then(data => dispatch(receiveRecipes(data)),
             err => dispatch(receiveRecipeErrors(err.responseJSON)))
@@ -105,10 +110,5 @@ export const fetchRecipe = id => dispatch => (
 
 export const searchRecipes = recipes => dispatch => (
   APIUtils.searchRecipes(recipes).then(data => dispatch(receiveSearch(data)),
-            err => dispatch(receiveRecipeErrors(err.responseJSON)))
-);
-
-export const updateRecipe = recipe => dispatch => (
-  APIUtils.updateRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
             err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );

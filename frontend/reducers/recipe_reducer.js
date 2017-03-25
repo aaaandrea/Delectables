@@ -15,16 +15,16 @@ const RecipeReducer = (state = {}, action) => {
       return merge({}, state, {
         errors
       });
-    case REMOVE_RECIPE:
-      let newState = merge([], state);
-      let index;
-      state.forEach((el, idx) => {
-        if (el.id === action.id) {
-          index = idx;
-        }
-      });
-      newState = newState.splice(index, 1);
-      return newState;
+    // case REMOVE_RECIPE:
+    //   let newState = merge([], state);
+    //   let index;
+    //   state.forEach((el, idx) => {
+    //     if (el.id === action.id) {
+    //       index = idx;
+    //     }
+    //   });
+    //   newState = newState.splice(index, 1);
+    //   return newState;
     default:
       return state;
   }

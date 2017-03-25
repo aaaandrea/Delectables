@@ -92,14 +92,21 @@ class RecipeForm extends React.Component {
     e.preventDefault();
     const recipe = Object.assign({}, this.state.recipe);
     this.props.processForm(recipe)
-     .then(resp => hashHistory.push(`/recipes/${resp.id}`));
+      .then(resp => {
+        hashHistory.push(`/recipes/${resp.recipe.id}`);
+      });
   }
 
   renderAllIngredients(){
+    console.log(this.state.recipe.ingredients);
     return(
       <ul>
         {this.state.recipe.ingredients.map((el, idx) => (
-            <IngredientForm ingredient={el} key={idx} idx={idx} updateIngredientAttributes={this.updateIngredientAttributes} /> ))}
+          <IngredientForm
+            ingredient={el}
+            key={idx}
+            idx={idx}
+            updateIngredientAttributes={this.updateIngredientAttributes} /> ))}
       </ul>
     );
   }
@@ -137,7 +144,7 @@ class RecipeForm extends React.Component {
               className="recipe-form-selector"
               name="tag_id"
               placeholder="Category"
-              value={this.state.recipe.tag_id}
+              defaultValue={this.state.recipe.tag_id}
               onChange={this.updateRecipeAttributes('tag_id')}>
               <option value="">-</option>
               <option value="1">Breakfast</option>

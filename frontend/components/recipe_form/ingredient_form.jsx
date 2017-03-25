@@ -6,11 +6,11 @@ import merge from 'lodash/merge';
 class IngredientForm extends React.Component {
   constructor(props) {
     super(props);
-    if (this.props.ingredient) {
+    if (props.ingredient) {
       this.state = {
-        title: this.props.ingredient.title,
-        quantity: this.props.ingredient.quantity,
-        unit: this.props.ingredient.unit
+        title: props.ingredient.title,
+        quantity: props.ingredient.quantity,
+        unit: props.ingredient.unit
       };
     } else {
       this.state = {
@@ -18,6 +18,16 @@ class IngredientForm extends React.Component {
         quantity: "",
         unit: ""
       };
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.ingredient) {
+      this.setState( {
+        title: nextProps.ingredient.title,
+        quantity: nextProps.ingredient.quantity,
+        unit: nextProps.ingredient.unit
+      });
     }
   }
 

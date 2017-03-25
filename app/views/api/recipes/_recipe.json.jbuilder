@@ -17,7 +17,7 @@ json.comments recipe.comments.order(created_at: :desc) do |comment|
   json.body comment.body
 end
 
-json.tags recipe.tags do |tag|
-  json.id tag.id
-  json.name tag.name
+json.tag do
+  json.id recipe.tag.id
+  json.name recipe.tag.name
 end

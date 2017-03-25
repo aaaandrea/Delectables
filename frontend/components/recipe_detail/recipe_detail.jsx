@@ -7,9 +7,8 @@ class RecipeDetail extends React.Component {
     super(props);
     this.state = {
       comment: {
-        body: "",
-        user_id: props.user.currentUser.id,
-        recipe_id: props.recipeDetail.id}
+        body: ""
+      }
     };
     this.edit = this.edit.bind(this);
     this.delete = this.delete.bind(this);
@@ -32,25 +31,26 @@ class RecipeDetail extends React.Component {
   updateComment() {
     return e => this.setState({
       comment: {
-        body: e.currentTarget.value,
-        user_id: this.props.user.currentUser.id,
-        recipe_id: this.props.recipeDetail.id
+        body: e.currentTarget.value
       }
     });
   }
 
   addComment(e) {
     e.preventDefault();
-    const comment = this.state.comment;
+    const comment = {
+      body: this.state.comment.body,
+      user_id: this.props.user.currentUser.id,
+      recipe_id: this.props.recipeDetail.id
+    };
     this.props.createComment({comment})
       .then(() => (
         this.props.fetchComments(this.props.recipeDetail.id)
           .then( () =>
             this.setState({
               comment: {
-                body: "",
-                user_id: this.props.user.currentUser.id,
-                recipe_id: this.props.recipeDetail.id}
+                body: ""
+              }
             })
           )
       ));

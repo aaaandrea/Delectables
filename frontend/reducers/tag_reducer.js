@@ -7,7 +7,6 @@ const TagReducer = (state = [], action) => {
   switch(action.type){
     case RECEIVE_TAGS:
       return action.tags;
-      // return merge([], state, action.tags);
     default:
       return state;
   }
