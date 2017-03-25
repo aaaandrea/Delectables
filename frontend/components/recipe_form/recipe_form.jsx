@@ -19,11 +19,14 @@ class RecipeForm extends React.Component {
   }
 
   componentDidMount() {
-    const boundSetState = this.setState.bind(this);
-    this.props.fetchRecipe(this.props.params.recipeId)
+    if (this.props.formType === 'edit') {
+      const boundSetState = this.setState.bind(this);
+      this.props.fetchRecipe(this.props.params.recipeId)
       .then(({ recipe }) => {
         boundSetState({ recipe });
       });
+
+    }
   }
 
   updateIngredientAttributes(index, attribute) {
