@@ -57,7 +57,7 @@ class Api::RecipesController < ApplicationController
     # @ingredients = Ingredient.all.where(recipe_id == @recipe.id)
     # debugger
     if @recipe.destroy
-      # @ingredients.destroy
+      # @ingredients.destroy_all
     else
       render json: ["Recipe cannot be deleted"], status: 422
     end

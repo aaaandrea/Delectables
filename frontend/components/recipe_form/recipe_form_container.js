@@ -16,9 +16,6 @@ const mapStateToProps = ( state, ownProps ) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  // let action = recipe => dispatch(createRecipe(recipe)).then(
-  //   data => hashHistory.push(`/recipes/${Object.keys(data.recipe.id)}`));
-
   let formType = ownProps.location.pathname.slice(1);
   formType = formType.slice(-4);
   const processFormAction = (formType === 'edit') ? updateRecipe : createRecipe;
