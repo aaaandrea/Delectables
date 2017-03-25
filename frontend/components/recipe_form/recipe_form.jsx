@@ -98,7 +98,6 @@ class RecipeForm extends React.Component {
   }
 
   renderAllIngredients(){
-    console.log(this.state.recipe.ingredients);
     return(
       <ul>
         {this.state.recipe.ingredients.map((el, idx) => (
