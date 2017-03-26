@@ -21,17 +21,17 @@ u6 = User.create!(username: 'Grillenium Falcon', password: 'password')
 u7 = User.create!(username: 'Bean Me Up', password: 'password')
 
 # Tags/Categories
-b = Tag.create!(name: 'Breakfast', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489706037/StockSnap_OC8WX0E0X3_leigtd.jpg')
-l = Tag.create!(name: 'Lunch', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489707425/eggs-1467286_1920_rfd5i3.jpg')
-d = Tag.create!(name: 'Dinner', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489681266/lamb_carrots_zxvqx0.jpg')
-a = Tag.create!(name: 'Appetizers', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489707710/tapas-534200_1920_wha8cy.jpg')
-dr = Tag.create!(name: 'Drinks', img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1489707903/smoothie-1578240_1920_rhs0gm.jpg')
+b = Tag.create!(name: 'Breakfast', img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1489706037/StockSnap_OC8WX0E0X3_leigtd.jpg')
+l = Tag.create!(name: 'Lunch', img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1489707425/eggs-1467286_1920_rfd5i3.jpg')
+d = Tag.create!(name: 'Dinner', img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1489681266/lamb_carrots_zxvqx0.jpg')
+a = Tag.create!(name: 'Appetizers', img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1489707710/tapas-534200_1920_wha8cy.jpg')
+dr = Tag.create!(name: 'Drinks', img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1489707903/smoothie-1578240_1920_rhs0gm.jpg')
 
 # Recipes
 
 # breakfast
 b1 = Recipe.create!(name: 'Bacon and Cheese Quiche',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490240996/733f57c4-9f45-468d-92f9-c4f554bfa5b9_yxmtif.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490240996/733f57c4-9f45-468d-92f9-c4f554bfa5b9_yxmtif.jpg',
                    tag_id: b.id,
                    user_id: u3.id,
                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -90,7 +90,7 @@ b1 = Recipe.create!(name: 'Bacon and Cheese Quiche',
                   b1.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b2 = Recipe.create!(name: 'Apricot Cream Scones',
-                 img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241066/apricot-cream-scones_pg3zif.jpg',
+                 img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241066/apricot-cream-scones_pg3zif.jpg',
                  tag_id: b.id,
                  user_id: u1.id,
                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -150,7 +150,7 @@ b2 = Recipe.create!(name: 'Apricot Cream Scones',
                 b2.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b3 = Recipe.create!(name: 'Lemon Pancakes',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241190/Lemon_Pancakes_3970_ebbndw.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241190/Lemon_Pancakes_3970_ebbndw.jpg',
                    tag_id: b.id,
                    user_id: u1.id,
                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -209,7 +209,7 @@ b3 = Recipe.create!(name: 'Lemon Pancakes',
                   b3.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b4 = Recipe.create!(name: 'Persimmon Bread',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241233/5138645664_e79edbe1d3_z_w62hpv.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241233/5138645664_e79edbe1d3_z_w62hpv.jpg',
                    tag_id: b.id,
                    user_id: u1.id,
                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -268,7 +268,7 @@ b4 = Recipe.create!(name: 'Persimmon Bread',
                   b4.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b5 = Recipe.create!(name: 'Egg in a Nest',
-               img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241311/Egg_in_NestJPG_diebck.jpg',
+               img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241311/Egg_in_NestJPG_diebck.jpg',
                tag_id: b.id,
                user_id: u1.id,
                directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -327,7 +327,7 @@ b5 = Recipe.create!(name: 'Egg in a Nest',
               b5.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b6 = Recipe.create!(name: 'Pumpkin Doughnuts',
-               img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241366/DSC_27051_stqqwn.jpg',
+               img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241366/DSC_27051_stqqwn.jpg',
                tag_id: b.id,
                user_id: u1.id,
                directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -386,7 +386,7 @@ b6 = Recipe.create!(name: 'Pumpkin Doughnuts',
               b6.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b7 = Recipe.create!(name: 'French Toast',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241476/french-toast-recipe_ijevms.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241476/french-toast-recipe_ijevms.jpg',
                    tag_id: b.id,
                    user_id: u1.id,
                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -446,7 +446,7 @@ b7 = Recipe.create!(name: 'French Toast',
 
 # lunch
   l1 = Recipe.create!(name: 'Roasted Beet and Citrus Salad With Ricotta and Pistachio Vinaigrette',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490200193/Chicory-Salad-11_upafzl.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490200193/Chicory-Salad-11_upafzl.jpg',
                      tag_id: l.id,
                      user_id: u1.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -505,7 +505,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     l1.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l2 = Recipe.create!(name: 'Curry Artichoke Rice Salad',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241554/curry-rice-salad-a_dv9jeh.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241554/curry-rice-salad-a_dv9jeh.jpg',
                      tag_id: l.id,
                      user_id: u1.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -564,7 +564,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     l2.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l3 = Recipe.create!(name: 'Grilled Corn, Mango and Jicama Salad with Honey Vinaigrette',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241628/Salad-Creole-green-salad-baby-arugula-and-baby-greens-roast-fennel-naval-and-blood-oranges-candied-cayenne-pecans-goat-cheese-in-creole-mustard-vinaigrette.-Accompanied-a-Cajun-menu_s7yvxb.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241628/Salad-Creole-green-salad-baby-arugula-and-baby-greens-roast-fennel-naval-and-blood-oranges-candied-cayenne-pecans-goat-cheese-in-creole-mustard-vinaigrette.-Accompanied-a-Cajun-menu_s7yvxb.jpg',
                    tag_id: l.id,
                    user_id: u1.id,
                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -624,7 +624,7 @@ b7 = Recipe.create!(name: 'French Toast',
                   l3.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l4 = Recipe.create!(name: 'Orange Cranberry Green Salad with Walnuts and Blue Cheese',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241751/green-salad-with-cranberries_ubfres.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241751/green-salad-with-cranberries_ubfres.jpg',
                      tag_id: l.id,
                      user_id: u4.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -683,7 +683,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     l4.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l5 = Recipe.create!(name: 'Spicy Pumpkin Soup with Cilantro Pepita Pesto',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241818/CvEkhpVUAAA5oYG_glmzax.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241818/CvEkhpVUAAA5oYG_glmzax.jpg',
                      tag_id: l.id,
                      user_id: u3.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -742,7 +742,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     l5.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l6 = Recipe.create!(name: 'Roasted Autumn Vegetable Chowder',
-                 img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490241911/cornchowder5_ya37vl.jpg',
+                 img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241911/cornchowder5_ya37vl.jpg',
                  tag_id: l.id,
                  user_id: u1.id,
                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -801,7 +801,7 @@ b7 = Recipe.create!(name: 'French Toast',
                 l6.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l7 = Recipe.create!(name: 'Potato Leek Soup',
-                 img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242014/Skinny-Crockpot-Potato-Leek-Soup_sy8jwh.jpg',
+                 img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242014/Skinny-Crockpot-Potato-Leek-Soup_sy8jwh.jpg',
                  tag_id: l.id,
                  user_id: u2.id,
                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -860,7 +860,7 @@ b7 = Recipe.create!(name: 'French Toast',
                 l7.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l8 = Recipe.create!(name: 'B.L.A.T. Sandwich with Spicy Chipotle Mayonnaise',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242125/BLTA-bacon-lettuce-tomato-sandwich-toast-avocado-5_lkfvzm.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242125/BLTA-bacon-lettuce-tomato-sandwich-toast-avocado-5_lkfvzm.jpg',
                      tag_id: l.id,
                      user_id: u1.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -921,7 +921,7 @@ b7 = Recipe.create!(name: 'French Toast',
 
 # dinner
   d1 = Recipe.create!(name: 'Chicken Bolognese with Tagliatelle',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490200498/ElCerrito_ThePasta2-superJumbo_gqatvi.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490200498/ElCerrito_ThePasta2-superJumbo_gqatvi.jpg',
                      tag_id: d.id,
                      user_id: u3.id,
                      directions: 'Heat a large skillet over medium-high. Swirl in oil. Add onion, celery, and carrots; season with salt and pepper. Cook, stirring, until softened, 5 to 7 minutes. Add chicken; season with salt and pepper. Cook, breaking into bite-size pieces, until no longer pink, 3 to 4 minutes. Stir in tomato paste; cook 2 minutes. Add wine; boil until almost evaporated, 1 to 2 minutes. Add milk and tomatoes; reduce heat and simmer until thickened, 12 to 15 minutes. Cook pasta in a large pot of salted water. Drain, reserving 1 cup pasta water; return to pot. Add sauce, then pasta water, a little at a time, until sauce evenly coats pasta. Drizzle with oil and top with celery leaves, cheese, and a pinch of nutmeg; serve.')
@@ -973,7 +973,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     d1.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d2 = Recipe.create!(name: 'Paella with Tomatoes',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242201/paella_ui10c8.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242201/paella_ui10c8.jpg',
                      tag_id: d.id,
                      user_id: u1.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1032,7 +1032,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     d2.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d3 = Recipe.create!(name: 'Spice Rubbed Flank Steak',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242285/1427695310729_cat1dd.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242285/1427695310729_cat1dd.jpg',
                      tag_id: d.id,
                      user_id: u1.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1091,7 +1091,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     d3.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d4 = Recipe.create!(name: 'Horseradish Meatloaf',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242412/FN_CHARITY-BOYD-MOMS-MEATLOAF_s4x3.jpg.rend.hgtvcom.616.462_wdf4m2.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242412/FN_CHARITY-BOYD-MOMS-MEATLOAF_s4x3.jpg.rend.hgtvcom.616.462_wdf4m2.jpg',
                    tag_id: d.id,
                    user_id: u5.id,
                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1151,7 +1151,7 @@ b7 = Recipe.create!(name: 'French Toast',
                   d4.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d5 = Recipe.create!(name: 'Macaroni and Cheese with Bacon, Leeks, and Thyme',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242460/MTI1NjQ2NjcwNTk0NjEwNDUw_av3oun.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242460/MTI1NjQ2NjcwNTk0NjEwNDUw_av3oun.jpg',
                      tag_id: d.id,
                      user_id: u6.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1211,7 +1211,7 @@ b7 = Recipe.create!(name: 'French Toast',
 
 
   d7 = Recipe.create!(name: 'Tofu in Coconut Sauce with Ginger and Lemongrass',
-                 img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242604/Red-Coconut-Curry-Tofu-Plated-1_qiop2s.jpg',
+                 img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242604/Red-Coconut-Curry-Tofu-Plated-1_qiop2s.jpg',
                  tag_id: d.id,
                  user_id: u7.id,
                  directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1270,7 +1270,7 @@ b7 = Recipe.create!(name: 'French Toast',
                 d7.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   d8 = Recipe.create!(name: 'Hearty Spinach and Sausage Soup',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490242706/IMG_1062_gxfozx.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490242706/IMG_1062_gxfozx.jpg',
                      tag_id: d.id,
                      user_id: u3.id,
                      directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1330,7 +1330,7 @@ b7 = Recipe.create!(name: 'French Toast',
 
 # appetizers
   a1 = Recipe.create!(name: 'Artichoke Hummus',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212029/ff-artichoke-hummus-feature_l29jyr.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490212029/ff-artichoke-hummus-feature_l29jyr.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
@@ -1369,7 +1369,7 @@ b7 = Recipe.create!(name: 'French Toast',
                                           quantity: '1')
 
   a2 = Recipe.create!(name: 'Brushetta al Pomodoro',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212107/maxresdefault_xhyfng.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490212107/maxresdefault_xhyfng.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: 'Mix together and enjoy')
@@ -1389,7 +1389,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     a2.ingredients.create!(title: 'Pinch of salt')
 
   a3 = Recipe.create!(name: 'Blood orange salad',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212196/img_1773_c4pjza.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490212196/img_1773_c4pjza.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: '1. Peel and section oranges with a sharp knife, leaving the pith and membrane behind.
@@ -1407,7 +1407,7 @@ b7 = Recipe.create!(name: 'French Toast',
                     a3.ingredients.create!(title: 'coarse salt')
 
   a4 = Recipe.create!(name: 'Easy Black Bean Dip',
-                     img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490212272/Black-Bean-Dip_ootvwn.jpg',
+                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490212272/Black-Bean-Dip_ootvwn.jpg',
                      tag_id: a.id,
                      user_id: u1.id,
                      directions: '1. Drain beans, reserving 2 tablespoons of liquid, then rinse in a strainer.
@@ -1457,7 +1457,7 @@ b7 = Recipe.create!(name: 'French Toast',
                                           unit: 'tsp')
 
 a5 = Recipe.create!(name: 'Chili Garlic Corn Chips',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490395883/p1110489_mru1zp.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490395883/p1110489_mru1zp.jpg',
                    tag_id: a.id,
                    user_id: u7.id,
                    directions: 'Blend all ingredients until smooth using a hand blender or traditional blender. Drink immediately.')
@@ -1482,7 +1482,7 @@ a5 = Recipe.create!(name: 'Chili Garlic Corn Chips',
                                           unit: 'tsp')
 
 a6 = Recipe.create!(name: 'Coconut Shrimp Poppers with Chili Mango Cream',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490395960/3673f370-34c2-4974-9ad2-8f0368df924d_rfj9zg.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490395960/3673f370-34c2-4974-9ad2-8f0368df924d_rfj9zg.jpg',
                    tag_id: a.id,
                    user_id: u1.id,
                    directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
@@ -1506,7 +1506,7 @@ a6 = Recipe.create!(name: 'Coconut Shrimp Poppers with Chili Mango Cream',
                    a6.ingredients.create!(title: 'lemon slices')
 
 a7 = Recipe.create!(name: 'Creamy Blue Cheese Dip with Lemon and Chives',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396021/bluecheese_m8twag.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490396021/bluecheese_m8twag.jpg',
                   tag_id: a.id,
                   user_id: u1.id,
                   directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
@@ -1543,7 +1543,7 @@ a7 = Recipe.create!(name: 'Creamy Blue Cheese Dip with Lemon and Chives',
                                           unit: 'cup(s)')
 
 a8 = Recipe.create!(name: 'Kettle Corn',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396103/Old-Fashioned-Kettle-Corn-1_ob4fng.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490396103/Old-Fashioned-Kettle-Corn-1_ob4fng.jpg',
                   tag_id: a.id,
                   user_id: u1.id,
                   directions: 'Blend all ingredients until smooth using a hand blender or traditional blender.')
@@ -1564,7 +1564,7 @@ a8 = Recipe.create!(name: 'Kettle Corn',
 
 # drinks
 dr1 = Recipe.create!(name: 'Easy Banana Milkshake',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490237919/banana-date-tahini-smoothie-1_moklxz.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490237919/banana-date-tahini-smoothie-1_moklxz.jpg',
                    tag_id: dr.id,
                    user_id: u7.id,
                    directions: 'Blend all ingredients until smooth using a hand blender or traditional blender. Drink immediately.')
@@ -1589,7 +1589,7 @@ dr1 = Recipe.create!(name: 'Easy Banana Milkshake',
                                           unit: 'tsp')
 
 dr2 = Recipe.create!(name: 'Fresh Lemonade',
-                   img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490237624/lemonade2_qnz7xz.jpg',
+                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490237624/lemonade2_qnz7xz.jpg',
                    tag_id: dr.id,
                    user_id: u1.id,
                    directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
@@ -1613,7 +1613,7 @@ dr2 = Recipe.create!(name: 'Fresh Lemonade',
                    dr2.ingredients.create!(title: 'lemon slices')
 
 dr3 = Recipe.create!(name: 'Fresh Strawberry Margaritas for Two',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490237764/Strawberry-Margaritas-5_tlr11k.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490237764/Strawberry-Margaritas-5_tlr11k.jpg',
                   tag_id: dr.id,
                   user_id: u1.id,
                   directions: 'In a food processor, combine garbanzo beans, artichoke hearts, garlic, tahini, lemon juice, and olive oil. Process until smooth, adding water to thin if necessary. Add salt and Sriracha (if using) to taste. Extra lemon juice or tahini may also be added to taste.
@@ -1650,7 +1650,7 @@ dr3 = Recipe.create!(name: 'Fresh Strawberry Margaritas for Two',
                                           unit: 'cup(s)')
 
 dr4 = Recipe.create!(name: 'Strawberry Milk',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490237827/homemade-strawberry-milk-DSC_2026_hmjeh1.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490237827/homemade-strawberry-milk-DSC_2026_hmjeh1.jpg',
                   tag_id: dr.id,
                   user_id: u1.id,
                   directions: 'Blend all ingredients until smooth using a hand blender or traditional blender.')
@@ -1668,7 +1668,7 @@ dr4 = Recipe.create!(name: 'Strawberry Milk',
                                        unit: 'tbsp')
 
 dr5 = Recipe.create!(name: 'Lemon Drop',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396344/Make-a-Lemon-Drop-Step-10_xdmd4s.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490396344/Make-a-Lemon-Drop-Step-10_xdmd4s.jpg',
                   tag_id: dr.id,
                   user_id: u5.id,
                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1727,7 +1727,7 @@ dr5 = Recipe.create!(name: 'Lemon Drop',
                  dr5.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 dr6 = Recipe.create!(name: 'Mojito Perfecto',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396395/Mojito-de-frutas-de-la-pasi_C3_B3n_kmpgbl.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490396395/Mojito-de-frutas-de-la-pasi_C3_B3n_kmpgbl.jpg',
                   tag_id: dr.id,
                   user_id: u2.id,
                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1786,7 +1786,7 @@ dr6 = Recipe.create!(name: 'Mojito Perfecto',
                  dr6.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 dr7 = Recipe.create!(name: 'Eggnog',
-                        img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396441/10758_best_eggnog_yt6zrw.jpg',
+                        img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490396441/10758_best_eggnog_yt6zrw.jpg',
                         tag_id: dr.id,
                         user_id: u3.id,
                         directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
@@ -1845,7 +1845,7 @@ dr7 = Recipe.create!(name: 'Eggnog',
                        dr7.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 dr8 = Recipe.create!(name: 'Mimosa',
-                  img: 'http://res.cloudinary.com/dg0cmca7a/image/upload/v1490396488/maxresdefault_qfkrbe.jpg',
+                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490396488/maxresdefault_qfkrbe.jpg',
                   tag_id: dr.id,
                   user_id: u4.id,
                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
