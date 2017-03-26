@@ -4,6 +4,6 @@ class CreateIngredients < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.timestamps
     end
-    add_index :ingredients, :name, unique: true
+    add_index :ingredients, :name
   end
 end

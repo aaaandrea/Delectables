@@ -12,7 +12,7 @@
 #
 
 class Ingredient < ApplicationRecord
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true
   validates :recipe, presence: true
 
   belongs_to :recipe

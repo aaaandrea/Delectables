@@ -39,4 +39,4 @@ extras:
 - fix gray text for session form
 
 
-clear store of recipe detail upon navigation from page. 
+clear store of recipe detail upon navigation from page.
