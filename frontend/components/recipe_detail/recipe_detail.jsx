@@ -136,15 +136,17 @@ class RecipeDetail extends React.Component {
           </label>
           <br></br>
           <label> by {this.props.recipeDetail.user.username}</label>
-          <figure>
-            <img
-              className="recipe-detail-img"
-              src={this.props.recipeDetail.img}
-              alt={this.props.recipeDetail.name}/>
-          </figure>
-          <div className="recipe-ing-container">
-            <h3 className="recipe-detail-h3">Ingredients</h3>
-            {this.renderIngredients()}
+          <div className="recipe-img-ing">
+            <figure>
+              <img
+                className="recipe-detail-img"
+                src={this.props.recipeDetail.img}
+                alt={this.props.recipeDetail.name}/>
+            </figure>
+            <div className="recipe-ing-container">
+              <h3 className="recipe-detail-h3">Ingredients</h3>
+              {this.renderIngredients()}
+            </div>
           </div>
           <div className="recipe-dir-container">
             <h3 className="recipe-detail-h3">Directions</h3>
