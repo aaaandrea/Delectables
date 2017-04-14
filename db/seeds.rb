@@ -31,92 +31,89 @@ dr = Tag.create!(name: 'Drinks', img: 'https://res.cloudinary.com/dg0cmca7a/imag
 
 # breakfast
 b1 = Recipe.create!(name: 'Bacon and Cheese Quiche',
-                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490240996/733f57c4-9f45-468d-92f9-c4f554bfa5b9_yxmtif.jpg',
-                   tag_id: b.id,
-                   user_id: u3.id,
-                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490240996/733f57c4-9f45-468d-92f9-c4f554bfa5b9_yxmtif.jpg',
+                    tag_id: b.id,
+                    user_id: u3.id,
+                    directions: 'Crumble bacon in to the bottom of the pie shell. Sprinkle shredded cheese over the bacon. Saute green onions in bacon grease and sprinkle over cheese. Beat eggs, half& half& milk together, then add remaining ingredients. Pour into the pie shell and bake at 350 degrees for 45 minutes.')
 
-                   2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+                    b1.ingredients.create!(title: 'slices cooked bacon', quantity: '5-6')
 
-                   3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+                    b1.ingredients.create!(title: 'green onions, chopped', quantity: '3-4')
 
-                   4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+                    b1.ingredients.create!(title: 'eggs, slightly beaten',
+                                        quantity: '3')
 
-                  b1.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                        quantity: '2',
-                                        unit: 'lb')
+                    b1.ingredients.create!(title: 'milk',
+                                          quantity: '1/2',
+                                          unit: 'cup(s)')
 
-                  b1.ingredients.create!(title: 'extra-virgin olive oil, divided',
+                  b1.ingredients.create!(title: 'ground pepper',
                                         quantity: '1/4',
-                                        unit: 'cup(s)')
-
-                  b1.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                        quantity: '2')
-
-                  b1.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
-
-                  b1.ingredients.create!(title: 'toasted shelled pistachios',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
-
-                  b1.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                        quantity: '1')
-
-                  b1.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                        quantity: '1')
-
-                  b1.ingredients.create!(title: 'juice from 1 lemon',
-                                        quantity: '2',
                                         unit: 'tsp')
 
-                  b1.ingredients.create!(title: 'small shallot, finely minced',
-                                        quantity: '1')
+                  b1.ingredients.create!(title: 'shredded cheddar cheese',
+                                        quantity: '1.5',
+                                        unit: 'cup(s)')
 
-                  b1.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                        quantity: '2',
-                                        unit: 'tsp')
-
-                  b1.ingredients.create!(title: 'honey',
+                  b1.ingredients.create!(title: 'half & half',
                                         quantity: '1',
-                                        unit: 'tbsp')
-
-                  b1.ingredients.create!(title: 'fresh ricotta',
-                                        quantity: '1/2',
                                         unit: 'cup(s)')
 
-                  b1.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                  b1.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                  b1.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-                  b1.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+                  b1.ingredients.create!(title: 'salt',
+                                        quantity: '1/2',
+                                        unit: 'tsp')
+
+                  b1.ingredients.create!(title: 'dry mustard',
+                                        quantity: '1/2',
+                                        unit: 'tsp')
+
+                  b1.ingredients.create!(title: 'cayenne pepper')
+
+                  b1.ingredients.create!(title: 'pie shell',
+                                        quantity: '1')
+
+                  b1.comments.create!(body: 'This was amazing! I used whole milk. YUM', user_id: u3.id)
+                  b1.comments.create!(body: 'Love me some quiche', user_id: u4.id)
+                  b1.comments.create!(body: "This quiche was delish.", user_id: u2.id)
+                  b1.comments.create!(body: 'I added an extra egg, and that worked way better', user_id: u6.id)
 
 b2 = Recipe.create!(name: 'Apricot Cream Scones',
                  img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241066/apricot-cream-scones_pg3zif.jpg',
                  tag_id: b.id,
                  user_id: u1.id,
-                 directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+                 directions: '1. Preheat oven to 425 degrees.
 
-                 2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+                              2. In a medium bowl, whisk together the flour, baking powder, salt and sugar.
 
-                 3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+                              3. In a separate small bowl, whisk together the egg, cream and vanilla; set aside.
 
-                 4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+                              4. Rub butter mixture into the flour mixture with your fingers (or use a pastry blender) until it resembles coarse crumbs. Stir in the apricot pieces.
 
-                b2.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                              5. Add the cream mixture to the flour mixture all at once and stir until moistened (The mixture should hold together when pinched).
+
+                              6. Dump the mixture out onto the counter, gather all the pieces together with your hands and press everything together to form a rough ball. Pat it into a circle, about 3/4 inch thick.
+
+                              7. Cut the circle like a pie into 8 pieces and place pieces onto a parchment-lined baking sheet.
+
+                              8. Brush scones with a little cream and sprinkle with coarse sugar.
+
+                              9. Bake in a preheated 425 degree oven for 15 minutes or until golden brown.')
+
+                b2.ingredients.create!(title: 'all purpose flour',
                                       quantity: '2',
-                                      unit: 'lb')
-
-                b2.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                      quantity: '1/4',
                                       unit: 'cup(s)')
 
-                b2.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                      quantity: '2')
-
-                b2.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
-
-                b2.ingredients.create!(title: 'toasted shelled pistachios',
-                                      quantity: '1/4',
+                b2.ingredients.create!(title: 'baking powder',
+                                      quantity: '1.5',
                                       unit: 'cup(s)')
+
+                b2.ingredients.create!(title: 'salt',
+                                       quantity: '1.2',
+                                       unit: 'tsp')
+
+                b2.ingredients.create!(title: 'sugar',
+                                    quantity: '1/4',
+                                    unit: 'cup(s)')
 
                 b2.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
                                       quantity: '1')

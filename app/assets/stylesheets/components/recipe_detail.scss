@@ -3,6 +3,7 @@
   font-size: 16px;
   padding: 10px;
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
 
 
@@ -12,8 +13,29 @@
     font-size: 24px;
     padding: 0;
   }
-  .recipe-detail-img {
-    float: right;
+
+  .recipe-img-ing {
+    display: flex;
+    flex-direction: row;
+    background: blue;
+
+    .recipe-detail-img {
+      margin: 0 auto;
+
+      // height: 30;
+      // width: 10;
+    }
+
+    .recipe-ing-container{
+      float: right;
+      padding: 5px;
+      background: white;
+
+      .recipe-detail-ul {
+        .recipe-detail-list {
+        }
+      }
+    }
   }
 
   .recipe-detail-h3 {
@@ -22,17 +44,9 @@
 
   .recipe-dir-container{
     float: left;
+    background: green;
 
     .recipe-detail-p {
-    }
-  }
-
-  .recipe-ing-container{
-    float: right;
-
-    .recipe-detail-ul {
-      .recipe-detail-list {
-      }
     }
   }
 
