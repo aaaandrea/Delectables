@@ -34,54 +34,52 @@ b1 = Recipe.create!(name: 'Bacon and Cheese Quiche',
                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490240996/733f57c4-9f45-468d-92f9-c4f554bfa5b9_yxmtif.jpg',
                     tag_id: b.id,
                     user_id: u3.id,
-                    directions: 'Crumble bacon in to the bottom of the pie shell. Sprinkle shredded cheese over the bacon. Saute green onions in bacon grease and sprinkle over cheese. Beat eggs, half& half& milk together, then add remaining ingredients. Pour into the pie shell and bake at 350 degrees for 45 minutes.')
+                    directions: 'Crumble bacon in to the bottom of the pie
+                    shell. Sprinkle shredded cheese over the bacon.
+                    Sautee green onions in bacon grease and sprinkle
+                    over cheese. Beat eggs, half& half and milk together,
+                    then add remaining ingredients. Pour into the pie
+                    shell and bake at 350 degrees for 45 minutes.')
 
-                    b1.ingredients.create!(title: 'slices cooked bacon', quantity: '5-6')
+b1.ingredients.create!(title: 'slices cooked bacon', quantity: '5-6')
 
-                    b1.ingredients.create!(title: 'green onions, chopped', quantity: '3-4')
+b1.ingredients.create!(title: 'green onions, chopped', quantity: '3-4')
 
-                    b1.ingredients.create!(title: 'eggs, slightly beaten',
-                                        quantity: '3')
+b1.ingredients.create!(title: 'eggs, slightly beaten', quantity: '3')
 
-                    b1.ingredients.create!(title: 'milk',
-                                          quantity: '1/2',
-                                          unit: 'cup(s)')
+b1.ingredients.create!(title: 'milk', quantity: '1/2', unit: 'cup(s)')
 
-                  b1.ingredients.create!(title: 'ground pepper',
-                                        quantity: '1/4',
-                                        unit: 'tsp')
+b1.ingredients.create!(title: 'ground pepper', quantity: '1/4', unit: 'tsp')
 
-                  b1.ingredients.create!(title: 'shredded cheddar cheese',
-                                        quantity: '1.5',
-                                        unit: 'cup(s)')
+b1.ingredients.create!(title: 'shredded cheddar cheese', quantity: '1.5',
+                       unit: 'cup(s)')
 
-                  b1.ingredients.create!(title: 'half & half',
-                                        quantity: '1',
-                                        unit: 'cup(s)')
+b1.ingredients.create!(title: 'half & half', quantity: '1', unit: 'cup(s)')
 
-                  b1.ingredients.create!(title: 'salt',
-                                        quantity: '1/2',
-                                        unit: 'tsp')
+b1.ingredients.create!(title: 'salt', quantity: '1/2', unit: 'tsp')
 
-                  b1.ingredients.create!(title: 'dry mustard',
-                                        quantity: '1/2',
-                                        unit: 'tsp')
+b1.ingredients.create!(title: 'dry mustard', quantity: '1/2', unit: 'tsp')
 
-                  b1.ingredients.create!(title: 'cayenne pepper')
+b1.ingredients.create!(title: 'cayenne pepper')
 
-                  b1.ingredients.create!(title: 'pie shell',
-                                        quantity: '1')
+b1.ingredients.create!(title: 'pie shell', quantity: '1')
 
-                  b1.comments.create!(body: 'This was amazing! I used whole milk. YUM', user_id: u3.id)
-                  b1.comments.create!(body: 'Love me some quiche', user_id: u4.id)
-                  b1.comments.create!(body: "This quiche was delish.", user_id: u2.id)
-                  b1.comments.create!(body: 'I added an extra egg, and that worked way better', user_id: u6.id)
+b1.comments.create!(body: 'This was amazing! I used whole milk. YUM',
+                    user_id: u3.id)
+b1.comments.create!(body: 'Love me some quiche', user_id: u4.id)
+b1.comments.create!(body: "This quiche was delish.", user_id: u2.id)
+b1.comments.create!(body: 'I added an extra egg, and that worked way better',
+                    user_id: u6.id)
+
+
+
+
 
 b2 = Recipe.create!(name: 'Apricot Cream Scones',
-                 img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241066/apricot-cream-scones_pg3zif.jpg',
-                 tag_id: b.id,
-                 user_id: u1.id,
-                 directions: '1. Preheat oven to 425 degrees.
+                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241066/apricot-cream-scones_pg3zif.jpg',
+                    tag_id: b.id,
+                    user_id: u1.id,
+                    directions: '1. Preheat oven to 425 degrees.
 
                               2. In a medium bowl, whisk together the flour, baking powder, salt and sugar.
 
@@ -99,111 +97,97 @@ b2 = Recipe.create!(name: 'Apricot Cream Scones',
 
                               9. Bake in a preheated 425 degree oven for 15 minutes or until golden brown.')
 
-                b2.ingredients.create!(title: 'all purpose flour',
-                                      quantity: '2',
-                                      unit: 'cup(s)')
+b2.ingredients.create!(title: 'all purpose flour', quantity: '2', unit: 'cup(s)')
 
-                b2.ingredients.create!(title: 'baking powder',
-                                      quantity: '1.5',
-                                      unit: 'cup(s)')
+b2.ingredients.create!(title: 'baking powder', quantity: '1.5', unit: 'cup(s)')
 
-                b2.ingredients.create!(title: 'salt',
-                                       quantity: '1.2',
-                                       unit: 'tsp')
+b2.ingredients.create!(title: 'salt', quantity: '1.2', unit: 'tsp')
 
-                b2.ingredients.create!(title: 'sugar',
-                                    quantity: '1/4',
-                                    unit: 'cup(s)')
+b2.ingredients.create!(title: 'sugar', quantity: '1/4', unit: 'cup(s)')
 
-                b2.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                      quantity: '1')
+b2.ingredients.create!(title: 'cold unsalted butter, cut into small pieces', quantity: '6', unit: 'tbsp')
 
-                b2.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                      quantity: '1')
+b2.ingredients.create!(title: 'chopped dried apricots', quantity: '1/2', unit: 'cup(s)')
 
-                b2.ingredients.create!(title: 'juice from 1 lemon',
-                                      quantity: '2',
-                                      unit: 'tsp')
+b2.ingredients.create!(title: 'egg, beaten', quantity: '1')
 
-                b2.ingredients.create!(title: 'small shallot, finely minced',
-                                      quantity: '1')
+b2.ingredients.create!(title: 'heavy cream', quantity: '1/2', unit: 'cup(s)')
 
-                b2.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                      quantity: '2',
-                                      unit: 'tsp')
+b2.ingredients.create!(title: 'vanilla extract', quantity: '1/2', unit: 'tsp')
 
-                b2.ingredients.create!(title: 'honey',
-                                      quantity: '1',
-                                      unit: 'tbsp')
+b2.ingredients.create!(title: 'extra heavy cream for brushing')
 
-                b2.ingredients.create!(title: 'fresh ricotta',
-                                      quantity: '1/2',
-                                      unit: 'cup(s)')
+b2.ingredients.create!(title: 'course sugar, like turbinado')
 
-                b2.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                b2.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                b2.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
+b2.comments.create!(body: 'I love scones and apricots. This has all the things!', user_id: u3.id)
+b2.comments.create!(body: 'Found it a little too cakey, so I added frosting!', user_id: u4.id)
+b2.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
+b2.comments.create!(body: 'I made mine into smaller pieces, and that worked out well', user_id: u6.id)
 
-                b2.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+
+
+
 
 b3 = Recipe.create!(name: 'Lemon Pancakes',
-                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241190/Lemon_Pancakes_3970_ebbndw.jpg',
-                   tag_id: b.id,
-                   user_id: u1.id,
-                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241190/Lemon_Pancakes_3970_ebbndw.jpg',
+                    tag_id: b.id,
+                    user_id: u1.id,
+                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
 
-                   2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+                    2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
 
-                   3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+                    3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
 
-                   4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+                    4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
 
-                  b3.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                        quantity: '2',
-                                        unit: 'lb')
+b3.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                      quantity: '2',
+                      unit: 'lb')
 
-                  b3.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
+b3.ingredients.create!(title: 'extra-virgin olive oil, divided',
+                      quantity: '1/4',
+                      unit: 'cup(s)')
 
-                  b3.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                        quantity: '2')
+b3.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
+                      quantity: '2')
 
-                  b3.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
+b3.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
 
-                  b3.ingredients.create!(title: 'toasted shelled pistachios',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
+b3.ingredients.create!(title: 'toasted shelled pistachios',
+                      quantity: '1/4',
+                      unit: 'cup(s)')
 
-                  b3.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                        quantity: '1')
+b3.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
+                      quantity: '1')
 
-                  b3.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                        quantity: '1')
+b3.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
+                      quantity: '1')
 
-                  b3.ingredients.create!(title: 'juice from 1 lemon',
-                                        quantity: '2',
-                                        unit: 'tsp')
+b3.ingredients.create!(title: 'juice from 1 lemon',
+                      quantity: '2',
+                      unit: 'tsp')
 
-                  b3.ingredients.create!(title: 'small shallot, finely minced',
-                                        quantity: '1')
+b3.ingredients.create!(title: 'small shallot, finely minced',
+                      quantity: '1')
 
-                  b3.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                        quantity: '2',
-                                        unit: 'tsp')
+b3.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
+                      quantity: '2',
+                      unit: 'tsp')
 
-                  b3.ingredients.create!(title: 'honey',
-                                        quantity: '1',
-                                        unit: 'tbsp')
+b3.ingredients.create!(title: 'honey',
+                      quantity: '1',
+                      unit: 'tbsp')
 
-                  b3.ingredients.create!(title: 'fresh ricotta',
-                                        quantity: '1/2',
-                                        unit: 'cup(s)')
+b3.ingredients.create!(title: 'fresh ricotta',
+                      quantity: '1/2',
+                      unit: 'cup(s)')
 
-                  b3.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                  b3.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                  b3.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-                  b3.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+b3.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+b3.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
+b3.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
+b3.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+
+
 
 b4 = Recipe.create!(name: 'Persimmon Bread',
                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241233/5138645664_e79edbe1d3_z_w62hpv.jpg',
