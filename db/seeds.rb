@@ -212,52 +212,27 @@ b6 = Recipe.create!(name: 'Pumpkin Doughnuts',
                Cool completely, and store (not wrapped tight) at room temperature for several days.
                Yield: 12 doughnuts or 15 muffins.')
 
-b6.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                      quantity: '2',
-                      unit: 'lb')
+b6.ingredients.create!(title: 'vegetable oil', quantity: '1/2', unit: 'cup(s)')
+b6.ingredients.create!(title: 'large eggs', quantity: '3')
+b6.ingredients.create!(title: 'granulated sugar', quantity: '1 1/2', unit: 'cup(s)')
+b6.ingredients.create!(title: 'pumpkin puree (canned pumpkin)', quantity: '1 1/2', unit: 'cup(s)')
+b6.ingredients.create!(title: 'pumpkin pie spice', quantity: '1 1/2', unit: 'tsp')
+b6.ingredients.create!(title: 'salt', quantity: '1', unit: 'tsp')
+b6.ingredients.create!(title: 'baking powder', quantity: '1 1/2', unit: 'tsp')
+b6.ingredients.create!(title: 'all purpose flour', quantity: '2', unit: 'cup(s)')
+b6.ingredients.create!(title: 'cinnamon sugar, for coating', quantity: '3', unit: 'tbsp')
 
-b6.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                      quantity: '1/4',
-                      unit: 'cup(s)')
 
-b6.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                      quantity: '2')
+b6.comments.create!(body: 'Pumpkin doughnuts?!?!', user_id: u3.id)
+b6.comments.create!(body: 'Surprisingly good', user_id: u4.id)
+b6.comments.create!(body: "Nope.", user_id: u2.id)
+b6.comments.create!(body: 'Never would\'ve thought of this! Amazing!', user_id: u6.id)
 
-b6.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
 
-b6.ingredients.create!(title: 'toasted shelled pistachios',
-                      quantity: '1/4',
-                      unit: 'cup(s)')
 
-b6.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                      quantity: '1')
 
-b6.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                      quantity: '1')
 
-b6.ingredients.create!(title: 'juice from 1 lemon',
-                      quantity: '2',
-                      unit: 'tsp')
 
-b6.ingredients.create!(title: 'small shallot, finely minced',
-                      quantity: '1')
-
-b6.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                      quantity: '2',
-                      unit: 'tsp')
-
-b6.ingredients.create!(title: 'honey',
-                      quantity: '1',
-                      unit: 'tbsp')
-
-b6.ingredients.create!(title: 'fresh ricotta',
-                      quantity: '1/2',
-                      unit: 'cup(s)')
-
-b6.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-b6.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-b6.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-b6.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b7 = Recipe.create!(name: 'French Toast',
                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241476/french-toast-recipe_ijevms.jpg',
