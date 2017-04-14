@@ -42,26 +42,16 @@ b1 = Recipe.create!(name: 'Bacon and Cheese Quiche',
                     shell and bake at 350 degrees for 45 minutes.')
 
 b1.ingredients.create!(title: 'slices cooked bacon', quantity: '5-6')
-
 b1.ingredients.create!(title: 'green onions, chopped', quantity: '3-4')
-
 b1.ingredients.create!(title: 'eggs, slightly beaten', quantity: '3')
-
 b1.ingredients.create!(title: 'milk', quantity: '1/2', unit: 'cup(s)')
-
 b1.ingredients.create!(title: 'ground pepper', quantity: '1/4', unit: 'tsp')
-
 b1.ingredients.create!(title: 'shredded cheddar cheese', quantity: '1.5',
                        unit: 'cup(s)')
-
 b1.ingredients.create!(title: 'half & half', quantity: '1', unit: 'cup(s)')
-
 b1.ingredients.create!(title: 'salt', quantity: '1/2', unit: 'tsp')
-
 b1.ingredients.create!(title: 'dry mustard', quantity: '1/2', unit: 'tsp')
-
 b1.ingredients.create!(title: 'cayenne pepper')
-
 b1.ingredients.create!(title: 'pie shell', quantity: '1')
 
 b1.comments.create!(body: 'This was amazing! I used whole milk. YUM',
@@ -70,8 +60,6 @@ b1.comments.create!(body: 'Love me some quiche', user_id: u4.id)
 b1.comments.create!(body: "This quiche was delish.", user_id: u2.id)
 b1.comments.create!(body: 'I added an extra egg, and that worked way better',
                     user_id: u6.id)
-
-
 
 
 
@@ -98,25 +86,15 @@ b2 = Recipe.create!(name: 'Apricot Cream Scones',
                               9. Bake in a preheated 425 degree oven for 15 minutes or until golden brown.')
 
 b2.ingredients.create!(title: 'all purpose flour', quantity: '2', unit: 'cup(s)')
-
 b2.ingredients.create!(title: 'baking powder', quantity: '1.5', unit: 'cup(s)')
-
 b2.ingredients.create!(title: 'salt', quantity: '1.2', unit: 'tsp')
-
 b2.ingredients.create!(title: 'sugar', quantity: '1/4', unit: 'cup(s)')
-
 b2.ingredients.create!(title: 'cold unsalted butter, cut into small pieces', quantity: '6', unit: 'tbsp')
-
 b2.ingredients.create!(title: 'chopped dried apricots', quantity: '1/2', unit: 'cup(s)')
-
 b2.ingredients.create!(title: 'egg, beaten', quantity: '1')
-
 b2.ingredients.create!(title: 'heavy cream', quantity: '1/2', unit: 'cup(s)')
-
 b2.ingredients.create!(title: 'vanilla extract', quantity: '1/2', unit: 'tsp')
-
 b2.ingredients.create!(title: 'extra heavy cream for brushing')
-
 b2.ingredients.create!(title: 'course sugar, like turbinado')
 
 b2.comments.create!(body: 'I love scones and apricots. This has all the things!', user_id: u3.id)
@@ -141,21 +119,13 @@ b3 = Recipe.create!(name: 'Lemon Pancakes',
                     Serve with butter, syrup, and extra lemon zest. (Can turn this into more of a dessert with a powdered sugar glaze and/or whipped cream!)')
 
 b3.ingredients.create!(title: 'whole lemons', quantity: '2')
-
 b3.ingredients.create!(title: '2% milk', quantity: '2 1/4', unit: 'cup(s)')
-
 b3.ingredients.create!(title: 'vanilla extract', quantity: '1', unit: 'tbsp')
-
 b3.ingredients.create!(title: 'flour', quantity: '3', unit: 'cup(s)')
-
 b3.ingredients.create!(title: 'sugar', quantity: '1/4', unit: 'cup(s)')
-
 b3.ingredients.create!(title: 'baking pwoder', quantity: '2', unit: 'tbsp')
-
 b3.ingredients.create!(title: 'salt', quantity: '1/4', unit: 'tsp')
-
 b3.ingredients.create!(title: 'whole eggs, beaten', quantity: '2')
-
 b3.ingredients.create!(title: 'butter, melted', quantity: '1/4', unit: 'cup(s)')
 
 b3.comments.create!(body: 'Forget lemonade, PANCAKES!', user_id: u3.id)
@@ -172,21 +142,13 @@ b4 = Recipe.create!(name: 'Persimmon Bread',
                     directions: '1. Butter 2 loaf pans. Line the bottoms with a piece of parchment paper or dust with flour and tap out any excess. 2. Preheat oven to 350 degrees. 3. Sift the first 5 dry ingredients in a large mixing bowl. 4. Make a well in the center then stir in the butter, eggs, liquor, persimmon puree then the nuts and raisins. 5. Bake 1 hour or until toothpick inserted into the center comes out clean. Storage: Will keep for about a week, if well-wrapped, at room temperature. The Persimmon Breads take well to being frozen, too.')
 
 b4.ingredients.create!(title: 'sifted flour', quantity: '3 1/2', unit: 'cup(s)')
-
 b4.ingredients.create!(title: 'salt', quantity: '1 1/2', unit: 'tsp')
-
 b4.ingredients.create!(title: 'baking soda', quantity: '2', unit: 'tbsp')
-
 b4.ingredients.create!(title: 'ground nutmeg', quantity: '1', unit: 'tsp')
-
 b4.ingredients.create!(title: 'sugar', quantity: '2 1/4', unit: 'cup(s)')
-
 b4.ingredients.create!(title: 'melted unsalted butter, cooled to room temperature', quantity: '1', unit: 'cup(s)')
-
 b4.ingredients.create!(title: 'large eggs, beaten, at room temperature', quantity: '4')
-
 b4.ingredients.create!(title: 'cognac, bourbon, or whiskey', quantity: '2/3', unit: 'cup(s)')
-
 b4.ingredients.create!(title: 'persimmon puree', quantity: '2', unit: 'cup(s)')
 b4.ingredients.create!(title: 'walnuts or pecan, toasted and chopped', quantity: '2', unit: 'cup(s)')
 b4.ingredients.create!(title: 'raisins, or diced dried fruits', quantity: '2', unit: 'cup(s)')
@@ -231,67 +193,28 @@ b6.comments.create!(body: 'Never would\'ve thought of this! Amazing!', user_id: 
 
 
 
-
-
-
 b7 = Recipe.create!(name: 'French Toast',
                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241476/french-toast-recipe_ijevms.jpg',
                    tag_id: b.id,
                    user_id: u1.id,
-                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+                   directions: 'In a small bowl, combine, cinnamon, nutmeg, and sugar and set aside briefly.
 
-                   2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+                  In a 10-inch or 12-inch skillet, melt butter over medium heat. Whisk together cinnamon mixture, eggs, milk, and vanilla and pour into a shallow container such as a pie plate. Dip bread in egg mixture. Fry slices until golden brown, then flip to cook the other side. Serve with syrup.')
 
-                   3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+b7.ingredients.create!(title: 'ground cinnamon', quantity: '1', unit: 'tsp')
+b7.ingredients.create!(title: 'ground nutmeg', quantity: '1/4', unit: 'tsp(s)')
+b7.ingredients.create!(title: 'sugar', quantity: '2', unit: 'tbsp')
+b7.ingredients.create!(title: 'butter', quantity: '4', unit: 'tbsp')
+b7.ingredients.create!(title: 'eggs', quantity: '4')
+b7.ingredients.create!(title: 'milk', quantity: '1/4', unit: 'cup(s)')
+b7.ingredients.create!(title: 'vanilla extract', quantity: '1/2', unit: 'tsp')
+b7.ingredients.create!(title: 'slices brioche or white bread', quantity: '8')
+b7.ingredients.create!(title: 'syrup', quantity: '1/2', unit: 'cup(s)')
 
-                   4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
-
-                  b7.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                        quantity: '2',
-                                        unit: 'lb')
-
-                  b7.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
-
-                  b7.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                        quantity: '2')
-
-                  b7.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
-
-                  b7.ingredients.create!(title: 'toasted shelled pistachios',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
-
-                  b7.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                        quantity: '1')
-
-                  b7.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                        quantity: '1')
-
-                  b7.ingredients.create!(title: 'juice from 1 lemon',
-                                        quantity: '2',
-                                        unit: 'tsp')
-
-                  b7.ingredients.create!(title: 'small shallot, finely minced',
-                                        quantity: '1')
-
-                  b7.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                        quantity: '2',
-                                        unit: 'tsp')
-
-                  b7.ingredients.create!(title: 'honey',
-                                        quantity: '1',
-                                        unit: 'tbsp')
-
-                  b7.ingredients.create!(title: 'fresh ricotta',
-                                        quantity: '1/2',
-                                        unit: 'cup(s)')
-
-                  b7.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                  b7.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                  b7.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-                  b7.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+b7.comments.create!(body: 'This is my favorite breakfast food.', user_id: u3.id)
+b7.comments.create!(body: 'All a part of a complete breakfast', user_id: u4.id)
+b7.comments.create!(body: "Add berries on the side, sooo goooooood", user_id: u2.id)
+b7.comments.create!(body: 'Classic', user_id: u6.id)
 
 # lunch
   l1 = Recipe.create!(name: 'Roasted Beet and Citrus Salad With Ricotta and Pistachio Vinaigrette',
