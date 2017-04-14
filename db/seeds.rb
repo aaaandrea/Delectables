@@ -217,7 +217,7 @@ b7.comments.create!(body: "Add berries on the side, sooo goooooood", user_id: u2
 b7.comments.create!(body: 'Classic', user_id: u6.id)
 
 # lunch
-  l1 = Recipe.create!(name: 'Roasted Beet and Citrus Salad With Ricotta and Pistachio Vinaigrette',
+l1 = Recipe.create!(name: 'Roasted Beet and Citrus Salad With Ricotta and Pistachio Vinaigrette',
                      img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490200193/Chicory-Salad-11_upafzl.jpg',
                      tag_id: l.id,
                      user_id: u1.id,
@@ -229,111 +229,55 @@ b7.comments.create!(body: 'Classic', user_id: u6.id)
 
                      4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
 
-                    l1.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                          quantity: '2',
-                                          unit: 'lb')
+l1.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean', quantity: '2', unit: 'lb')
+l1.ingredients.create!(title: 'extra-virgin olive oil, divided', quantity: '1/4', unit: 'cup(s)')
+l1.ingredients.create!(title: 'sprigs thyme or rosemary (optional)', quantity: '2')
+l1.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
+l1.ingredients.create!(title: 'toasted shelled pistachios', quantity: '1/4', unit: 'cup(s)')
+l1.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges', quantity: '1')
+l1.ingredients.create!(title: 'orange, cut into suprèmes or wedges', quantity: '1')
+l1.ingredients.create!(title: 'juice from 1 lemon', quantity: '2', unit: 'tsp')
+l1.ingredients.create!(title: 'small shallot, finely minced', quantity: '1')
+l1.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil', quantity: '2', unit: 'tsp')
+l1.ingredients.create!(title: 'honey', quantity: '1', unit: 'tbsp')
+l1.ingredients.create!(title: 'fresh ricotta', quantity: '1/2', unit: 'cup(s)')
 
-                    l1.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                          quantity: '1/4',
-                                          unit: 'cup(s)')
 
-                    l1.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                          quantity: '2')
+l1.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+l1.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
+l1.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
+l1.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
-                    l1.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
 
-                    l1.ingredients.create!(title: 'toasted shelled pistachios',
-                                          quantity: '1/4',
-                                          unit: 'cup(s)')
 
-                    l1.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                          quantity: '1')
+l2 = Recipe.create!(name: 'Curry Artichoke Rice Salad',
+                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241554/curry-rice-salad-a_dv9jeh.jpg',
+                    tag_id: l.id,
+                    user_id: u1.id,
+                    directions: 'Cook Rice as directed on box, but brown using olive oil, instead of butter.
+                              Mix Mayonnaise, curry powder and reserved marinade together, and set aside.
+                              Combine cooked Rice-a-Roni, artichoke hearts, olives, green onions and bell pepper.
+                              Pour mayonnaise mixture over rice mix.
+                              Stir to coat.
+                              Refrigerate until serving.
+                              Enjoy!')
 
-                    l1.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                          quantity: '1')
+l2.ingredients.create!(title: 'chicken rice-a-roni', quantity: '10', unit: 'oz')
+l2.ingredients.create!(title: 'extra-virgin olive oil, divided', quantity: '2', unit: 'tbsp')
+l2.ingredients.create!(title: '(6 ounce) jars marinated artichoke hearts, chopped, reserve liquid', quantity: '2')
+l2.ingredients.create!(title: 'green bell pepper, diced', quantity: '1/2')
+l2.ingredients.create!(title: 'green onions, chopped both white and green parts', quantity: '4')
+l2.ingredients.create!(title: 'pimento-stuffed green olives, sliced thin', quantity: '15')
+l2.ingredients.create!(title: 'curry powder', quantity: '1', unit: 'tbsp')
+l2.ingredients.create!(title: 'mayo', quantity: '1/3', unit: 'cup(s)')
 
-                    l1.ingredients.create!(title: 'juice from 1 lemon',
-                                          quantity: '2',
-                                          unit: 'tsp')
+l2.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+l2.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
+l2.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
+l2.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
-                    l1.ingredients.create!(title: 'small shallot, finely minced',
-                                          quantity: '1')
 
-                    l1.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                          quantity: '2',
-                                          unit: 'tsp')
 
-                    l1.ingredients.create!(title: 'honey',
-                                          quantity: '1',
-                                          unit: 'tbsp')
-
-                    l1.ingredients.create!(title: 'fresh ricotta',
-                                          quantity: '1/2',
-                                          unit: 'cup(s)')
-
-                    l1.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                    l1.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                    l1.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-                    l1.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
-
-  l2 = Recipe.create!(name: 'Curry Artichoke Rice Salad',
-                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241554/curry-rice-salad-a_dv9jeh.jpg',
-                     tag_id: l.id,
-                     user_id: u1.id,
-                     directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
-
-                     2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
-
-                     3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
-
-                     4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
-
-                    l2.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                          quantity: '2',
-                                          unit: 'lb')
-
-                    l2.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                          quantity: '1/4',
-                                          unit: 'cup(s)')
-
-                    l2.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                          quantity: '2')
-
-                    l2.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
-
-                    l2.ingredients.create!(title: 'toasted shelled pistachios',
-                                          quantity: '1/4',
-                                          unit: 'cup(s)')
-
-                    l2.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                          quantity: '1')
-
-                    l2.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                          quantity: '1')
-
-                    l2.ingredients.create!(title: 'juice from 1 lemon',
-                                          quantity: '2',
-                                          unit: 'tsp')
-
-                    l2.ingredients.create!(title: 'small shallot, finely minced',
-                                          quantity: '1')
-
-                    l2.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                          quantity: '2',
-                                          unit: 'tsp')
-
-                    l2.ingredients.create!(title: 'honey',
-                                          quantity: '1',
-                                          unit: 'tbsp')
-
-                    l2.ingredients.create!(title: 'fresh ricotta',
-                                          quantity: '1/2',
-                                          unit: 'cup(s)')
-
-                    l2.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                    l2.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                    l2.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-                    l2.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
   l3 = Recipe.create!(name: 'Grilled Corn, Mango and Jicama Salad with Honey Vinaigrette',
                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241628/Salad-Creole-green-salad-baby-arugula-and-baby-greens-roast-fennel-naval-and-blood-oranges-candied-cayenne-pecans-goat-cheese-in-creole-mustard-vinaigrette.-Accompanied-a-Cajun-menu_s7yvxb.jpg',
