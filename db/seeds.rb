@@ -158,189 +158,106 @@ b3.ingredients.create!(title: 'whole eggs, beaten', quantity: '2')
 
 b3.ingredients.create!(title: 'butter, melted', quantity: '1/4', unit: 'cup(s)')
 
-b3.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-b3.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-b3.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-b3.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+b3.comments.create!(body: 'Forget lemonade, PANCAKES!', user_id: u3.id)
+b3.comments.create!(body: 'Missing the irish coffee', user_id: u4.id)
+b3.comments.create!(body: "Used whipped butter to top this off.", user_id: u2.id)
+b3.comments.create!(body: 'Doesn\'t need syrup', user_id: u6.id)
 
 
 
 b4 = Recipe.create!(name: 'Persimmon Bread',
-                   img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241233/5138645664_e79edbe1d3_z_w62hpv.jpg',
-                   tag_id: b.id,
-                   user_id: u1.id,
-                   directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241233/5138645664_e79edbe1d3_z_w62hpv.jpg',
+                    tag_id: b.id,
+                    user_id: u1.id,
+                    directions: '1. Butter 2 loaf pans. Line the bottoms with a piece of parchment paper or dust with flour and tap out any excess. 2. Preheat oven to 350 degrees. 3. Sift the first 5 dry ingredients in a large mixing bowl. 4. Make a well in the center then stir in the butter, eggs, liquor, persimmon puree then the nuts and raisins. 5. Bake 1 hour or until toothpick inserted into the center comes out clean. Storage: Will keep for about a week, if well-wrapped, at room temperature. The Persimmon Breads take well to being frozen, too.')
 
-                   2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+b4.ingredients.create!(title: 'sifted flour', quantity: '3 1/2', unit: 'cup(s)')
 
-                   3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+b4.ingredients.create!(title: 'salt', quantity: '1 1/2', unit: 'tsp')
 
-                   4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+b4.ingredients.create!(title: 'baking soda', quantity: '2', unit: 'tbsp')
 
-                  b4.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                        quantity: '2',
-                                        unit: 'lb')
+b4.ingredients.create!(title: 'ground nutmeg', quantity: '1', unit: 'tsp')
 
-                  b4.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
+b4.ingredients.create!(title: 'sugar', quantity: '2 1/4', unit: 'cup(s)')
 
-                  b4.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                        quantity: '2')
+b4.ingredients.create!(title: 'melted unsalted butter, cooled to room temperature', quantity: '1', unit: 'cup(s)')
 
-                  b4.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
+b4.ingredients.create!(title: 'large eggs, beaten, at room temperature', quantity: '4')
 
-                  b4.ingredients.create!(title: 'toasted shelled pistachios',
-                                        quantity: '1/4',
-                                        unit: 'cup(s)')
+b4.ingredients.create!(title: 'cognac, bourbon, or whiskey', quantity: '2/3', unit: 'cup(s)')
 
-                  b4.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                        quantity: '1')
+b4.ingredients.create!(title: 'persimmon puree', quantity: '2', unit: 'cup(s)')
+b4.ingredients.create!(title: 'walnuts or pecan, toasted and chopped', quantity: '2', unit: 'cup(s)')
+b4.ingredients.create!(title: 'raisins, or diced dried fruits', quantity: '2', unit: 'cup(s)')
 
-                  b4.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                        quantity: '1')
+b4.comments.create!(body: 'Too little whiskey', user_id: u3.id)
+b4.comments.create!(body: 'I used almonds and they worked fine', user_id: u4.id)
+b4.comments.create!(body: "Caaarbs! This did not go well for my paleo diet.", user_id: u2.id)
+b4.comments.create!(body: 'Mind. Blown.', user_id: u6.id)
 
-                  b4.ingredients.create!(title: 'juice from 1 lemon',
-                                        quantity: '2',
-                                        unit: 'tsp')
 
-                  b4.ingredients.create!(title: 'small shallot, finely minced',
-                                        quantity: '1')
-
-                  b4.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                        quantity: '2',
-                                        unit: 'tsp')
-
-                  b4.ingredients.create!(title: 'honey',
-                                        quantity: '1',
-                                        unit: 'tbsp')
-
-                  b4.ingredients.create!(title: 'fresh ricotta',
-                                        quantity: '1/2',
-                                        unit: 'cup(s)')
-
-                  b4.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-                  b4.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-                  b4.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-                  b4.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
-
-b5 = Recipe.create!(name: 'Egg in a Nest',
-               img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241311/Egg_in_NestJPG_diebck.jpg',
-               tag_id: b.id,
-               user_id: u1.id,
-               directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
-
-               2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
-
-               3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
-
-               4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
-
-              b5.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                    quantity: '2',
-                                    unit: 'lb')
-
-              b5.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                    quantity: '1/4',
-                                    unit: 'cup(s)')
-
-              b5.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                    quantity: '2')
-
-              b5.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
-
-              b5.ingredients.create!(title: 'toasted shelled pistachios',
-                                    quantity: '1/4',
-                                    unit: 'cup(s)')
-
-              b5.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                    quantity: '1')
-
-              b5.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                    quantity: '1')
-
-              b5.ingredients.create!(title: 'juice from 1 lemon',
-                                    quantity: '2',
-                                    unit: 'tsp')
-
-              b5.ingredients.create!(title: 'small shallot, finely minced',
-                                    quantity: '1')
-
-              b5.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                    quantity: '2',
-                                    unit: 'tsp')
-
-              b5.ingredients.create!(title: 'honey',
-                                    quantity: '1',
-                                    unit: 'tbsp')
-
-              b5.ingredients.create!(title: 'fresh ricotta',
-                                    quantity: '1/2',
-                                    unit: 'cup(s)')
-
-              b5.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-              b5.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-              b5.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-              b5.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b6 = Recipe.create!(name: 'Pumpkin Doughnuts',
                img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241366/DSC_27051_stqqwn.jpg',
                tag_id: b.id,
                user_id: u1.id,
-               directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+               directions: 'Preheat the oven to 350°F. Lightly grease two standard doughnut pans. If you don\'t have doughnut pans, you can bake these in a standard muffin tin; they just won\'t be doughnuts.
+               Beat together the oil, eggs, sugar, pumpkin, spices, salt, and baking powder until smooth.
+               Add the flour, stirring just until smooth.
+               Fill the wells of the doughnut pans about 3/4 full; use a scant 1/4 cup of batter in each well. If you\'re making muffins, fill each well about 3/4 full; the recipe makes about 15, so you\'ll need to bake in two batches (unless you have two muffin pans).
+               Bake the doughnuts for 15 to 18 minutes, or until a cake tester inserted into the center of one comes out clean. If you\'re making muffins, they\'ll need to bake for 23 to 25 minutes.
+               Remove the doughnuts from the oven, and after about 5 minutes, loosen their edges, and transfer them to a rack to cool.
+               While the doughnuts are still warm (but no longer fragile), gently shake them in a bag with the cinnamon-sugar. If you\'ve made muffins, sprinkle their tops heavily with cinnamon-sugar.
+               Cool completely, and store (not wrapped tight) at room temperature for several days.
+               Yield: 12 doughnuts or 15 muffins.')
 
-               2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+b6.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
+                      quantity: '2',
+                      unit: 'lb')
 
-               3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+b6.ingredients.create!(title: 'extra-virgin olive oil, divided',
+                      quantity: '1/4',
+                      unit: 'cup(s)')
 
-               4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+b6.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
+                      quantity: '2')
 
-              b6.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                                    quantity: '2',
-                                    unit: 'lb')
+b6.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
 
-              b6.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                                    quantity: '1/4',
-                                    unit: 'cup(s)')
+b6.ingredients.create!(title: 'toasted shelled pistachios',
+                      quantity: '1/4',
+                      unit: 'cup(s)')
 
-              b6.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                                    quantity: '2')
+b6.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
+                      quantity: '1')
 
-              b6.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
+b6.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
+                      quantity: '1')
 
-              b6.ingredients.create!(title: 'toasted shelled pistachios',
-                                    quantity: '1/4',
-                                    unit: 'cup(s)')
+b6.ingredients.create!(title: 'juice from 1 lemon',
+                      quantity: '2',
+                      unit: 'tsp')
 
-              b6.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                                    quantity: '1')
+b6.ingredients.create!(title: 'small shallot, finely minced',
+                      quantity: '1')
 
-              b6.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                                    quantity: '1')
+b6.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
+                      quantity: '2',
+                      unit: 'tsp')
 
-              b6.ingredients.create!(title: 'juice from 1 lemon',
-                                    quantity: '2',
-                                    unit: 'tsp')
+b6.ingredients.create!(title: 'honey',
+                      quantity: '1',
+                      unit: 'tbsp')
 
-              b6.ingredients.create!(title: 'small shallot, finely minced',
-                                    quantity: '1')
+b6.ingredients.create!(title: 'fresh ricotta',
+                      quantity: '1/2',
+                      unit: 'cup(s)')
 
-              b6.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                                    quantity: '2',
-                                    unit: 'tsp')
-
-              b6.ingredients.create!(title: 'honey',
-                                    quantity: '1',
-                                    unit: 'tbsp')
-
-              b6.ingredients.create!(title: 'fresh ricotta',
-                                    quantity: '1/2',
-                                    unit: 'cup(s)')
-
-              b6.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
-              b6.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
-              b6.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
-              b6.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
+b6.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
+b6.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
+b6.comments.create!(body: "I'll be making this one again.", user_id: u2.id)
+b6.comments.create!(body: 'Pretty good, thanks for sharing!', user_id: u6.id)
 
 b7 = Recipe.create!(name: 'French Toast',
                    img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241476/french-toast-recipe_ijevms.jpg',
