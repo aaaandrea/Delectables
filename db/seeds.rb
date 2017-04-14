@@ -132,55 +132,31 @@ b3 = Recipe.create!(name: 'Lemon Pancakes',
                     img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241190/Lemon_Pancakes_3970_ebbndw.jpg',
                     tag_id: b.id,
                     user_id: u1.id,
-                    directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+                    directions: 'Zest both lemons. Set aside. Measure the milk and add the juice of 1 1/2 of the lemons. Stir and let sit for 5 minutes, then gently stir in the vanilla.
 
-                    2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+                    Stir together the flour, sugar, baking powder, and salt. Pour in the milk/lemon mixture, stirring gently. When it\'s halfway mixed together, stir in the eggs, then the melted butter. Finally, stir in the lemon zest. (If the batter is overly thick at this stage, add up to 1/4 cup milk.
 
-                    3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+                    Heat an iron skillet over medium heat, then add 2 tablespoons butter. When it\'s melted, drop in 1/4 cup helpings of batter, smoothing the top to help spread it into an even layer. Cook until golden and sizzly around the edges, then turn to the other side and finish cooking. Remove and repeat with the rest of the batter.
 
-                    4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
+                    Serve with butter, syrup, and extra lemon zest. (Can turn this into more of a dessert with a powdered sugar glaze and/or whipped cream!)')
 
-b3.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                      quantity: '2',
-                      unit: 'lb')
+b3.ingredients.create!(title: 'whole lemons', quantity: '2')
 
-b3.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                      quantity: '1/4',
-                      unit: 'cup(s)')
+b3.ingredients.create!(title: '2% milk', quantity: '2 1/4', unit: 'cup(s)')
 
-b3.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                      quantity: '2')
+b3.ingredients.create!(title: 'vanilla extract', quantity: '1', unit: 'tbsp')
 
-b3.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
+b3.ingredients.create!(title: 'flour', quantity: '3', unit: 'cup(s)')
 
-b3.ingredients.create!(title: 'toasted shelled pistachios',
-                      quantity: '1/4',
-                      unit: 'cup(s)')
+b3.ingredients.create!(title: 'sugar', quantity: '1/4', unit: 'cup(s)')
 
-b3.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                      quantity: '1')
+b3.ingredients.create!(title: 'baking pwoder', quantity: '2', unit: 'tbsp')
 
-b3.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                      quantity: '1')
+b3.ingredients.create!(title: 'salt', quantity: '1/4', unit: 'tsp')
 
-b3.ingredients.create!(title: 'juice from 1 lemon',
-                      quantity: '2',
-                      unit: 'tsp')
+b3.ingredients.create!(title: 'whole eggs, beaten', quantity: '2')
 
-b3.ingredients.create!(title: 'small shallot, finely minced',
-                      quantity: '1')
-
-b3.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                      quantity: '2',
-                      unit: 'tsp')
-
-b3.ingredients.create!(title: 'honey',
-                      quantity: '1',
-                      unit: 'tbsp')
-
-b3.ingredients.create!(title: 'fresh ricotta',
-                      quantity: '1/2',
-                      unit: 'cup(s)')
+b3.ingredients.create!(title: 'butter, melted', quantity: '1/4', unit: 'cup(s)')
 
 b3.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
 b3.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
