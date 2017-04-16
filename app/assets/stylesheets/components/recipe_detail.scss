@@ -135,11 +135,14 @@
       background-color: white;
 
       .recipe-comment-name{
+        font-family: 'Baloo Bhaina';
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 100;
+        // font-weight: bold;
       }
       .recipe-comment {
-        font-size: 18px;
+        font-weight: 50;
+        font-size: 14px;
       }
     }
   }

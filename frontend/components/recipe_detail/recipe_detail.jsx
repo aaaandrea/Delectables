@@ -85,9 +85,19 @@ class RecipeDetail extends React.Component {
     return(
       <ul className="recipe-detail-ul">
         {this.props.recipeDetail.ingredients.map((el, idx) => {
-          return(<li
+          if (!el.quantity) {
+            return (
+              <li
+              className="recipe-detail-list"
+              key={idx}>{el.title}</li>
+            );
+          }
+          return (
+            <li
             className="recipe-detail-list"
-            key={idx}>{el.quantity} {el.unit} - {el.title}</li>);
+            key={idx}>
+            <label>{el.quantity} {el.unit} - </label>{el.title}</li>
+          );
         })}
       </ul>
     );
