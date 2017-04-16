@@ -1,12 +1,15 @@
 .recipe-detail-container {
+  padding-top: 20px;
+  padding-left: 30px;
   margin: 0 auto;
   font-size: 16px;
-  padding: 20px;
+  color: $mauve;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
 
   .recipe-title-container {
+    // padding-left: 20px;
     font-family: 'Baloo Bhaina';
     color: $mauve;
     padding: 5;
@@ -22,38 +25,49 @@
   }
 
   .recipe-img-ing {
+    // padding-left: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    padding: 10px;
-    margin-bottom: 20px;
 
     .recipe-detail-img {
+      // padding-left: 20px;
       justify-content: flex-start;
       margin: 0 auto;
-      background: $light-gray;
+      background: linear-gradient(to right, $lightest-blue, $light-peach);
       padding: 10px;
       height: 30%;
       width: 40%;
       margin: 0;
+      border: 1px solid $lightest-blue;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      margin-right: 20px;
     }
 
     .recipe-ing-container{
-      padding-left: 20px;
+      padding: 10px;
       flex-direction: column;
-      flex-grow: 2 0 0;
+      border: 1px solid $light-gray;
+      border-radius: 10px;
+      background: linear-gradient(to right, $light-peach , $lightest-blue);
+      margin-bottom: 10px;
 
       .recipe-detail-ul {
         float: right;
         flex-flow: wrap;
-        padding-left: 20px;
+        padding: 5px;
+        background: white;
+        border: 1px solid white;
+        border-radius: 10px;
 
         .recipe-detail-list {
           flex-flow: wrap;
           list-style: disc;
           list-style-position: inside;
-          padding-left: 10px;
+          font-size: 14px;
+          font-family: sans-serif;
         }
       }
     }
@@ -61,21 +75,29 @@
 
 
   .recipe-detail-label {
+    // padding-left: 20px;
     font-family: 'Baloo Bhaina';
     font-size: 18px;
     padding: 0;
+    line-height: 1;
   }
 
   .recipe-dir-container{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 95%;
+    padding: 10px;
     border-top: 1px solid $light-gray;
     border-bottom: 1px solid $light-gray;
+    border-radius: 10px;
+    background: linear-gradient(to right, $lightest-blue , $light-peach);
     float: left;
+    font-size: 14px;
+    font-family: sans-serif;
 
     .recipe-detail-p {
-      padding-left: 20px;
-      padding-right: 50px;
+      padding: 10px;
+      background: white;
+      border: 1px solid $lightest-gray;
+      border-radius: 10px;
     }
   }
 
@@ -97,18 +119,23 @@
   }
 
 
-
   .recipe-comments-container {
-    padding-top: 10px;
+    padding: 10px;
+    margin-top: 10px;
     width: 95%;
+    background: linear-gradient(to right, $lightest-blue , $light-peach);
+    border: 1px solid $lightest-blue;
+    border-radius: 10px;
+    margin-bottom: 40px;
 
     .recipe-comment-create-container{
       display: flex;
       flex-direction: column;
-      padding-left: 20px;
 
       .recipe-comment-body {
         background: white;
+        border: 1px solid $light-gray;
+        border-radius: 10px;
       }
 
       .recipe-comment-button {
@@ -116,11 +143,12 @@
         justify-content: center;
         align-items: center;
         font-size: 14px;
-        background: $pink-orange;
-        color: $bone;
+        background: $pink-oatmeal;
         height: 30px;
         width: 200px;
         margin-top: 5px;
+        border: 1px solid $light-gray;
+        border-radius: 10px;
       }
 
       .recipe-comment-button:hover {
@@ -132,12 +160,12 @@
       display: flex;
       flex-direction: column;
       border-bottom: $gray;
-      padding-top: 20px;
-      padding-left: 15px;
+      padding-top: 10px;
 
       .recipe-comment-container {
         flex-direction: row;
-        border: 1px $light-gray solid;
+        border: 1px solid $light-gray;
+        border-radius: 10px;
         margin: 2px;
         padding: 5px;
         background-color: white;
@@ -146,7 +174,6 @@
           font-family: 'Baloo Bhaina';
           font-size: 12px;
           font-weight: 100;
-          // font-weight: bold;
         }
         .recipe-comment {
           font-weight: 50;
