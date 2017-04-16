@@ -160,7 +160,7 @@ class RecipeForm extends React.Component {
 
             <label className="recipe-form-label">Directions</label>
             <textarea
-              className="recipe-form-attribute"
+              className="recipe-form-dir"
               type="textarea"
               placeholder="Directions"
               value={this.state.recipe.directions}
