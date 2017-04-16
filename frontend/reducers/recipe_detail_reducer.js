@@ -5,6 +5,7 @@ import {
 
 const RecipeDetailReducer = (state = {}, action) => {
   Object.freeze(state);
+  console.log(state);
   switch(action.type) {
     case RECEIVE_RECIPE:
       return merge({}, action.recipe);

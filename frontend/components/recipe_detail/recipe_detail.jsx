@@ -132,7 +132,7 @@ class RecipeDetail extends React.Component {
       return null;
     } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
       return(
-        <div>
+        <div className="recipe-buttons">
         <button className="recipe-detail-button" onClick={this.delete}>Delete</button>
         <button className="recipe-detail-button" onClick={this.edit}>Update</button>
         </div>

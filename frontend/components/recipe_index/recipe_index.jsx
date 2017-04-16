@@ -55,7 +55,7 @@ class RecipeIndex extends React.Component {
     };
   }
 
-  renderRecipeTags() {
+  renderFilterButtons() {
     if (!this.props.tags) {
       return null;
     }
@@ -74,7 +74,7 @@ class RecipeIndex extends React.Component {
 
   render(){
     let recipes = this.renderRecipes();
-    let tagButtons = this.renderRecipeTags();
+    let tagButtons = this.renderFilterButtons();
     return(
       <div className="recipe-index-container">
         <section className="index-filter-container">

@@ -78,18 +78,23 @@
     }
   }
 
-  .recipe-detail-button {
-    font-size: 14px;
-    background: $pink-orange;
-    color: $bone;
-    height: 30px;
-    width: 200px;
-    margin: 5px;
+  .recipe-buttons {
+
+    .recipe-detail-button {
+      text-align: center;
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 200px;
+      margin: 5px;
+    }
+
+    .recipe-detail-button:hover {
+      background-color: $peach;
+    }
   }
 
-  .recipe-detail-button:hover {
-    background-color: $peach;
-  }
 
 
   .recipe-comments-container {
@@ -107,14 +112,14 @@
 
       .recipe-comment-button {
         display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 14px;
         background: $pink-orange;
         color: $bone;
         height: 30px;
         width: 200px;
         margin-top: 5px;
-        justify-content: center;
-        align-items: center;
       }
 
       .recipe-comment-button:hover {

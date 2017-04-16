@@ -20,7 +20,7 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.tag = Tag.find(recipe_params[:tag_id])
+    # @recipe.tag = Tag.find(recipe_params[:tag_id])
     @recipe.user_id = current_user.id
     if @recipe.save
       ingredients_params[:ingredients].each do |ingredient|
@@ -31,7 +31,7 @@ class Api::RecipesController < ApplicationController
       end
       render "api/recipes/show"
     else
-      render json: @recipe.errors.full_messages, status: 422
+      render json: @recipe.errors.full_messages
     end
   end
 
