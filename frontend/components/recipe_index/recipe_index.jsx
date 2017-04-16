@@ -6,6 +6,7 @@ class RecipeIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      filterTagId: false,
       recipes: this.props.recipes
     };
     this.filterRecipes = this.filterRecipes.bind(this);
@@ -31,7 +32,13 @@ class RecipeIndex extends React.Component {
   }
 
   renderRecipes() {
-    return this.state.recipes.map( (recipe, idx) => (
+    const recipes = this.state.recipes.filter((recipe) => {
+      if (!this.state.filterTagId) {
+        return true;
+      }
+      return recipe.tag_id === this.state.filterTagId;
+    });
+    return recipes.map( (recipe, idx) => (
       <li key={idx}
         className="recipe-container col col-1-4"
         onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
@@ -44,13 +51,7 @@ class RecipeIndex extends React.Component {
   filterRecipes(id) {
     return (e) => {
       e.preventDefault();
-      let recipes = [];
-      this.props.recipes.forEach(recipe => {
-        if (recipe.tag_id === id) {
-          recipes.push(recipe);
-        }
-      });
-      this.setState({ recipes });
+      this.setState({ filterTagId: id });
     };
   }
 
@@ -58,8 +59,9 @@ class RecipeIndex extends React.Component {
     if (!this.props.tags) {
       return null;
     }
+    const buttons = [{name: 'All'}].concat(this.props.tags);
     return(
-      this.props.tags.map((tag, idx) => (
+      buttons.map((tag, idx) => (
         <button
           className="index-filter"
           key={idx}
