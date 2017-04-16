@@ -85,9 +85,19 @@ class RecipeDetail extends React.Component {
     return(
       <ul className="recipe-detail-ul">
         {this.props.recipeDetail.ingredients.map((el, idx) => {
-          return(<li
+          if (!el.quantity) {
+            return (
+              <li
+              className="recipe-detail-list"
+              key={idx}>{el.title}</li>
+            );
+          }
+          return (
+            <li
             className="recipe-detail-list"
-            key={idx}>{el.quantity} {el.unit} - {el.title}</li>);
+            key={idx}>
+            <label>{el.quantity} {el.unit} </label>{el.title}</li>
+          );
         })}
       </ul>
     );
@@ -99,13 +109,18 @@ class RecipeDetail extends React.Component {
     }
     return(
       <div className="recipe-comments-container">
-        <label className="recipe-comments-title">Comments</label>
+        <label className="recipe-detail-label">Comments</label>
 
         {this.renderCommentBox()}
 
         <ul className="recipe-comments-ul-container">
           {this.props.recipeDetail.comments.map((el, idx) => {
-            return(<li className="recipe-comment" key={idx}>{el.body}</li>);
+            return(
+              <div className="recipe-comment-container">
+                <label className="recipe-comment-name">{el.username} says</label>
+                <li className="recipe-comment" key={idx}>{el.body}</li>
+              </div>
+            );
           })}
         </ul>
       </div>
@@ -117,7 +132,7 @@ class RecipeDetail extends React.Component {
       return null;
     } else if (this.props.user.currentUser.id === this.props.recipeDetail.user.id) {
       return(
-        <div>
+        <div className="recipe-buttons">
         <button className="recipe-detail-button" onClick={this.delete}>Delete</button>
         <button className="recipe-detail-button" onClick={this.edit}>Update</button>
         </div>
@@ -131,25 +146,28 @@ class RecipeDetail extends React.Component {
       div = (
         <section
           className="recipe-detail-container">
-          <label
-            className="recipe-detail-title">{this.props.recipeDetail.name}
-          </label>
-          <br></br>
-          <label> by {this.props.recipeDetail.user.username}</label>
+          <div className="recipe-title-container">
+            <label
+              className="recipe-detail-title">{this.props.recipeDetail.name}
+            </label>
+            <label
+              className="recipe-detail-author"> by {this.props.recipeDetail.user.username}
+            </label>
+          </div>
           <div className="recipe-img-ing">
-            <figure>
               <img
                 className="recipe-detail-img"
                 src={this.props.recipeDetail.img}
-                alt={this.props.recipeDetail.name}/>
-            </figure>
+                alt={this.props.recipeDetail.name}>
+              </img>
             <div className="recipe-ing-container">
-              <h3 className="recipe-detail-h3">Ingredients</h3>
+              <label className="recipe-detail-label">Ingredients</label>
+              <br></br>
               {this.renderIngredients()}
             </div>
           </div>
           <div className="recipe-dir-container">
-            <h3 className="recipe-detail-h3">Directions</h3>
+            <label className="recipe-detail-label">Directions</label>
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
           {this.renderDeleteButton()}

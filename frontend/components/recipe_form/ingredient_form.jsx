@@ -31,7 +31,6 @@ class IngredientForm extends React.Component {
     }
   }
 
-
   renderUnits() {
     const unitArray = [
       '',
@@ -62,7 +61,7 @@ class IngredientForm extends React.Component {
 
   render() {
     return (
-        <div>
+        <div className="ing-list-container">
           <input
             className="ing-form-attribute"
             type="text"

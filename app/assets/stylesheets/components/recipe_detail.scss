@@ -1,104 +1,158 @@
 .recipe-detail-container {
   margin: 0 auto;
   font-size: 16px;
-  padding: 10px;
+  padding: 20px;
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
 
-
-  .recipe-detail-title {
+  .recipe-title-container {
     font-family: 'Baloo Bhaina';
     color: $mauve;
-    font-size: 24px;
-    padding: 0;
-  }
-  .recipe-detail-img {
-    float: right;
-  }
+    padding: 5;
 
-  .recipe-detail-h3 {
-    font-family: 'Baloo Bhaina';
-  }
+    .recipe-detail-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-  .recipe-dir-container{
-    float: left;
-
-    .recipe-detail-p {
+    .recipe-detail-author {
+      font-size: 12px;
     }
   }
 
-  .recipe-ing-container{
-    float: right;
+  .recipe-img-ing {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    padding: 10px;
+    margin-bottom: 20px;
 
-    .recipe-detail-ul {
-      .recipe-detail-list {
+    .recipe-detail-img {
+      justify-content: flex-start;
+      margin: 0 auto;
+      background: $light-gray;
+      padding: 10px;
+      height: 30%;
+      width: 40%;
+      margin: 0;
+    }
+
+    .recipe-ing-container{
+      padding-left: 20px;
+      flex-direction: column;
+      flex-grow: 2 0 0;
+
+      .recipe-detail-ul {
+        float: right;
+        flex-flow: wrap;
+        padding-left: 20px;
+
+        .recipe-detail-list {
+          flex-flow: wrap;
+          list-style: disc;
+          list-style-position: inside;
+          padding-left: 10px;
+        }
       }
     }
   }
 
-  .recipe-detail-button {
-    font-size: 14px;
-    background: $pink-orange;
-    color: $bone;
-    height: 30px;
-    width: 200px;
-    margin: 5px;
-  }
 
-  .recipe-detail-button:hover {
-    background-color: $peach;
-  }
-
-.recipe-comment-create-container{
-  display: flex;
-  flex-direction: column;
-
-  .recipe-comment-body {
-    background: white;
-
-  }
-
-  .recipe-comment-button {
-    font-size: 14px;
-    background: $pink-orange;
-    color: $bone;
-    height: 30px;
-    width: 200px;
-    margin: 5px;
-    justify-content: center;
-    margin-left: 0 auto;
-  }
-
-  .recipe-comment-button:hover {
-    background-color: $peach;
-  }
-}
-
-
-.recipe-comments-container {
-  padding-top: 40px;
-
-  .recipe-comments-title {
+  .recipe-detail-label {
     font-family: 'Baloo Bhaina';
-    color: $mauve;
-    font-size: 24px;
+    font-size: 18px;
     padding: 0;
   }
 
-  .recipe-comments-ul-container {
-    display: flex;
-    flex-direction: column;
-    border-bottom: $gray;
-    padding-top: 40px;
+  .recipe-dir-container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    float: left;
 
-
-    .recipe-comment {
-      border: 1px $light-gray solid;
-      margin: 2px;
-      padding: 5px;
-      background-color: white;
-
+    .recipe-detail-p {
+      padding-left: 20px;
+      padding-right: 50px;
     }
   }
-}
+
+  .recipe-buttons {
+
+    .recipe-detail-button {
+      text-align: center;
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 200px;
+      margin: 5px;
+    }
+
+    .recipe-detail-button:hover {
+      background-color: $peach;
+    }
+  }
+
+
+
+  .recipe-comments-container {
+    padding-top: 10px;
+    width: 95%;
+
+    .recipe-comment-create-container{
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+
+      .recipe-comment-body {
+        background: white;
+      }
+
+      .recipe-comment-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        background: $pink-orange;
+        color: $bone;
+        height: 30px;
+        width: 200px;
+        margin-top: 5px;
+      }
+
+      .recipe-comment-button:hover {
+        background-color: $peach;
+      }
+    }
+
+    .recipe-comments-ul-container {
+      display: flex;
+      flex-direction: column;
+      border-bottom: $gray;
+      padding-top: 20px;
+      padding-left: 15px;
+
+      .recipe-comment-container {
+        flex-direction: row;
+        border: 1px $light-gray solid;
+        margin: 2px;
+        padding: 5px;
+        background-color: white;
+
+        .recipe-comment-name{
+          font-family: 'Baloo Bhaina';
+          font-size: 12px;
+          font-weight: 100;
+          // font-weight: bold;
+        }
+        .recipe-comment {
+          font-weight: 50;
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }

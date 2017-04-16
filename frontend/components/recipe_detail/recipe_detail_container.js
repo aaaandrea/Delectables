@@ -7,7 +7,8 @@ const defaultRecipe = {user: {}};
 const defaultComment = {body: {}};
 
 const mapStateToProps = (state, ownProps) => {
-  let recipeDetail = merge({}, defaultRecipe, state.recipeDetail) || defaultRecipe;
+  console.log(state);
+  let recipeDetail = merge({}, defaultRecipe, state.recipeDetail, state.recipe) || defaultRecipe;
   let user = state.session;
   return {recipeDetail, user};
 };

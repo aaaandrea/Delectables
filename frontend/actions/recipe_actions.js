@@ -84,7 +84,8 @@ export const fetchComments = recipeId => dispatch => (
 
 
 export const createRecipe = recipe => dispatch => (
-  APIUtils.createRecipe(recipe).then(data => dispatch(receiveRecipe(data)),
+  APIUtils.createRecipe(recipe)
+            .then(data => dispatch(receiveRecipe(data)),
             err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
@@ -105,7 +106,7 @@ export const fetchRecipes = () => dispatch => (
 
 export const fetchRecipe = id => dispatch => (
   APIUtils.fetchRecipe(id).then(data => dispatch(receiveRecipe(data)),
-  err => dispatch(receiveRecipeErrors(err.responseJSON)))
+            err => dispatch(receiveRecipeErrors(err.responseJSON)))
 );
 
 export const searchRecipes = recipes => dispatch => (

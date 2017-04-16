@@ -25,7 +25,6 @@ class RecipeForm extends React.Component {
       .then(({ recipe }) => {
         boundSetState({ recipe });
       });
-
     }
   }
 
@@ -96,7 +95,12 @@ class RecipeForm extends React.Component {
     const recipe = Object.assign({}, this.state.recipe);
     this.props.processForm(recipe)
       .then(resp => {
-        hashHistory.push(`/recipes/${resp.recipe.id}`);
+        if (resp.recipe.id) {
+          hashHistory.push(`/recipes/${resp.recipe.id}`);
+        }
+        else {
+
+        }
       });
   }
 
@@ -116,10 +120,8 @@ class RecipeForm extends React.Component {
   render(){
     let { errors } = this.props;
     if (errors) {
-      errors = errors.map( (error, i ) => <li key={i}>{error}</li>);
-      errors = <ul className='error'>{errors}</ul>;
+      errors = errors.map( (error, i ) => <li className="recipe-error" key={i}>{error}</li>);
     }
-
     return(
         <form
           className="recipe-form-container"
@@ -130,8 +132,8 @@ class RecipeForm extends React.Component {
               { (this.props.params.recipeId) ? "Update" : "Create" } Recipe
             </h2>
 
-            <p
-              className="recipe-form-errors">{ this.props.errors }</p>
+            <ul
+              className="recipe-form-errors">{ errors }</ul>
 
             <label className="recipe-form-label">Recipe Name</label>
             <input
@@ -157,8 +159,8 @@ class RecipeForm extends React.Component {
             </select>
 
             <label className="recipe-form-label">Directions</label>
-            <input
-              className="recipe-form-attribute"
+            <textarea
+              className="recipe-form-dir"
               type="textarea"
               placeholder="Directions"
               value={this.state.recipe.directions}
