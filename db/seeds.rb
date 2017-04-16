@@ -386,55 +386,28 @@ l6 = Recipe.create!(name: 'Roasted Autumn Vegetable Chowder',
                img: 'https://res.cloudinary.com/dg0cmca7a/image/upload/v1490241911/cornchowder5_ya37vl.jpg',
                tag_id: l.id,
                user_id: u1.id,
-               directions: '1. Preheat oven to 375°F (190°C). Fold a 12- by 24-inch sheet of aluminum foil in half to form a square. Crimp two edges to form a pouch. Toss beets, 1 tablespoon (15ml) olive oil, rosemary or thyme sprigs (if using), and salt and pepper to taste in a medium bowl until beets are coated. Add to pouch and crimp remaining edge to seal. (If using multiple colors of beets, roast in separate pouches.) Transfer to a rimmed baking sheet and place in oven. Roast until beets are completely tender and a toothpick or cake tester inserted into a beet through foil meets little to no resistance, about 1 1/2 hours. Remove from oven and allow to cool. When beets are cool enough to handle, peel by gently rubbing skin under cold running water. Cut beets into 1 1/2–inch chunks. Beets can be cooked and stored in the refrigerator for up to 5 days.
+               directions: 'Roast at 400 degrees, stirring occasionally, until veggies are tender and slightly browned (about 30 minutes).
+                In a large saucepan, heat two tablespoons of butter over medium heat, then add:
 
-               2. Place pistachios in a mortar and pound with pestle until lightly crushed but not totally pulverized. (You can also chop them with a knife.) Transfer half of nuts to a large bowl and reserve the rest for garnish.
+                1/2 onion, diced,
+                one carrot, diced,
+                one celery stalk, diced.
 
-               3. Add grapefruit juice, orange juice, lemon juice, shallot, minced herbs, and honey to bowl with pistachios and whisk to combine. Drizzle in remaining 3 tablespoons (45ml) olive oil while whisking constantly. Season to taste with salt and pepper.
+                Cook, stirring for about five minutes or so then add the roasted vegetables, making sure to scrape out all the liquid with a spatula. Next, add three more cups of vegetable broth. Bring to a simmer, then puree with and immersion blender, leaving it just a bit chunky.
+                Add one cup of milk and one cup of defrosted frozen corn, and heat through.  Season with salt and freshly ground pepper to taste.  Finally, add a tablespoon or two of hot sauce, to taste (I used Cholula).')
 
-               4. To Serve: Toss beets and citrus with vinaigrette in a large bowl (if using red beets, toss them separately from everything else) and season to taste with salt and pepper. Spread half of ricotta over a serving platter, place dressed beets and citrus on top, dollop with remaining ricotta, sprinkle with reserved pistachios, and serve.')
-
-l6.ingredients.create!(title: 'beets, unpeeled, greens removed, scrubbed clean',
-                      quantity: '2',
-                      unit: 'lb')
-
-l6.ingredients.create!(title: 'extra-virgin olive oil, divided',
-                      quantity: '1/4',
-                      unit: 'cup(s)')
-
-l6.ingredients.create!(title: 'sprigs thyme or rosemary (optional)',
-                      quantity: '2')
-
-l6.ingredients.create!(title: 'Kosher salt and freshly ground black pepper')
-
-l6.ingredients.create!(title: 'toasted shelled pistachios',
-                      quantity: '1/4',
-                      unit: 'cup(s)')
-
-l6.ingredients.create!(title: 'grapefruit, cut into suprèmes or wedges',
-                      quantity: '1')
-
-l6.ingredients.create!(title: 'orange, cut into suprèmes or wedges',
-                      quantity: '1')
-
-l6.ingredients.create!(title: 'juice from 1 lemon',
-                      quantity: '2',
-                      unit: 'tsp')
-
-l6.ingredients.create!(title: 'small shallot, finely minced',
-                      quantity: '1')
-
-l6.ingredients.create!(title: 'minced fresh parsley, tarragon, or chervil',
-                      quantity: '2',
-                      unit: 'tsp')
-
-l6.ingredients.create!(title: 'honey',
-                      quantity: '1',
-                      unit: 'tbsp')
-
-l6.ingredients.create!(title: 'fresh ricotta',
-                      quantity: '1/2',
-                      unit: 'cup(s)')
+l6.ingredients.create!(title: 'small russet potatoes, peeled and cut in chunks', quantity: '3')
+l6.ingredients.create!(title: 'sweet potato, peeled and cut in chunks', quantity: '1')
+l6.ingredients.create!(title: 'small head of cauliflower, cut in chunks', quantity: '1')
+l6.ingredients.create!(title: 'head of broccoli, cut in chunks', quantity: '1/2')
+l6.ingredients.create!(title: 'leeks, white part only, rinsed well and sliced', quantity: '2')
+l6.ingredients.create!(title: 'onion, cut in chunks', quantity: '1')
+l6.ingredients.create!(title: 'large garlic cloves, peeled', quantity: '3')
+l6.ingredients.create!(title: 'olive oil', quantity: '3', unit: 'tbsp')
+l6.ingredients.create!(title: 'dried thyme', quantity: '1', unit: 'tsp')
+l6.ingredients.create!(title: 'dried sage', quantity: '1/2', unit: 'tsp')
+l6.ingredients.create!(title: 'coriander powder', quantity: '1/2', unit: 'tsp')
+l6.ingredients.create!(title: 'large pinch of koscher salt and black pepper')
 
 l6.comments.create!(body: 'This was amazing! I added parsley. YUM', user_id: u3.id)
 l6.comments.create!(body: 'Needs more olive oil', user_id: u4.id)
