@@ -99,7 +99,7 @@ class RecipeDetail extends React.Component {
     }
     return(
       <div className="recipe-comments-container">
-        <label className="recipe-comments-title">Comments</label>
+        <label className="recipe-detail-label">Comments</label>
 
         {this.renderCommentBox()}
 
