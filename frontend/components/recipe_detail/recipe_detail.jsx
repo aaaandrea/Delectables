@@ -89,13 +89,13 @@ class RecipeDetail extends React.Component {
             return (
               <li
               className="recipe-detail-list"
-              key={idx}>{el.title}</li>
+              key={'ingredient' + el.id}>{el.title}</li>
             );
           }
           return (
             <li
             className="recipe-detail-list"
-            key={idx}>
+            key={'ingredient' + el.id}>
             <label>{el.quantity} {el.unit} </label>{el.title}</li>
           );
         })}
@@ -116,9 +116,9 @@ class RecipeDetail extends React.Component {
         <ul className="recipe-comments-ul-container">
           {this.props.recipeDetail.comments.map((el, idx) => {
             return(
-              <div className="recipe-comment-container">
+              <div className="recipe-comment-container" key={'comment' + idx}>
                 <label className="recipe-comment-name">{el.username} says</label>
-                <li className="recipe-comment" key={idx}>{el.body}</li>
+                <li className="recipe-comment">{el.body}</li>
               </div>
             );
           })}

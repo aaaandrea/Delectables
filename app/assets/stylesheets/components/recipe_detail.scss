@@ -1,12 +1,12 @@
 .recipe-detail-container {
   margin: 0 auto;
   font-size: 16px;
-  padding: 20px;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
 
   .recipe-title-container {
+    padding-left: 20px;
     font-family: 'Baloo Bhaina';
     color: $mauve;
     padding: 5;
@@ -22,14 +22,15 @@
   }
 
   .recipe-img-ing {
+    padding-left: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    padding: 10px;
     margin-bottom: 20px;
 
     .recipe-detail-img {
+      padding-left: 20px;
       justify-content: flex-start;
       margin: 0 auto;
       background: $light-gray;
@@ -42,7 +43,6 @@
     .recipe-ing-container{
       padding-left: 20px;
       flex-direction: column;
-      flex-grow: 2 0 0;
 
       .recipe-detail-ul {
         float: right;
@@ -53,7 +53,9 @@
           flex-flow: wrap;
           list-style: disc;
           list-style-position: inside;
-          padding-left: 10px;
+          // padding-left: 10px;
+          font-size: 14px;
+          font-family: sans-serif;
         }
       }
     }
@@ -61,17 +63,22 @@
 
 
   .recipe-detail-label {
+    padding-left: 20px;
     font-family: 'Baloo Bhaina';
     font-size: 18px;
     padding: 0;
   }
 
   .recipe-dir-container{
+    padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid $light-gray;
     border-bottom: 1px solid $light-gray;
+    background: white;
     float: left;
+    font-size: 14px;
+    font-family: sans-serif;
 
     .recipe-detail-p {
       padding-left: 20px;
@@ -80,6 +87,7 @@
   }
 
   .recipe-buttons {
+    padding-left: 20px;
 
     .recipe-detail-button {
       text-align: center;
@@ -99,6 +107,7 @@
 
 
   .recipe-comments-container {
+    padding-left: 20px;
     padding-top: 10px;
     width: 95%;
 
