@@ -31,7 +31,7 @@ class Api::RecipesController < ApplicationController
       end
       render "api/recipes/show"
     else
-      render json: @recipe.errors.full_messages
+      render json: @recipe.errors.full_messages, status: 422
     end
   end
 
@@ -48,7 +48,7 @@ class Api::RecipesController < ApplicationController
       end
       render "api/recipes/show"
     else
-      render json: ["Update information is incorrect"], status: 422
+      render json: @recipe.errors.full_messages, status: 422
     end
   end
 

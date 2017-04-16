@@ -120,7 +120,7 @@ class RecipeForm extends React.Component {
   render(){
     let { errors } = this.props;
     if (errors) {
-      errors = errors.map( (error, i ) => <li key={i}>{error}</li>);
+      errors = errors.map( (error, i ) => <li className="recipe-error" key={i}>{error}</li>);
     }
     return(
         <form
