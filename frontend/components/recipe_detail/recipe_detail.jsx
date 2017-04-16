@@ -94,7 +94,6 @@ class RecipeDetail extends React.Component {
   }
 
   renderComments() {
-    console.log(this.props.recipeDetail.comments);
     if (!this.props.recipeDetail.comments) {
       return null;
     }
@@ -132,25 +131,28 @@ class RecipeDetail extends React.Component {
       div = (
         <section
           className="recipe-detail-container">
-          <label
-            className="recipe-detail-title">{this.props.recipeDetail.name}
-          </label>
-          <br></br>
-          <label> by {this.props.recipeDetail.user.username}</label>
+          <div className="recipe-title-container">
+            <label
+              className="recipe-detail-title">{this.props.recipeDetail.name}
+            </label>
+            <label
+              className="recipe-detail-author"> by {this.props.recipeDetail.user.username}
+            </label>
+          </div>
           <div className="recipe-img-ing">
-            <figure>
               <img
                 className="recipe-detail-img"
                 src={this.props.recipeDetail.img}
-                alt={this.props.recipeDetail.name}/>
-            </figure>
+                alt={this.props.recipeDetail.name}>
+              </img>
             <div className="recipe-ing-container">
-              <h3 className="recipe-detail-h3">Ingredients</h3>
+              <label className="recipe-detail-label">Ingredients</label>
+              <br></br>
               {this.renderIngredients()}
             </div>
           </div>
           <div className="recipe-dir-container">
-            <h3 className="recipe-detail-h3">Directions</h3>
+            <label className="recipe-detail-label">Directions</label>
             <p className="recipe-detail-p">{this.props.recipeDetail.directions}</p>
           </div>
           {this.renderDeleteButton()}
