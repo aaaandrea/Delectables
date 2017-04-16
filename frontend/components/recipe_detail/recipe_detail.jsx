@@ -96,7 +96,7 @@ class RecipeDetail extends React.Component {
             <li
             className="recipe-detail-list"
             key={idx}>
-            <label>{el.quantity} {el.unit} - </label>{el.title}</li>
+            <label>{el.quantity} {el.unit} </label>{el.title}</li>
           );
         })}
       </ul>
