@@ -33,12 +33,9 @@
       margin: 0 auto;
       background: lightgray;
       padding: 10px;
-      min-width: 75px;
-      min-height: 50px;
-      max-width: 400px;
-      max-height: 250px;
+      height: 30%;
+      width: 40%;
       margin: 0;
-
     }
 
     .recipe-ing-container{
@@ -63,6 +60,7 @@
 
   .recipe-detail-label {
     font-family: 'Baloo Bhaina';
+    font-size: 18px;
     padding: 0;
   }
 
@@ -70,10 +68,12 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     float: left;
 
     .recipe-detail-p {
       padding-left: 20px;
+      padding-right: 50px;
     }
   }
 
@@ -90,41 +90,35 @@
     background-color: $peach;
   }
 
-.recipe-comment-create-container{
-  display: flex;
-  flex-direction: column;
-
-  .recipe-comment-body {
-    background: white;
-
-  }
-
-  .recipe-comment-button {
-    font-size: 14px;
-    background: $pink-orange;
-    color: $bone;
-    height: 30px;
-    width: 200px;
-    margin: 5px;
-    justify-content: center;
-    margin-left: 0 auto;
-  }
-
-  .recipe-comment-button:hover {
-    background-color: $peach;
-  }
-}
-
 
 .recipe-comments-container {
-  border-top: 1px solid lightgray;
   padding-top: 10px;
+  width: 95%;
 
-  .recipe-comments-title {
-    font-family: 'Baloo Bhaina';
-    color: $mauve;
-    font-size: 24px;
-    padding: 0;
+  .recipe-comment-create-container{
+    display: flex;
+    flex-direction: column;
+
+    .recipe-comment-body {
+      background: white;
+    }
+
+    .recipe-comment-button {
+      display: flex;
+      font-size: 14px;
+      background: $pink-orange;
+      color: $bone;
+      height: 30px;
+      width: 200px;
+      margin: 5px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0 auto;
+    }
+
+    .recipe-comment-button:hover {
+      background-color: $peach;
+    }
   }
 
   .recipe-comments-ul-container {
@@ -133,13 +127,20 @@
     border-bottom: $gray;
     padding-top: 20px;
 
-
-    .recipe-comment {
+    .recipe-comment-container {
+      flex-direction: row;
       border: 1px $light-gray solid;
       margin: 2px;
       padding: 5px;
       background-color: white;
 
+      .recipe-comment-name{
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .recipe-comment {
+        font-size: 18px;
+      }
     }
   }
 }
