@@ -30,8 +30,11 @@ class RecipeIndex extends React.Component {
       className="recipe-image"
       src={recipe.img}/>);
   }
-
+        // <p className="recipe-author">{recipe.user.username}</p>
   renderRecipes() {
+    this.state.recipes.map((recipe) => (
+      console.log(recipe.user)
+    ));
     const recipes = this.state.recipes.filter((recipe) => {
       if (!this.state.filterTagId) {
         return true;
