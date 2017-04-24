@@ -1,12 +1,16 @@
 class Api::RecipesController < ApplicationController
 
   def index
-    if !params[:tag_id]
-      @recipes = Recipe.all
-    else
-      @recipes = Recipe.where(tag_id: params[:tag_id]).all
-    end
-    render json: @recipes
+    @recipes = Recipe.all
+    # if !params[:tag_id]
+    #   @recipes = Recipe.all
+    #   # @users = User.all
+    # else
+    #   @recipes = Recipe.where(tag_id: params[:tag_id]).all
+    #   # @users = User.all
+    # end
+    # render json: @recipes
+    render "api/recipes/index"
   end
 
   def show

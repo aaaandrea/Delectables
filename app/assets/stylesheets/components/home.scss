@@ -82,8 +82,13 @@
           }
 
           .recipe-name {
-            font-size: 16px;
+            font-size: 13px;
             font-weight: bold;
+            text-align: center;
+          }
+          .recipe-author {
+            font-size: 10px;
+            font-style: italic;
             text-align: center;
           }
         }

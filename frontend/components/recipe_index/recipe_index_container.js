@@ -5,6 +5,8 @@ import { selectAllRecipes, selectRecipe, selectAllTags } from '../../reducers/se
 import RecipeIndex from './recipe_index';
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(state);
+  console.log(ownProps);
   return{
     recipes: selectAllRecipes(state),
     tags: state.tags

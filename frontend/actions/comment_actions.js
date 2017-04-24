@@ -39,4 +39,3 @@ const removeComment = comment => ({
   type: REMOVE_COMMENT,
   comment
 });
-Contact GitHub API Training Shop Blog About

@@ -32,8 +32,10 @@ class RecipeIndex extends React.Component {
   }
         // <p className="recipe-author">{recipe.user.username}</p>
   renderRecipes() {
+    let me;
     this.state.recipes.map((recipe) => (
-      console.log(recipe.user)
+      // console.log(recipe)
+      me = 1
     ));
     const recipes = this.state.recipes.filter((recipe) => {
       if (!this.state.filterTagId) {
@@ -47,6 +49,7 @@ class RecipeIndex extends React.Component {
         onClick={() => hashHistory.push(`/recipes/${recipe.id}`)}>
         {(recipe.img === "") ? null : this.renderImage(recipe)}
         <p className="recipe-name">{recipe.name}</p>
+        <p className="recipe-author">by {recipe.user.username}</p>
       </li>
     ));
   }
