@@ -34,7 +34,6 @@ class RecipeIndex extends React.Component {
   renderRecipes() {
     let me;
     this.state.recipes.map((recipe) => (
-      // console.log(recipe)
       me = 1
     ));
     const recipes = this.state.recipes.filter((recipe) => {

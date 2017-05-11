@@ -6,7 +6,6 @@ import { hashHistory } from 'react-router';
 
 
 const mapStateToProps = ( state, ownProps ) => {
-  console.log(state);
   let recipe = {name: "", directions: "", img: "", ingredients: [{}],
                 tag_id: "", user_id: state.session.currentUser.id};
   let formType = ownProps.location.pathname.slice(1);
