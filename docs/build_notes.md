@@ -32,8 +32,8 @@
     - Potential Issues: possibility for duplicate ingredients given the users can type in ingredients differently.
 
 extras:
-- center detail update/delete buttons
-- render errors for create/delete recipe
-- when search is complete: add code snippet of filtering to production readme
-- fix gray text for session form
-- clear store of recipe detail upon navigation from page.
+- [done] center detail update/delete buttons
+- [done] render errors for create/delete recipe
+- [done] when search is complete: add code snippet of filtering to production readme
+- [done] fix gray text for session form
+- [done] clear store of recipe detail upon navigation from page.
